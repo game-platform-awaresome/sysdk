@@ -1,0 +1,131 @@
+//
+//  SY185_PCHeader.pch
+//  SY_185SDK
+//
+//  Created by 燚 on 2017/9/25.
+//  Copyright © 2017年 Yi Shi. All rights reserved.
+//
+
+#ifndef SY185_PCHeader_pch
+#define SY185_PCHeader_pch
+
+//屏幕的宽和高
+#define kSCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define kSCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+//视图的宽和高
+#define view_width self.view.frame.size.width
+#define view_height self.view.frame.size.height
+
+//相对宽和高
+#define WIDTH (kSCREEN_WIDTH > kSCREEN_HEIGHT ? kSCREEN_HEIGHT : kSCREEN_WIDTH)
+#define HEIGHT (kSCREEN_WIDTH < kSCREEN_HEIGHT ? kSCREEN_HEIGHT : kSCREEN_WIDTH)
+#define kNAVGATION_HEIGHT (CGRectGetMaxY(self.navigationController.navigationBar.frame))
+
+//悬浮窗视图的相关尺寸
+#define FLOATSIZE 55
+#define FLOAT_MENU_WIDTH WIDTH * 0.95
+#define FLOAT_MENU_HEIGHT FLOAT_MENU_WIDTH
+
+//支付页面的尺寸
+#define PAYVIEW_WIDTH WIDTH * 0.95
+#define PAYVIEW_HEIGHT WIDTH * 0.95
+
+// RGB Color
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a / 255.0]
+#define RGBCOLOR(r,g,b) RGBACOLOR(r,g,b,255)
+
+#define TEXTCOLOR RGBCOLOR(55,60,65)
+#define BLUE_DARK RGBCOLOR(54, 145, 224)
+#define BLUE_LIGHT RGBCOLOR(42, 179, 231)
+#define LINECOLOR RGBCOLOR(188, 188, 188)
+#define BUTTON_GREEN_COLOR RGBCOLOR(96, 186, 75)
+#define BUTTON_YELLOW_COLOR RGBCOLOR(251, 193, 92)
+#define LOGIN_BACKGROUNDCOLOR RGBACOLOR(239, 240, 241, 255)
+#define FBBackGroundColor RGBCOLOR(245, 245, 245)
+
+//弱引用
+#define WeakSelf __weak typeof(self) weakSelf = self
+
+//控制台打印,debug 模式打印,打包发布不打印
+#ifdef DEBUG
+#define syLog(format, ...) NSLog(format, ## __VA_ARGS__)
+#define SDKLOG(message) syLog(@"SYSDK === %@",message)
+#else
+#define syLog(format, ...)
+#define SDKLOG(message)
+#endif
+
+//打印方法名
+#define __LOGFUNC__ syLog(@"%s",__func__)
+
+//导入信息工具
+#import "InfomationTool.h"
+#import "SY_LogModel.h"
+
+#define SDK_Log(message) [SY_LogModel showMessage:message]
+
+/** 获取图片 */
+#define IMAGE_GET_BUNDLE_PATH(path) [InfomationTool getBundlePath:path]
+#define SDK_IMAGE(image) [UIImage imageNamed:IMAGE_GET_BUNDLE_PATH(image)]
+
+/** 系统单利 */
+#define SDK_USERDEFAULTS_SAVE_OBJECT(object,key) [[NSUserDefaults standardUserDefaults] setObject:object forKey:key]; \
+[[NSUserDefaults standardUserDefaults] synchronize]
+
+#define SDK_USERDEFAULTS_GET_OBJECT(key) [[NSUserDefaults standardUserDefaults] objectForKey:key]
+
+/** 自动登录相关 */
+#define AUTOLOGINKEY @"sdk_autologin_key"
+#define SDK_ISAUTOLOGIN SDK_USERDEFAULTS_GET_OBJECT(AUTOLOGINKEY)
+#define SDK_SETAUTOLOGIN(auto) SDK_USERDEFAULTS_SAVE_OBJECT(auto,AUTOLOGINKEY)
+#define SDK_USER_SELF_LOGOUT(logout) SDK_USERDEFAULTS_SAVE_OBJECT(logout,@"isUserLogOut")
+#define SDK_GET_USER_LOGOUT SDK_USERDEFAULTS_GET_OBJECT(@"isUserLogOut")
+
+//登出的通知
+#define SDK_LOG_OUT_NOTIFICATION @"SDK_logoutNotification"
+#define SDK_PAY_RESULTS_NOTIFICATION @"SDK_payResultsNotification"
+
+#define REQUEST_STATUS NSString *status = content[@"status"]
+
+#define SDK_GETDEVICEYYPE @"2"
+#define SDK_GETCHANNELID [RequestTool channelID]
+#define SDK_GETAPPID [SDKModel sharedModel].AppID
+#define SDK_GETDEVICEID [InfomationTool deviceID]
+
+#define SDK_GETSIGN(dict,array) [RequestTool signWithParms:dict WithKeys:array]
+
+#define SDK_GETDEVICEMAKER @"Apple"
+#define SDK_GETDEVICEMODEL [InfomationTool phoneType]
+#define SDK_GETSYSTEMVERSION [InfomationTool systemVersion]
+#define SDK_GETUID [UserModel currentUser].uid
+
+#define SDK_START_ANIMATION      [InfomationTool startWaitAnimation]
+#define SDK_STOP_ANIMATION       [InfomationTool stopWaitAnimation]
+
+#define SDK_CONTENT_DATA (content[@"data"] ? content[@"data"] : content)
+#define GAME_WINDOW_LEVEL UIWindowLevelNormal
+#define SDK_WINDOW_LEVEL (UIWindowLevelAlert - 1)
+
+#define SDK_MESSAGE(message)  [InfomationTool showAlertMessage:message dismissTime:0.7 dismiss:nil]
+
+/** ------------------------------ GM ------------------------------------- */
+#define k_WIDTH (kSCREEN_WIDTH < kSCREEN_HEIGHT ? kSCREEN_WIDTH : kSCREEN_HEIGHT)
+#define k_HEIGHT (kSCREEN_WIDTH < kSCREEN_HEIGHT ? kSCREEN_HEIGHT : kSCREEN_WIDTH)
+
+#define GM_FLOATSIZE ((k_WIDTH < 414) ? 75 : 85)
+#define GM_FLOATSIZE_HEIGHT (FLOATSIZE / 60.0 * 25)
+
+#define GM_WINDOW_LEVEL (UIWindowLevelNormal + 10)
+
+
+
+#define SDK_VERSION [NSString stringWithFormat:@"版本 : 1.4.3"]
+
+#endif /* SY185_PCHeader_pch */
+
+
+
+
+
+
