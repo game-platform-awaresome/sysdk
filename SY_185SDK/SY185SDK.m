@@ -14,6 +14,13 @@
 #import "SDK_ADImage.h"
 #import "SYStatisticsModel.h"
 
+
+#ifdef DEBUG
+#import "SYDeviceTool.h"
+#import "SYSDKModel.h"
+#endif
+
+
 @interface SY185SDK () <LoginControllerDeleagete, SYfloatViewDelegate, SYPayControllerDeleagete, GMFunctionDelegate, ADImageDelegate>
 
 @property (nonatomic, weak) id<SY185SDKDelegate> delegate;
@@ -29,6 +36,10 @@ static SY185SDK *sdk = nil;
     dispatch_once(&onceToken, ^{
         if (sdk == nil) {
             sdk = [[SY185SDK alloc] init];
+#ifdef DEBUG
+            [sdk testFunction];
+
+#endif
         }
     });
     return sdk;
@@ -308,6 +319,18 @@ static SY185SDK *sdk = nil;
 + (void)submitExtraDataWithType:(SY185SDKReportType)type ServerID:(NSString *)serverID ServerName:(NSString *)serverName RoleID:(NSString *)roleID RoleName:(NSString *)roleName RoleLevel:(NSString *)roleLevel Money:(NSString *)money VipLevel:(NSString *)vipLevel {
     [SDKModel reportDataWithType:type ServerID:serverID ServerName:serverName RoleID:roleID RoleName:roleName RoleLevel:roleLevel Money:money VipLevel:vipLevel];
 }
+
+
+
+
+#pragma mark - test
+- (void)testFunction {
+    syLog(@"运营商  === %@",[SYDeviceTool MobilePhoneOperators]);
+    syLog(@"属性类型 === %@",[SYSDKModel getAllPropertyTypeWithClass:[SYSDKModel class]]);
+}
+
+
+
 
 
 @end

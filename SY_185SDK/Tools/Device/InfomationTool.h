@@ -32,6 +32,9 @@
 /* 网络信号 */
 + (NSString *)netWrokStates;
 
+
+
+
 /** 保存广告图片 */
 + (void)saveAdImageWithUrl:(NSString *)url;
 

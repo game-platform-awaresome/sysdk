@@ -57,7 +57,7 @@
 #endif
 
 //打印方法名
-#define __LOGFUNC__ syLog(@"%s",__func__)
+#define __LOGFUNC__ syLog(@"%s",__func__);
 
 //导入信息工具
 #import "InfomationTool.h"

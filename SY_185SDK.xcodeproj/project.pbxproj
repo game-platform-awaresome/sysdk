@@ -345,6 +345,14 @@
 		B5C40EF621115F53007F74D9 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C40EF121115F53007F74D9 /* FBShimmeringLayer.m */; };
 		B5C40EF721115F53007F74D9 /* FBShimmeringView.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C40EF221115F53007F74D9 /* FBShimmeringView.h */; };
 		B5C40EF821115F53007F74D9 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C40EF321115F53007F74D9 /* FBShimmeringView.m */; };
+		B5C40EFB21116129007F74D9 /* SYDeviceTool.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C40EF921116129007F74D9 /* SYDeviceTool.h */; };
+		B5C40EFC21116129007F74D9 /* SYDeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C40EFA21116129007F74D9 /* SYDeviceTool.m */; };
+		B5C40F0221118E47007F74D9 /* SYRequestTool.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C40F0021118E47007F74D9 /* SYRequestTool.h */; };
+		B5C40F0321118E47007F74D9 /* SYRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C40F0121118E47007F74D9 /* SYRequestTool.m */; };
+		B5C40F0D21119944007F74D9 /* SYGeneralModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C40F0B21119944007F74D9 /* SYGeneralModel.h */; };
+		B5C40F0E21119944007F74D9 /* SYGeneralModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C40F0C21119944007F74D9 /* SYGeneralModel.m */; };
+		B5C40F1121119B4E007F74D9 /* SYSDKModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C40F0F21119B4E007F74D9 /* SYSDKModel.h */; };
+		B5C40F1221119B4E007F74D9 /* SYSDKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C40F1021119B4E007F74D9 /* SYSDKModel.m */; };
 		B5D6142A20BF90B20010CA98 /* Tracking.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6142920BF90B20010CA98 /* Tracking.h */; };
 		B5D6143120BF93190010CA98 /* SYStatisticsModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6142F20BF93190010CA98 /* SYStatisticsModel.h */; };
 		B5D6143220BF93190010CA98 /* SYStatisticsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D6143020BF93190010CA98 /* SYStatisticsModel.m */; };
@@ -652,6 +660,14 @@
 		B5C40EF121115F53007F74D9 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
 		B5C40EF221115F53007F74D9 /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
 		B5C40EF321115F53007F74D9 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
+		B5C40EF921116129007F74D9 /* SYDeviceTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYDeviceTool.h; sourceTree = "<group>"; };
+		B5C40EFA21116129007F74D9 /* SYDeviceTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYDeviceTool.m; sourceTree = "<group>"; };
+		B5C40F0021118E47007F74D9 /* SYRequestTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYRequestTool.h; sourceTree = "<group>"; };
+		B5C40F0121118E47007F74D9 /* SYRequestTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYRequestTool.m; sourceTree = "<group>"; };
+		B5C40F0B21119944007F74D9 /* SYGeneralModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYGeneralModel.h; sourceTree = "<group>"; };
+		B5C40F0C21119944007F74D9 /* SYGeneralModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYGeneralModel.m; sourceTree = "<group>"; };
+		B5C40F0F21119B4E007F74D9 /* SYSDKModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYSDKModel.h; sourceTree = "<group>"; };
+		B5C40F1021119B4E007F74D9 /* SYSDKModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYSDKModel.m; sourceTree = "<group>"; };
 		B5C9427F1F78986200B3E9DA /* SY185_PCHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SY185_PCHeader.pch; sourceTree = "<group>"; };
 		B5D6142920BF90B20010CA98 /* Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracking.h; sourceTree = "<group>"; };
 		B5D6142B20BF90E60010CA98 /* ReYunTracking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = ReYunTracking.a; path = "../SY_185SDK_Demo/trackingIO_ios_sdk_1.0.0 2/ReYunTracking.a"; sourceTree = "<group>"; };
@@ -1083,11 +1099,11 @@
 				B5ABC0C91FEA37CF00B24DE2 /* SDK_ADImage.m */,
 				B5C9427F1F78986200B3E9DA /* SY185_PCHeader.pch */,
 				B5D6142920BF90B20010CA98 /* Tracking.h */,
-				B5D617AD1F7B425F0046740A /* Class */,
 				B5A017CC1F7500E5005E75D6 /* Tools */,
+				B5D617AD1F7B425F0046740A /* Class */,
 				B5A017C21F74FF67005E75D6 /* Model */,
-				B5C9427E1F78980600B3E9DA /* Other */,
 				B5C40EB52111558F007F74D9 /* ThirdLibrary */,
+				B5C9427E1F78980600B3E9DA /* Other */,
 				B5A017811F74F625005E75D6 /* Info.plist */,
 			);
 			path = SY_185SDK;
@@ -1096,6 +1112,9 @@
 		B5A017C21F74FF67005E75D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B5C40F0B21119944007F74D9 /* SYGeneralModel.h */,
+				B5C40F0C21119944007F74D9 /* SYGeneralModel.m */,
+				B5C40F0A211197E0007F74D9 /* SDKModel */,
 				B5D617DA1F7B4A3E0046740A /* Model.h */,
 				B5D617DB1F7B4A3E0046740A /* Model.m */,
 				B5A017C31F74FFD3005E75D6 /* SDKModel.h */,
@@ -1119,12 +1138,9 @@
 		B5A017CC1F7500E5005E75D6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				B5A017D71F750252005E75D6 /* SYKeychain.h */,
-				B5A017D81F750252005E75D6 /* SYKeychain.m */,
-				B5A017CD1F7501EF005E75D6 /* InfomationTool.h */,
-				B5A017CE1F7501EF005E75D6 /* InfomationTool.m */,
-				B58DD2CA1F7A2D11009C7943 /* RequestTool.h */,
-				B58DD2CB1F7A2D11009C7943 /* RequestTool.m */,
+				B5C40EFF21116165007F74D9 /* Keychain */,
+				B5C40EFE21116141007F74D9 /* NetWork */,
+				B5C40EFD21116135007F74D9 /* Device */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1208,6 +1224,46 @@
 				B5C40EF321115F53007F74D9 /* FBShimmeringView.m */,
 			);
 			path = FBShimmering;
+			sourceTree = "<group>";
+		};
+		B5C40EFD21116135007F74D9 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				B5A017CD1F7501EF005E75D6 /* InfomationTool.h */,
+				B5A017CE1F7501EF005E75D6 /* InfomationTool.m */,
+				B5C40EF921116129007F74D9 /* SYDeviceTool.h */,
+				B5C40EFA21116129007F74D9 /* SYDeviceTool.m */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		B5C40EFE21116141007F74D9 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				B58DD2CA1F7A2D11009C7943 /* RequestTool.h */,
+				B58DD2CB1F7A2D11009C7943 /* RequestTool.m */,
+				B5C40F0021118E47007F74D9 /* SYRequestTool.h */,
+				B5C40F0121118E47007F74D9 /* SYRequestTool.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		B5C40EFF21116165007F74D9 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				B5A017D71F750252005E75D6 /* SYKeychain.h */,
+				B5A017D81F750252005E75D6 /* SYKeychain.m */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		B5C40F0A211197E0007F74D9 /* SDKModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5C40F0F21119B4E007F74D9 /* SYSDKModel.h */,
+				B5C40F1021119B4E007F74D9 /* SYSDKModel.m */,
+			);
+			path = SDKModel;
 			sourceTree = "<group>";
 		};
 		B5C9427E1F78980600B3E9DA /* Other */ = {
@@ -1321,6 +1377,7 @@
 				B57D4CA01FA1E54100303A93 /* SYKeychain.h in Headers */,
 				B57D4C541FA18D8400303A93 /* SY_AutoLoginView.h in Headers */,
 				B57D4C551FA18D8400303A93 /* SY_BindingPhoneView.h in Headers */,
+				B5C40F1121119B4E007F74D9 /* SYSDKModel.h in Headers */,
 				B57D4C561FA18D8400303A93 /* SY_ForgetPasswordView.h in Headers */,
 				B57D4C571FA18D8400303A93 /* SY_LoginView.h in Headers */,
 				B56564101FDFB16500E3CC44 /* FBDetailViewController.h in Headers */,
@@ -1337,6 +1394,7 @@
 				B57D4C5D1FA18D8400303A93 /* m185CheackPayResults.h in Headers */,
 				B5ABC0C61FEA099300B24DE2 /* SY_adPicImageView.h in Headers */,
 				B57D4C5E1FA18D8400303A93 /* PAlipayController.h in Headers */,
+				B5C40EFB21116129007F74D9 /* SYDeviceTool.h in Headers */,
 				B5B28E1F1FDA371F008A9BCD /* FeedbackNavigationController.h in Headers */,
 				B57D4C5F1FA18D8400303A93 /* PPhonepayController.h in Headers */,
 				B57D4C601FA18D8400303A93 /* PPlatformCoinViewController.h in Headers */,
@@ -1350,11 +1408,13 @@
 				B57D4C671FA18D8400303A93 /* GM_DetailView.h in Headers */,
 				B5B28E241FDA400C008A9BCD /* FBSubmitViewController.h in Headers */,
 				B56568B41FE136F100E3CC44 /* LLRefreshHelper.h in Headers */,
+				B5C40F0D21119944007F74D9 /* SYGeneralModel.h in Headers */,
 				B57D4C681FA18D8400303A93 /* GM_PropsListView.h in Headers */,
 				B57D4C691FA18D8400303A93 /* GM_PropsNumView.h in Headers */,
 				B57D4C6A1FA18D8400303A93 /* GMDetailCell.h in Headers */,
 				B5FF875A1FCE62EB004F9820 /* SY_BindingIDCardView.h in Headers */,
 				B56568AE1FE136F100E3CC44 /* LLRefreshComponent.h in Headers */,
+				B5C40F0221118E47007F74D9 /* SYRequestTool.h in Headers */,
 				B5B28E1B1FDA2F1A008A9BCD /* FeedbackViewController.h in Headers */,
 				B57D4C6B1FA18D8400303A93 /* GM_FloatViewController.h in Headers */,
 				B57D4C6D1FA18D8400303A93 /* InfomationTool.h in Headers */,
@@ -1427,11 +1487,12 @@
 		B5A017741F74F625005E75D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SY;
 				KnownAssetTags = (
 					New,
 				);
 				LastUpgradeCheck = 0900;
-				ORGANIZATIONNAME = "Yi Shi";
+				ORGANIZATIONNAME = 185sy.com;
 				TargetAttributes = {
 					B56567161FE0CB5100E3CC44 = {
 						CreatedOnToolsVersion = 9.1;
@@ -1456,7 +1517,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				"zh-Hant",
 				"zh-Hans",
 			);
@@ -1694,6 +1754,7 @@
 				B57D4C241FA18D2000303A93 /* SY_RegistView.m in Sources */,
 				B57D4C251FA18D2000303A93 /* SYPayController.m in Sources */,
 				B57D4C261FA18D2000303A93 /* m185_PayBackGroundView.m in Sources */,
+				B5C40F1221119B4E007F74D9 /* SYSDKModel.m in Sources */,
 				B5ABC0CB1FEA37CF00B24DE2 /* SDK_ADImage.m in Sources */,
 				B56568B11FE136F100E3CC44 /* LLRefreshFooterView.m in Sources */,
 				B5C40ED4211155D4007F74D9 /* MASConstraint.m in Sources */,
@@ -1703,6 +1764,7 @@
 				B57D4C291FA18D2000303A93 /* PAlipayController.m in Sources */,
 				B5B28E251FDA400C008A9BCD /* FBSubmitViewController.m in Sources */,
 				B57D4C2A1FA18D2000303A93 /* PPhonepayController.m in Sources */,
+				B5C40F0321118E47007F74D9 /* SYRequestTool.m in Sources */,
 				B5E29C952099928E00AFE368 /* FFPayDetailViewController.m in Sources */,
 				B57D4C2B1FA18D2000303A93 /* PPlatformCoinViewController.m in Sources */,
 				B57D4C2C1FA18D2000303A93 /* PTenpayController.m in Sources */,
@@ -1735,6 +1797,8 @@
 				B5C40EF621115F53007F74D9 /* FBShimmeringLayer.m in Sources */,
 				B56564031FDE719200E3CC44 /* FeedbackCell.m in Sources */,
 				B57D4C101FA18CF500303A93 /* SYFloatViewModel.m in Sources */,
+				B5C40F0E21119944007F74D9 /* SYGeneralModel.m in Sources */,
+				B5C40EFC21116129007F74D9 /* SYDeviceTool.m in Sources */,
 				B57D4C111FA18CF500303A93 /* SYFloatViewController.m in Sources */,
 				B57D4C131FA18CF500303A93 /* FAccountViewController.m in Sources */,
 				B56568AF1FE136F100E3CC44 /* LLRefreshComponent.m in Sources */,
@@ -1982,7 +2046,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/SY_185SDK/Other/SY185_PCHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SY_185SDK/SY185_PCHeader.pch";
 				INFOPLIST_FILE = SY_185SDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2022,7 +2086,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/SY_185SDK/Other/SY185_PCHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SY_185SDK/SY185_PCHeader.pch";
 				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = YES;
 				INFOPLIST_FILE = SY_185SDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

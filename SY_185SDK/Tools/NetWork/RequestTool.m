@@ -148,9 +148,7 @@
             [signString appendString:@"&"];
         }
     }];
-
     [signString appendString:[SDKModel sharedModel].AppKey];
-
     return [RequestTool md5:signString];
 }
 
@@ -166,9 +164,6 @@
             return  channel;
         }
     }
-
-
-    
 
     NSString *path = [InfomationTool getBundlePath:@"SDKCHANNELID.txt"];
 
@@ -201,7 +196,6 @@
     if (str && str.length > 0) {
         result = [str stringByReplacingOccurrencesOfString:@"\n"withString:@""];
     }
-
     return result;
 }
 
