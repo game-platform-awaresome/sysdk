@@ -19,6 +19,10 @@
 #define DEVICE_CHANNEL @"device(_Channel"
 #define DEVICE_CHANNEL_STRING @"device(_Channel_string"
 
+#import "LoginController.h"
+#import "SYFloatViewController.h"
+
+
 @implementation InfomationTool
 
 /** 设备 id */
@@ -438,7 +442,16 @@ static UIImageView *_animationView = nil;
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
 
 //    [[InfomationTool rootViewController] presentViewController:alertController animated:YES completion:nil];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+
+    if ([LoginController sharedController].isShow) {
+        [[LoginController sharedController] presentViewController:alertController animated:YES completion:nil];
+    } else if ([SYFloatViewController sharedController].currentController) {
+        [[SYFloatViewController sharedController].currentController presentViewController:alertController animated:YES completion:nil];
+    } else {
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
+    }
+
+//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(second * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [alertController dismissViewControllerAnimated:YES completion:^{
             if (dismiss) {

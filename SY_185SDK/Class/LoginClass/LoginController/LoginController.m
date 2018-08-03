@@ -7,10 +7,18 @@
 //
 
 #import "LoginController.h"
+
 #import "m185_LoginBackGroundView.h"
 #import "UserModel.h"
 #import "SDKModel.h"
+
 @class SY_BindingPhoneView;
+
+
+
+#define LOGIN_BACK_WIDTH FLOAT_MENU_WIDTH
+#define LOGIN_BACK_HEIGHT LOGIN_BACK_WIDTH * 0.8
+
 
 #ifdef DEBUG
 
@@ -52,6 +60,12 @@ static UIWindow *appWindow = nil;
 @property (nonatomic, strong) m185_LoginBackGroundView *backgroundView;
 
 
+
+
+@property (nonatomic, strong) UIViewController *testViewController;
+
+
+
 @end
 
 
@@ -66,7 +80,6 @@ LoginController *controller = nil;
     dispatch_once(&onceToken, ^{
         if (controller == nil) {
             controller = [[LoginController alloc] init];
-
         }
     });
     return controller;
@@ -75,11 +88,16 @@ LoginController *controller = nil;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self addobserver];
         [self addAutoLoginView];
     }
     return self;
 }
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+}
+
 
 - (void)addAutoLoginView {
     NSString *autoLogin = SDK_ISAUTOLOGIN;
@@ -154,25 +172,71 @@ LoginController *controller = nil;
         return;
     }
 
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:controller action:@selector(loginViewResignFirstResponds)];
-    tap.numberOfTapsRequired = 1;
-    tap.numberOfTouchesRequired = 1;
+    [self showView];
+    controller.isShow = YES;
+    [controller startAnimation];
 
-    if (useWindow) {
-        syLog(@"befor key window  === %@", [UIApplication sharedApplication].keyWindow);
-        appWindow = [UIApplication sharedApplication].keyWindow;
-        [controller.loginControllerBackGroundWindow makeKeyAndVisible];
-        [controller.loginControllerBackGroundWindow resignKeyWindow];
-        [appWindow makeKeyWindow];
-        [controller.windowRootViewController.view addSubview:controller.backgroundView];
-        [controller.windowRootViewController.view addGestureRecognizer:tap];
-        syLog(@"after key window  === %@", [UIApplication sharedApplication].keyWindow);
+    [controller stopAnimationAfter:10];
+
+//    if (useWindow) {
+//        syLog(@"befor key window  === %@", [UIApplication sharedApplication].keyWindow);
+//        appWindow = [UIApplication sharedApplication].keyWindow;
+//        [controller.loginControllerBackGroundWindow makeKeyAndVisible];
+//        [controller.loginControllerBackGroundWindow resignKeyWindow];
+//        [appWindow makeKeyWindow];
+//        [controller.windowRootViewController.view addSubview:controller.backgroundView];
+//        [controller.windowRootViewController.view addGestureRecognizer:tap];
+//        syLog(@"after key window  === %@", [UIApplication sharedApplication].keyWindow);
+//    } else {
+//        [[InfomationTool rootViewController].view addSubview:controller.loginControllerBackGroundView];
+//        [controller.loginControllerBackGroundView addSubview:controller.backgroundView];
+//        [controller.loginControllerBackGroundView addGestureRecognizer:tap];
+//    }
+
+}
+
++ (void)showView {
+    if ([UIApplication sharedApplication].keyWindow) {
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:controller action:@selector(loginViewResignFirstResponds)];
+        tap.numberOfTapsRequired = 1;
+        tap.numberOfTouchesRequired = 1;
+
+        if ([UIApplication sharedApplication].keyWindow.windowLevel == UIWindowLevelNormal) {
+            [[UIApplication sharedApplication].keyWindow addSubview:controller.loginControllerBackGroundView];
+            [controller.loginControllerBackGroundView addSubview:controller.backgroundView];
+            [controller.loginControllerBackGroundView addGestureRecognizer:tap];
+        } else {
+            for (UIWindow *window in [UIApplication sharedApplication].windows) {
+                if (window.windowLevel == UIWindowLevelNormal) {
+                    [[UIApplication sharedApplication].keyWindow addSubview:controller.loginControllerBackGroundView];
+                    [controller.loginControllerBackGroundView addSubview:controller.backgroundView];
+                    [controller.loginControllerBackGroundView addGestureRecognizer:tap];
+                    break;
+                }
+            }
+        }
+
+
+        [controller.loginControllerBackGroundView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.edges.mas_equalTo([UIApplication sharedApplication].keyWindow);
+        }];
+
+        [controller.backgroundView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(LOGIN_BACK_WIDTH, LOGIN_BACK_HEIGHT));
+            make.center.mas_equalTo(CGPointZero);
+        }];
+
+        if (!controller.testViewController) {
+            controller.testViewController = [UIViewController new];
+        }
+        [[UIApplication sharedApplication].keyWindow addSubview:controller.testViewController.view];
+        [[UIApplication sharedApplication].keyWindow sendSubviewToBack:controller.testViewController.view];
+
     } else {
-        [[InfomationTool rootViewController].view addSubview:controller.loginControllerBackGroundView];
-        [controller.loginControllerBackGroundView addSubview:controller.backgroundView];
-        [controller.loginControllerBackGroundView addGestureRecognizer:tap];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self showView];
+        });
     }
-
 }
 
 - (void)loginViewResignFirstResponds {
@@ -184,43 +248,55 @@ LoginController *controller = nil;
 }
 
 + (void)hideLoginView {
-    if (controller.useWindow) {
+//    if (controller.useWindow) {
 //        [controller.loginControllerBackGroundWindow resignKeyWindow];
 //        controller.windowRootViewController = nil;
 //        controller.loginControllerBackGroundView.hidden = YES;
 //        controller.loginControllerBackGroundWindow = nil;
+
 //        if (appWindow) {
 //            [appWindow makeKeyAndVisible];
 //        }
 
-        [controller.loginControllerBackGroundWindow setHidden:YES];
+//        [controller.loginControllerBackGroundWindow setHidden:YES];
 
 //        NSArray *windowArray = [UIApplication sharedApplication].windows;
 //        for (UIWindow *window in windowArray) {
 //            NSLog(@"\nwindow === %@\n",window);
 //        }
-    } else {
-        [controller.loginControllerBackGroundView removeFromSuperview];
-    }
+//    } else {
+//        [controller.loginControllerBackGroundView removeFromSuperview];
+//    }
+    [LoginController sharedController].isShow = NO;
+    [controller.loginControllerBackGroundView removeFromSuperview];
 }
 
 + (void)showADPicView {
 #warning show ad pic image view
     BOOL isShowAdPicView = [SDKModel sharedModel].isdisplay_ad.boolValue;
     if (isShowAdPicView) {
-        [controller.backgroundView removeFromSuperview];
-        if (controller.useWindow) {
-            [controller.windowRootViewController.view addSubview:(UIView *)controller.backgroundView.adPicImageView];
+        [self hideLoginView];
+
+
+        [[UIApplication sharedApplication].keyWindow addSubview:(UIView *)controller.backgroundView.adPicImageView];
+//        [controller.backgroundView removeFromSuperview];
+
+//        if (controller.useWindow) {
+//            [controller.windowRootViewController.view addSubview:(UIView *)controller.backgroundView.adPicImageView];
 //            [self hideLoginView];
+////        }
+//        } else {
+//            [[InfomationTool rootViewController].view addSubview:(UIView *)controller.backgroundView.adPicImageView];
 //        }
-        } else {
-            [[InfomationTool rootViewController].view addSubview:(UIView *)controller.backgroundView.adPicImageView];
-        }
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //            [[UIApplication sharedApplication].keyWindow addSubview:(UIView *)controller.backgroundView.adPicImageView];
 //        });
     } else {
+
+
         [LoginController showBingPhoneView];
+
+
     }
 }
 
@@ -233,12 +309,12 @@ LoginController *controller = nil;
         //显示绑定手机页面
         SDK_Log(@"显示绑定手机页面");
         [controller.backgroundView removeFromSuperview];
-        if (controller.useWindow) {
-            [controller.windowRootViewController.view addSubview:(UIView *)controller.backgroundView.bingdingPhoneView];
-        } else {
-            [[InfomationTool rootViewController].view addSubview:(UIView *)controller.backgroundView.bingdingPhoneView];
-        }
-//        [[UIApplication sharedApplication].keyWindow addSubview:(UIView *)controller.backgroundView.bingdingPhoneView];
+//        if (controller.useWindow) {
+//            [controller.windowRootViewController.view addSubview:(UIView *)controller.backgroundView.bingdingPhoneView];
+//        } else {
+//            [[InfomationTool rootViewController].view addSubview:(UIView *)controller.backgroundView.bingdingPhoneView];
+//        }
+        [controller.loginControllerBackGroundView addSubview:(UIView *)controller.backgroundView.bingdingPhoneView];
     } else {
         [LoginController showBindNameView];
     }
@@ -250,11 +326,12 @@ LoginController *controller = nil;
     if (isShowBindView && ([UserModel currentUser].id_card == nil || [UserModel currentUser].id_card.length == 0)) {
         [controller.backgroundView removeFromSuperview];
         SDK_Log(@"显示绑定信息页面");
-        if (controller.useWindow) {
-            [controller.windowRootViewController.view addSubview:(UIView *)controller.backgroundView.bindingIDCardView];
-        } else {
-            [[InfomationTool rootViewController].view addSubview:(UIView *)controller.backgroundView.bindingIDCardView];
-        }
+//        if (controller.useWindow) {
+//            [controller.windowRootViewController.view addSubview:(UIView *)controller.backgroundView.bindingIDCardView];
+//        } else {
+//            [[InfomationTool rootViewController].view addSubview:(UIView *)controller.backgroundView.bindingIDCardView];
+//        }
+        [controller.loginControllerBackGroundView addSubview:(UIView *)controller.backgroundView.bindingIDCardView];
     } else {
         [LoginController hideLoginView];
     }
@@ -274,11 +351,12 @@ LoginController *controller = nil;
 - (void)showAccountListView {
     [controller.backgroundView removeFromSuperview];
     SDK_Log(@"显示绑定信息页面");
-    if (controller.useWindow) {
-        [controller.windowRootViewController.view addSubview:(UIView *)controller.backgroundView.accountListView];
-    } else {
-        [[InfomationTool rootViewController].view addSubview:(UIView *)controller.backgroundView.accountListView];
-    }
+//    if (controller.useWindow) {
+//        [controller.windowRootViewController.view addSubview:(UIView *)controller.backgroundView.accountListView];
+//    } else {
+//        [[InfomationTool rootViewController].view addSubview:(UIView *)controller.backgroundView.accountListView];
+//    }
+    [controller.loginControllerBackGroundView addSubview:(UIView *)controller.backgroundView.accountListView];
 }
 
 #pragma mark - delegate login
@@ -407,15 +485,17 @@ LoginController *controller = nil;
     tap.numberOfTapsRequired = 1;
     tap.numberOfTouchesRequired = 1;
 
-    if (controller.useWindow) {
-        [controller.loginControllerBackGroundWindow makeKeyAndVisible];
-        [controller.windowRootViewController.view addSubview:controller.backgroundView];
-        [controller.windowRootViewController.view addGestureRecognizer:tap];
-    } else {
-        [[InfomationTool rootViewController].view addSubview:controller.loginControllerBackGroundView];
-        [controller.loginControllerBackGroundView addSubview:controller.backgroundView];
-        [controller.loginControllerBackGroundView addGestureRecognizer:tap];
-    }
+//    if (controller.useWindow) {
+//        [controller.loginControllerBackGroundWindow makeKeyAndVisible];
+//        [controller.windowRootViewController.view addSubview:controller.backgroundView];
+//        [controller.windowRootViewController.view addGestureRecognizer:tap];
+//    } else {
+//        [[InfomationTool rootViewController].view addSubview:controller.loginControllerBackGroundView];
+//        [controller.loginControllerBackGroundView addSubview:controller.backgroundView];
+//        [controller.loginControllerBackGroundView addGestureRecognizer:tap];
+//    }
+
+    [controller.loginControllerBackGroundView addSubview:self.backgroundView];
 }
 
 #pragma mark - delegate to register
@@ -460,7 +540,6 @@ LoginController *controller = nil;
     } else {
         [viewController removeAutoLoginView];
     }
-
 }
 
 #pragma mark - check is legal
@@ -495,30 +574,6 @@ LoginController *controller = nil;
     return YES;
 }
 
-#pragma mark - 监听屏幕旋转
-/** 添加监听事件 */
-- (void)addobserver {
-
-    UIDevice *device = [UIDevice currentDevice];
-    [device beginGeneratingDeviceOrientationNotifications];
-
-    NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
-
-    [notification addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification  object:device];
-
-}
-
-/** 监听屏幕的旋转 */
-- (void)orientationChanged:(NSNotification *)note  {
-    if ([SDKModel sharedModel].useWindow) {
-//        self.loginControllerBackGroundWindow.frame = CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_HEIGHT);
-//        self.windowRootViewController.view.frame = CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_HEIGHT);
-    } else {
-        self.loginControllerBackGroundView.frame = CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_HEIGHT);
-    }
-    self.backgroundView.center = CGPointMake(kSCREEN_WIDTH / 2, kSCREEN_HEIGHT / 2);
-}
-
 + (BOOL)isInit {
     if (controller) {
         return YES;
@@ -548,12 +603,13 @@ LoginController *controller = nil;
 }
 
 - (UIView *)loginControllerBackGroundView {
-    if (!_loginControllerBackGroundView) {
-        _loginControllerBackGroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_HEIGHT)];
-        _loginControllerBackGroundView.backgroundColor = BACKGROUNDCOLOR;
-//        _loginControllerBackGroundView.backgroundColor = [UIColor blackColor];
+    if (!self.view) {
+        self.view = [[UIView alloc] init];
+        self.view .backgroundColor = BACKGROUNDCOLOR;
+    } else {
+        self.view .backgroundColor = BACKGROUNDCOLOR;
     }
-    return _loginControllerBackGroundView;
+    return self.view;
 }
 
 - (m185_LoginBackGroundView *)backgroundView {

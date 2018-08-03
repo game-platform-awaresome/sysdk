@@ -142,7 +142,7 @@ static SYFloatViewController *controller = nil;
 #else
     self.view.backgroundColor = [UIColor clearColor];
 #endif
-    [self.view addSubview:self.closeBtn];
+//    [self.view addSubview:self.closeBtn];
     self.view.layer.masksToBounds = YES;
 
     [self.view addSubview:self.floatButton];
@@ -152,7 +152,7 @@ static SYFloatViewController *controller = nil;
         self.view.layer.masksToBounds = YES;
     }
     //添加手势
-    [self.view addGestureRecognizer:[self tap]];
+//    [self.view addGestureRecognizer:[self tap]];
 
 }
 
@@ -181,37 +181,36 @@ static SYFloatViewController *controller = nil;
 #pragma mark - method
 /** show float view */
 + (void)showFloatView {
-    if (FLOAT_CONTROLLER.useWindow) {
-        FLOAT_CONTROLLER.window.rootViewController = controller;
-
-        syLog(@"befor key window  === %@", [UIApplication sharedApplication].keyWindow);
-        appKeyWindow = [UIApplication sharedApplication].keyWindow;
-        [FLOAT_CONTROLLER.window makeKeyAndVisible];
-        [FLOAT_CONTROLLER.window resignKeyWindow];
-        [appKeyWindow makeKeyAndVisible];
-        syLog(@"after key window  === %@", [UIApplication sharedApplication].keyWindow);
-
-    } else {
-        FLOAT_CONTROLLER.view.center = FLOAT_ORI_CENTER;
+//    if (FLOAT_CONTROLLER.useWindow) {
+//        FLOAT_CONTROLLER.window.rootViewController = controller;
+//        syLog(@"befor key window  === %@", [UIApplication sharedApplication].keyWindow);
+//        appKeyWindow = [UIApplication sharedApplication].keyWindow;
+//        [FLOAT_CONTROLLER.window makeKeyAndVisible];
+//        [FLOAT_CONTROLLER.window resignKeyWindow];
+//        [appKeyWindow makeKeyAndVisible];
+//        syLog(@"after key window  === %@", [UIApplication sharedApplication].keyWindow);
+//
+//    } else {
 //        [ROOT_CONTROLLER addChildViewController:controller];
 
 //        [ROOT_CONTROLLER.view addSubview:controller.view];
 
-        [[UIApplication sharedApplication].keyWindow addSubview:controller.view];
-        [[UIApplication sharedApplication].keyWindow bringSubviewToFront:controller.view];
 //        [FLOAT_CONTROLLER didMoveToParentViewController:ROOT_CONTROLLER];
-    }
+//    }
+    FLOAT_CONTROLLER.view.center = FLOAT_ORI_CENTER;
+    [[UIApplication sharedApplication].keyWindow addSubview:controller.view];
+    [[UIApplication sharedApplication].keyWindow bringSubviewToFront:controller.view];
 }
 
 + (void)hideFloatView {
-    if (FLOAT_CONTROLLER.useWindow) {
-        [FLOAT_CONTROLLER.window resignKeyWindow];
-        FLOAT_CONTROLLER.window = nil;
-    } else {
+//    if (FLOAT_CONTROLLER.useWindow) {
+//        [FLOAT_CONTROLLER.window resignKeyWindow];
+//        FLOAT_CONTROLLER.window = nil;
+//    } else {
 //        [FLOAT_CONTROLLER willMoveToParentViewController:nil];
-        [FLOAT_CONTROLLER.view removeFromSuperview];
 //        [FLOAT_CONTROLLER removeFromParentViewController];
-    }
+//    }
+    [FLOAT_CONTROLLER.view removeFromSuperview];
 }
 
 - (void)signOut {
@@ -243,19 +242,24 @@ static SYFloatViewController *controller = nil;
 #pragma mark - responds to Gesture Recognizer
 /** 拖动的响应事件 */
 - (void)handlePan:(UIPanGestureRecognizer *)sender {
-    [ViewModel handelPan:sender WithResultView:(FLOAT_USEWINDOW ? self.window : self.view)];
+//    [ViewModel handelPan:sender WithResultView:(FLOAT_USEWINDOW ? self.window : self.view)];
+    [ViewModel handelPan:sender WithResultView:(self.view)];
 }
 
 /** 显示菜单 */
 - (void)handleTap:(UITapGestureRecognizer *)sender {
-    [ViewModel showFloatDetailViewWithController:self View:(FLOAT_USEWINDOW ? self.window : self.view)];
+    [self.view addSubview:self.closeBtn];
+//    [ViewModel showFloatDetailViewWithController:self View:(FLOAT_USEWINDOW ? self.window : self.view)];
+    [ViewModel showFloatDetailViewWithController:self View:(self.view)];
     _isShowMenu = YES;
 }
 
 /** 关闭菜单 */
 - (void)hideMenuView {
     _isShowMenu = NO;
-    [ViewModel hideFloatDetailViewWithController:self View:(FLOAT_USEWINDOW ? self.window : self.view)];
+    [self.closeBtn removeFromSuperview];
+//    [ViewModel hideFloatDetailViewWithController:self View:(FLOAT_USEWINDOW ? self.window : self.view)];
+    [ViewModel hideFloatDetailViewWithController:self View:(self.view)];
 }
 
 /** 关闭页面 */ 
@@ -278,7 +282,8 @@ static SYFloatViewController *controller = nil;
 
 /** 监听屏幕的旋转 */
 - (void)orientationChanged:(NSNotification *)note  {
-    [ViewModel screenRotatesWithController:self View:(FLOAT_USEWINDOW ? self.window : self.view)];
+//    [ViewModel screenRotatesWithController:self View:(FLOAT_USEWINDOW ? self.window : self.view)];
+    [ViewModel screenRotatesWithController:self View:(self.view)];
 }
 
 #pragma mark - select view delegate
@@ -361,11 +366,12 @@ static SYFloatViewController *controller = nil;
     }
 
 #warning fedbck
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:self.feedBackNavigationController animated:YES completion:^{
 
-    }];
+    [self presentViewController:self.feedBackNavigationController animated:YES completion:nil];
 
-
+//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:self.feedBackNavigationController animated:YES completion:^{
+//
+//    }];
 
 //    _accountPresentView = feedbackView;
 //    NSString *serviceQQ = [SDKModel sharedModel].qq;
@@ -377,9 +383,6 @@ static SYFloatViewController *controller = nil;
 //    self.feddbackQQLabel.text = [NSString stringWithFormat:@"客服QQ : %@",serviceQQ];
 //
 //    [self accountViewPresentChildView:self.feedbackView WithButtonFrame:button.frame];
-
-
-
 
 
 }

@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B5A017901F74F6B2005E75D6"
-            BuildableName = "SY_185SDK_Demo.app"
+            BuildableName = "tttooo.app"
             BlueprintName = "SY_185SDK_Demo"
             ReferencedContainer = "container:../SY_185SDK_Demo/SY_185SDK_Demo.xcodeproj">
          </BuildableReference>

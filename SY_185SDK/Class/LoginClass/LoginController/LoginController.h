@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SYBasicViewController.h"
 
 @class LoginController;
 
@@ -16,12 +17,13 @@
 
 @end
 
-@interface LoginController : NSObject
+@interface LoginController : SYBasicViewController
 
-@property (nonatomic, weak) id<LoginControllerDeleagete> delegate;
+@property (nonatomic, weak)     id<LoginControllerDeleagete>    delegate;
+@property (nonatomic, assign)   BOOL                            isShow;
+@property (nonatomic, assign)   BOOL                            useWindow;
 
-/** 是否使用窗口 */
-@property (nonatomic, assign) BOOL useWindow;
+
 
 + (LoginController *)sharedController;
 
@@ -29,6 +31,7 @@
 
 /** 显示登录页面 */
 + (void)showLoginViewUseTheWindow:(BOOL)useWindow WithDelegate:(id<LoginControllerDeleagete>)delegate;
+
 
 + (void)hideLoginView;
 

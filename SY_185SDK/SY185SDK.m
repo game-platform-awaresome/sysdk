@@ -20,8 +20,16 @@
 #import "SYSDKModel.h"
 #endif
 
+//new
+#import "SYLoginViewController.h"
 
-@interface SY185SDK () <LoginControllerDeleagete, SYfloatViewDelegate, SYPayControllerDeleagete, GMFunctionDelegate, ADImageDelegate>
+
+@interface SY185SDK ()
+<LoginControllerDeleagete,
+SYfloatViewDelegate,
+SYPayControllerDeleagete,
+GMFunctionDelegate,
+ADImageDelegate>
 
 @property (nonatomic, weak) id<SY185SDKDelegate> delegate;
 
@@ -38,11 +46,33 @@ static SY185SDK *sdk = nil;
             sdk = [[SY185SDK alloc] init];
 #ifdef DEBUG
             [sdk testFunction];
-
 #endif
         }
     });
     return sdk;
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self setCallBackBlock];
+    }
+    return self;
+}
+
+#pragma mark - call back block
+- (void)setCallBackBlock {
+    //登录回调
+    [LoginViewController setLoginResult:^(BOOL success, NSDictionary *content) {
+
+    }];
+
+    //登出回调
+    [LoginViewController setLogoutResult:^(BOOL success, NSDictionary *content) {
+
+    }];
+
+    
 }
 
 + (void)SDKShowMessage {

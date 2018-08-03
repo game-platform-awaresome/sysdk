@@ -353,6 +353,10 @@
 		B5C40F0E21119944007F74D9 /* SYGeneralModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C40F0C21119944007F74D9 /* SYGeneralModel.m */; };
 		B5C40F1121119B4E007F74D9 /* SYSDKModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C40F0F21119B4E007F74D9 /* SYSDKModel.h */; };
 		B5C40F1221119B4E007F74D9 /* SYSDKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C40F1021119B4E007F74D9 /* SYSDKModel.m */; };
+		B5C40F1D2112F6D8007F74D9 /* SYLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C40F1B2112F6D8007F74D9 /* SYLoginViewController.h */; };
+		B5C40F1E2112F6D8007F74D9 /* SYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C40F1C2112F6D8007F74D9 /* SYLoginViewController.m */; };
+		B5C40F222112F7D5007F74D9 /* SYBasicViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C40F202112F7D5007F74D9 /* SYBasicViewController.h */; };
+		B5C40F232112F7D5007F74D9 /* SYBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C40F212112F7D5007F74D9 /* SYBasicViewController.m */; };
 		B5D6142A20BF90B20010CA98 /* Tracking.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6142920BF90B20010CA98 /* Tracking.h */; };
 		B5D6143120BF93190010CA98 /* SYStatisticsModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6142F20BF93190010CA98 /* SYStatisticsModel.h */; };
 		B5D6143220BF93190010CA98 /* SYStatisticsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D6143020BF93190010CA98 /* SYStatisticsModel.m */; };
@@ -668,6 +672,10 @@
 		B5C40F0C21119944007F74D9 /* SYGeneralModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYGeneralModel.m; sourceTree = "<group>"; };
 		B5C40F0F21119B4E007F74D9 /* SYSDKModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYSDKModel.h; sourceTree = "<group>"; };
 		B5C40F1021119B4E007F74D9 /* SYSDKModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYSDKModel.m; sourceTree = "<group>"; };
+		B5C40F1B2112F6D8007F74D9 /* SYLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYLoginViewController.h; sourceTree = "<group>"; };
+		B5C40F1C2112F6D8007F74D9 /* SYLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYLoginViewController.m; sourceTree = "<group>"; };
+		B5C40F202112F7D5007F74D9 /* SYBasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYBasicViewController.h; sourceTree = "<group>"; };
+		B5C40F212112F7D5007F74D9 /* SYBasicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYBasicViewController.m; sourceTree = "<group>"; };
 		B5C9427F1F78986200B3E9DA /* SY185_PCHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SY185_PCHeader.pch; sourceTree = "<group>"; };
 		B5D6142920BF90B20010CA98 /* Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracking.h; sourceTree = "<group>"; };
 		B5D6142B20BF90E60010CA98 /* ReYunTracking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = ReYunTracking.a; path = "../SY_185SDK_Demo/trackingIO_ios_sdk_1.0.0 2/ReYunTracking.a"; sourceTree = "<group>"; };
@@ -1266,6 +1274,15 @@
 			path = SDKModel;
 			sourceTree = "<group>";
 		};
+		B5C40F1F2112F7A9007F74D9 /* BassicClass */ = {
+			isa = PBXGroup;
+			children = (
+				B5C40F202112F7D5007F74D9 /* SYBasicViewController.h */,
+				B5C40F212112F7D5007F74D9 /* SYBasicViewController.m */,
+			);
+			path = BassicClass;
+			sourceTree = "<group>";
+		};
 		B5C9427E1F78980600B3E9DA /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -1276,6 +1293,7 @@
 		B5D617AD1F7B425F0046740A /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				B5C40F1F2112F7A9007F74D9 /* BassicClass */,
 				B5022A7C1F8E26E500938301 /* FloatClass */,
 				B5D617AF1F7B43380046740A /* LoginClass */,
 				B5350BC51F8C9EA800E260EF /* PayClass */,
@@ -1321,9 +1339,11 @@
 		B5D617DE1F7DE2600046740A /* LoginController */ = {
 			isa = PBXGroup;
 			children = (
-				B5D617E51F7DF26B0046740A /* ChildClass */,
+				B5C40F1B2112F6D8007F74D9 /* SYLoginViewController.h */,
+				B5C40F1C2112F6D8007F74D9 /* SYLoginViewController.m */,
 				B5D617DF1F7DE4320046740A /* LoginController.h */,
 				B5D617E01F7DE4320046740A /* LoginController.m */,
+				B5D617E51F7DF26B0046740A /* ChildClass */,
 			);
 			path = LoginController;
 			sourceTree = "<group>";
@@ -1346,6 +1366,22 @@
 			files = (
 				B5A017B71F74FC81005E75D6 /* SY185SDK.h in Headers */,
 				B57D4C421FA18D4500303A93 /* SY185_PCHeader.pch in Headers */,
+				B5C40EDF211155D4007F74D9 /* NSArray+MASAdditions.h in Headers */,
+				B5C40EE7211155D4007F74D9 /* ViewController+MASAdditions.h in Headers */,
+				B5C40EE6211155D4007F74D9 /* View+MASShorthandAdditions.h in Headers */,
+				B5C40EE1211155D4007F74D9 /* NSArray+MASShorthandAdditions.h in Headers */,
+				B5C40EDD211155D4007F74D9 /* MASViewConstraint.h in Headers */,
+				B5C40EE4211155D4007F74D9 /* View+MASAdditions.h in Headers */,
+				B5C40EE2211155D4007F74D9 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				B5C40EEC21115701007F74D9 /* MBProgressHUD.h in Headers */,
+				B5C40ED0211155D4007F74D9 /* MASCompositeConstraint.h in Headers */,
+				B5C40ED2211155D4007F74D9 /* MASConstraint+Private.h in Headers */,
+				B5C40EDA211155D4007F74D9 /* MASUtilities.h in Headers */,
+				B5C40EDB211155D4007F74D9 /* MASViewAttribute.h in Headers */,
+				B5C40ED7211155D4007F74D9 /* MASLayoutConstraint.h in Headers */,
+				B5C40ED5211155D4007F74D9 /* MASConstraintMaker.h in Headers */,
+				B5C40ED3211155D4007F74D9 /* MASConstraint.h in Headers */,
+				B5C40ED9211155D4007F74D9 /* Masonry.h in Headers */,
 				B5D6142A20BF90B20010CA98 /* Tracking.h in Headers */,
 				B56568941FE112F100E3CC44 /* FBMineCell.h in Headers */,
 				B57D4C441FA18D8400303A93 /* BTWFloatModel.h in Headers */,
@@ -1355,13 +1391,10 @@
 				B57D4C491FA18D8400303A93 /* FAnnounceViewController.h in Headers */,
 				B57D4C4A1FA18D8400303A93 /* FPacksViewController.h in Headers */,
 				B5ABC0CA1FEA37CF00B24DE2 /* SDK_ADImage.h in Headers */,
-				B5C40EDF211155D4007F74D9 /* NSArray+MASAdditions.h in Headers */,
 				B56568AD1FE136F100E3CC44 /* LLRefresh.h in Headers */,
 				B57D4C4B1FA18D8400303A93 /* FSpeedViewController.h in Headers */,
 				B57D4C4C1FA18D8400303A93 /* FAnnouncementView.h in Headers */,
-				B5C40ED3211155D4007F74D9 /* MASConstraint.h in Headers */,
 				B5D6143120BF93190010CA98 /* SYStatisticsModel.h in Headers */,
-				B5C40ED5211155D4007F74D9 /* MASConstraintMaker.h in Headers */,
 				B57D4C4D1FA18D8400303A93 /* FloatSelectView.h in Headers */,
 				B57D4C4E1FA18D8400303A93 /* FPacksCell.h in Headers */,
 				B56568B01FE136F100E3CC44 /* LLRefreshFooterView.h in Headers */,
@@ -1370,7 +1403,6 @@
 				B565640C1FDFA9B800E3CC44 /* FBAlertController.h in Headers */,
 				B57D4C501FA18D8400303A93 /* FSettingView.h in Headers */,
 				B5E29C942099928E00AFE368 /* FFPayDetailViewController.h in Headers */,
-				B5C40ED7211155D4007F74D9 /* MASLayoutConstraint.h in Headers */,
 				B57D4C511FA18D8400303A93 /* SY_RRViewCell.h in Headers */,
 				B57D4C521FA18D8400303A93 /* m185_LoginBackGroundView.h in Headers */,
 				B57D4C531FA18D8400303A93 /* LoginController.h in Headers */,
@@ -1378,18 +1410,16 @@
 				B57D4C541FA18D8400303A93 /* SY_AutoLoginView.h in Headers */,
 				B57D4C551FA18D8400303A93 /* SY_BindingPhoneView.h in Headers */,
 				B5C40F1121119B4E007F74D9 /* SYSDKModel.h in Headers */,
+				B5C40F1D2112F6D8007F74D9 /* SYLoginViewController.h in Headers */,
 				B57D4C561FA18D8400303A93 /* SY_ForgetPasswordView.h in Headers */,
 				B57D4C571FA18D8400303A93 /* SY_LoginView.h in Headers */,
 				B56564101FDFB16500E3CC44 /* FBDetailViewController.h in Headers */,
 				B57D4C581FA18D8400303A93 /* SY_OneUpRegisteView.h in Headers */,
-				B5C40EE1211155D4007F74D9 /* NSArray+MASShorthandAdditions.h in Headers */,
 				B5C40EF721115F53007F74D9 /* FBShimmeringView.h in Headers */,
 				B57D4C591FA18D8400303A93 /* SY_RegistView.h in Headers */,
 				B57D4C5A1FA18D8400303A93 /* SYPayController.h in Headers */,
 				B565692B1FE25FB200E3CC44 /* FFRefreshTableView.h in Headers */,
 				B57D4C5B1FA18D8400303A93 /* m185_PayBackGroundView.h in Headers */,
-				B5C40EDB211155D4007F74D9 /* MASViewAttribute.h in Headers */,
-				B5C40EE6211155D4007F74D9 /* View+MASShorthandAdditions.h in Headers */,
 				B57D4C5C1FA18D8400303A93 /* m185WebViewController.h in Headers */,
 				B57D4C5D1FA18D8400303A93 /* m185CheackPayResults.h in Headers */,
 				B5ABC0C61FEA099300B24DE2 /* SY_adPicImageView.h in Headers */,
@@ -1419,26 +1449,18 @@
 				B57D4C6B1FA18D8400303A93 /* GM_FloatViewController.h in Headers */,
 				B57D4C6D1FA18D8400303A93 /* InfomationTool.h in Headers */,
 				B5C40EF521115F53007F74D9 /* FBShimmeringLayer.h in Headers */,
-				B5C40EDA211155D4007F74D9 /* MASUtilities.h in Headers */,
 				B56564151FDFD9E900E3CC44 /* FBServerCell.h in Headers */,
-				B5C40ED2211155D4007F74D9 /* MASConstraint+Private.h in Headers */,
-				B5C40ED0211155D4007F74D9 /* MASCompositeConstraint.h in Headers */,
 				B57D4C6E1FA18D8400303A93 /* RequestTool.h in Headers */,
 				B57D4C6F1FA18D8400303A93 /* Model.h in Headers */,
-				B5C40ED9211155D4007F74D9 /* Masonry.h in Headers */,
 				B57D4C701FA18D8400303A93 /* SDKModel.h in Headers */,
-				B5C40EE7211155D4007F74D9 /* ViewController+MASAdditions.h in Headers */,
 				B5C40EF421115F53007F74D9 /* FBShimmering.h in Headers */,
-				B5C40EEC21115701007F74D9 /* MBProgressHUD.h in Headers */,
 				B57D4C711FA18D8400303A93 /* UserModel.h in Headers */,
 				B57D4C721FA18D8400303A93 /* MapModel.h in Headers */,
 				B57D4C731FA18D8400303A93 /* PayModel.h in Headers */,
 				B5E1E560206344BA008F49CA /* SY_LogModel.h in Headers */,
 				B57D4C741FA18D8400303A93 /* DeviceModel.h in Headers */,
-				B5C40EE2211155D4007F74D9 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
-				B5C40EE4211155D4007F74D9 /* View+MASAdditions.h in Headers */,
-				B5C40EDD211155D4007F74D9 /* MASViewConstraint.h in Headers */,
 				B56564021FDE719200E3CC44 /* FeedbackCell.h in Headers */,
+				B5C40F222112F7D5007F74D9 /* SYBasicViewController.h in Headers */,
 				B5A017821F74F625005E75D6 /* SY_185SDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1761,6 +1783,7 @@
 				B57D4C271FA18D2000303A93 /* m185WebViewController.m in Sources */,
 				B57D4C281FA18D2000303A93 /* m185CheackPayResults.m in Sources */,
 				B59DE68E20EF19400058163E /* SY_AccountListView.m in Sources */,
+				B5C40F232112F7D5007F74D9 /* SYBasicViewController.m in Sources */,
 				B57D4C291FA18D2000303A93 /* PAlipayController.m in Sources */,
 				B5B28E251FDA400C008A9BCD /* FBSubmitViewController.m in Sources */,
 				B57D4C2A1FA18D2000303A93 /* PPhonepayController.m in Sources */,
@@ -1768,6 +1791,7 @@
 				B5E29C952099928E00AFE368 /* FFPayDetailViewController.m in Sources */,
 				B57D4C2B1FA18D2000303A93 /* PPlatformCoinViewController.m in Sources */,
 				B57D4C2C1FA18D2000303A93 /* PTenpayController.m in Sources */,
+				B5C40F1E2112F6D8007F74D9 /* SYLoginViewController.m in Sources */,
 				B57D4C2D1FA18D2000303A93 /* PWechatPayController.m in Sources */,
 				B5E1E561206344BA008F49CA /* SY_LogModel.m in Sources */,
 				B5C40ED6211155D4007F74D9 /* MASConstraintMaker.m in Sources */,
