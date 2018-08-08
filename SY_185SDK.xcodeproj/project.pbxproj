@@ -357,6 +357,10 @@
 		B5C40F1E2112F6D8007F74D9 /* SYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C40F1C2112F6D8007F74D9 /* SYLoginViewController.m */; };
 		B5C40F222112F7D5007F74D9 /* SYBasicViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C40F202112F7D5007F74D9 /* SYBasicViewController.h */; };
 		B5C40F232112F7D5007F74D9 /* SYBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C40F212112F7D5007F74D9 /* SYBasicViewController.m */; };
+		B5CCF215211833BC00FE2B04 /* SYFeedBackModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF213211833BC00FE2B04 /* SYFeedBackModel.h */; };
+		B5CCF216211833BC00FE2B04 /* SYFeedBackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF214211833BC00FE2B04 /* SYFeedBackModel.m */; };
+		B5CCF219211844BE00FE2B04 /* SYFBSourceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF217211844BE00FE2B04 /* SYFBSourceViewController.h */; };
+		B5CCF21A211844BE00FE2B04 /* SYFBSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF218211844BE00FE2B04 /* SYFBSourceViewController.m */; };
 		B5D6142A20BF90B20010CA98 /* Tracking.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6142920BF90B20010CA98 /* Tracking.h */; };
 		B5D6143120BF93190010CA98 /* SYStatisticsModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6142F20BF93190010CA98 /* SYStatisticsModel.h */; };
 		B5D6143220BF93190010CA98 /* SYStatisticsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D6143020BF93190010CA98 /* SYStatisticsModel.m */; };
@@ -677,6 +681,10 @@
 		B5C40F202112F7D5007F74D9 /* SYBasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYBasicViewController.h; sourceTree = "<group>"; };
 		B5C40F212112F7D5007F74D9 /* SYBasicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYBasicViewController.m; sourceTree = "<group>"; };
 		B5C9427F1F78986200B3E9DA /* SY185_PCHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SY185_PCHeader.pch; sourceTree = "<group>"; };
+		B5CCF213211833BC00FE2B04 /* SYFeedBackModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYFeedBackModel.h; sourceTree = "<group>"; };
+		B5CCF214211833BC00FE2B04 /* SYFeedBackModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYFeedBackModel.m; sourceTree = "<group>"; };
+		B5CCF217211844BE00FE2B04 /* SYFBSourceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYFBSourceViewController.h; sourceTree = "<group>"; };
+		B5CCF218211844BE00FE2B04 /* SYFBSourceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYFBSourceViewController.m; sourceTree = "<group>"; };
 		B5D6142920BF90B20010CA98 /* Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracking.h; sourceTree = "<group>"; };
 		B5D6142B20BF90E60010CA98 /* ReYunTracking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = ReYunTracking.a; path = "../SY_185SDK_Demo/trackingIO_ios_sdk_1.0.0 2/ReYunTracking.a"; sourceTree = "<group>"; };
 		B5D6142D20BF91270010CA98 /* SY_185Sta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = SY_185Sta.a; path = "../SY_185SDK_Demo/trackingIO_ios_sdk_1.0.0 2/SY_185Sta.a"; sourceTree = "<group>"; };
@@ -798,6 +806,8 @@
 				B5022AAB1F8E290500938301 /* BTWFloatModel.m */,
 				B57D4B4E1F9F286F00303A93 /* SYFloatViewModel.h */,
 				B57D4B4F1F9F286F00303A93 /* SYFloatViewModel.m */,
+				B5CCF213211833BC00FE2B04 /* SYFeedBackModel.h */,
+				B5CCF214211833BC00FE2B04 /* SYFeedBackModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1166,6 +1176,8 @@
 				B565640F1FDFB16500E3CC44 /* FBDetailViewController.m */,
 				B5B28E221FDA400C008A9BCD /* FBSubmitViewController.h */,
 				B5B28E231FDA400C008A9BCD /* FBSubmitViewController.m */,
+				B5CCF217211844BE00FE2B04 /* SYFBSourceViewController.h */,
+				B5CCF218211844BE00FE2B04 /* SYFBSourceViewController.m */,
 				B56568A11FE136F100E3CC44 /* Refresh */,
 			);
 			path = FeedBackController;
@@ -1396,6 +1408,7 @@
 				B57D4C4C1FA18D8400303A93 /* FAnnouncementView.h in Headers */,
 				B5D6143120BF93190010CA98 /* SYStatisticsModel.h in Headers */,
 				B57D4C4D1FA18D8400303A93 /* FloatSelectView.h in Headers */,
+				B5CCF219211844BE00FE2B04 /* SYFBSourceViewController.h in Headers */,
 				B57D4C4E1FA18D8400303A93 /* FPacksCell.h in Headers */,
 				B56568B01FE136F100E3CC44 /* LLRefreshFooterView.h in Headers */,
 				B57D4C4F1FA18D8400303A93 /* FRechargeRecordView.h in Headers */,
@@ -1427,6 +1440,7 @@
 				B5C40EFB21116129007F74D9 /* SYDeviceTool.h in Headers */,
 				B5B28E1F1FDA371F008A9BCD /* FeedbackNavigationController.h in Headers */,
 				B57D4C5F1FA18D8400303A93 /* PPhonepayController.h in Headers */,
+				B5CCF215211833BC00FE2B04 /* SYFeedBackModel.h in Headers */,
 				B57D4C601FA18D8400303A93 /* PPlatformCoinViewController.h in Headers */,
 				B57D4C611FA18D8400303A93 /* PTenpayController.h in Headers */,
 				B59DE68D20EF19400058163E /* SY_AccountListView.h in Headers */,
@@ -1767,6 +1781,7 @@
 				B56568B31FE136F100E3CC44 /* LLRefreshHeaderView.m in Sources */,
 				B57D4C1F1FA18D2000303A93 /* SY_AutoLoginView.m in Sources */,
 				B5C40ED1211155D4007F74D9 /* MASCompositeConstraint.m in Sources */,
+				B5CCF21A211844BE00FE2B04 /* SYFBSourceViewController.m in Sources */,
 				B57D4C201FA18D2000303A93 /* SY_BindingPhoneView.m in Sources */,
 				B565640D1FDFA9B800E3CC44 /* FBAlertController.m in Sources */,
 				B57D4C211FA18D2000303A93 /* SY_ForgetPasswordView.m in Sources */,
@@ -1775,6 +1790,7 @@
 				B57D4C231FA18D2000303A93 /* SY_OneUpRegisteView.m in Sources */,
 				B57D4C241FA18D2000303A93 /* SY_RegistView.m in Sources */,
 				B57D4C251FA18D2000303A93 /* SYPayController.m in Sources */,
+				B5CCF216211833BC00FE2B04 /* SYFeedBackModel.m in Sources */,
 				B57D4C261FA18D2000303A93 /* m185_PayBackGroundView.m in Sources */,
 				B5C40F1221119B4E007F74D9 /* SYSDKModel.m in Sources */,
 				B5ABC0CB1FEA37CF00B24DE2 /* SDK_ADImage.m in Sources */,

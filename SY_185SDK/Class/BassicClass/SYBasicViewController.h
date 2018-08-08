@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Masonry.h"
-
+#import "UserModel.h"
 
 @interface SYBasicViewController : UIViewController
 
@@ -23,6 +23,12 @@
 - (void)startAnimation;
 - (void)stopAnimation;
 - (void)stopAnimationAfter:(NSUInteger)time;
+
+
+/** 显示提示框 */
+- (void)showAlertMessage:(NSString *)message dismissTime:(float)second dismiss:(void(^)(void))dismiss;
+
+
 
 
 @end

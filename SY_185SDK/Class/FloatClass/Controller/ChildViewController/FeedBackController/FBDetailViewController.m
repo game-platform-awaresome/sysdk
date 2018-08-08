@@ -12,10 +12,11 @@
 #import "UserModel.h"
 #import "FBServerCell.h"
 #import "FBMineCell.h"
-//#import "LLRefresh.h"
-#import "FFRefreshTableView.h"
-//#import "MJRefresh.h"
 
+#import "FFRefreshTableView.h"
+
+#import "SYFBSourceViewController.h"
+#import "SYFloatViewController.h"
 
 @interface FBDetailViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -35,8 +36,10 @@
 @property (nonatomic, strong) UILabel *descriptionLabel;
 @property (nonatomic, strong) UITextView *descriptionView;
 
+/** 收起键盘 */
 @property (nonatomic, strong) UIBarButtonItem *cancelInpute;
-
+/** 客服评价 */
+@property (nonatomic, strong) UIBarButtonItem *CustomerServiceEvaluation;
 
 /** 工单 id */
 @property (nonatomic, strong) NSString *questionID;
@@ -47,11 +50,18 @@
 /** 总共页数 */
 @property (nonatomic, strong) NSString *totalPage;
 
+/** 是否可以添加评级 */
+@property (nonatomic, assign) BOOL canScore;
+/** 客服是否回复消息 */
+@property (nonatomic, assign) BOOL isReply;
+
+@property (nonatomic, strong) UILabel                       *sourceTitle;
+@property (nonatomic, strong) UIView                        *souceView;
+@property (nonatomic, strong) NSMutableArray<UIButton *>    *stars;
 
 
 
 //@property (nonatomic, strong) UIBarButtonItem *rightBUtton;
-
 
 
 
@@ -80,6 +90,10 @@ static FBDetailViewController *controller = nil;
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillHideWithNotification:) name:UIKeyboardWillHideNotification object:nil];
     }
     return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)keyboardWillShowWithNotification:(NSNotification *)notification {
@@ -115,7 +129,7 @@ static FBDetailViewController *controller = nil;
         }];
     }
 
-    self.navigationItem.rightBarButtonItem = nil;
+    self.navigationItem.rightBarButtonItem = self.CustomerServiceEvaluation;
 }
 
 
@@ -139,10 +153,12 @@ static FBDetailViewController *controller = nil;
     self.navigationItem.leftBarButtonItem = self.leftButton;
     [self.view addSubview:self.titleLabel];
     [self.view addSubview:self.typeLabel];
-    [self.view addSubview:self.descriptionLabel];
+//    [self.view addSubview:self.descriptionLabel];
     [self.view addSubview:self.descriptionView];
     [self.view addSubview:self.tableView];
-//    self.navigationItem.rightBarButtonItem = self.rightBUtton;
+    [self.view addSubview:self.sourceTitle];
+    [self.view addSubview:self.souceView];
+    self.navigationItem.rightBarButtonItem = self.CustomerServiceEvaluation;
 }
 
 - (void)viewWillLayoutSubviews {
@@ -151,8 +167,20 @@ static FBDetailViewController *controller = nil;
 
     self.titleLabel.frame = CGRectMake(10, kNAVGATION_HEIGHT + 10, WIDTH - 20, 30);
     self.typeLabel.frame = CGRectMake(10, CGRectGetMaxY(self.titleLabel.frame) + 3, WIDTH - 20, 30);
-    self.descriptionLabel.frame = CGRectMake(10, CGRectGetMaxY(self.typeLabel.frame) + 3, WIDTH - 20, 30);
-    self.descriptionView.frame = CGRectMake(10, CGRectGetMaxY(self.descriptionLabel.frame) + 5, WIDTH - 20, HEIGHT / 2 - CGRectGetMaxY(self.descriptionLabel.frame) - 10);
+//    self.descriptionLabel.frame = CGRectMake(10, CGRectGetMaxY(self.typeLabel.frame) + 3, WIDTH - 20, 30);
+    if (self.canScore) {
+        self.descriptionView.frame = CGRectMake(10, CGRectGetMaxY(self.typeLabel.frame) + 5, WIDTH - 20, HEIGHT / 2 - CGRectGetMaxY(self.typeLabel.frame) - 10);
+        self.souceView.frame = CGRectZero;
+        self.sourceTitle.frame = CGRectZero;
+        [self.souceView removeFromSuperview];
+        [self.sourceTitle removeFromSuperview];
+    } else {
+        self.descriptionView.frame = CGRectMake(10, CGRectGetMaxY(self.typeLabel.frame) + 5, WIDTH - 20, HEIGHT / 2 - CGRectGetMaxY(self.typeLabel.frame) - 65);
+        self.sourceTitle.frame = CGRectMake(10, CGRectGetMaxY(self.descriptionView.frame) + 5, WIDTH - 20, 20);
+        self.souceView.frame = CGRectMake(10, CGRectGetMaxY(self.sourceTitle.frame), WIDTH - 20, 30);
+        [self.view addSubview:self.sourceTitle];
+        [self.view addSubview:self.souceView];
+    }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -186,13 +214,19 @@ static FBDetailViewController *controller = nil;
     [self loadMoreData];
 }
 
+- (void)respondsToEvaluationButton {
+    [self presentViewController:[[FeedbackNavigationController alloc] initWithRootViewController:[SYFBSourceViewController showSourceCongrollerWith:self.questionID CallBackBlock:^{
+        [self refresData];
+    }]] animated:YES completion:nil];
+}
+
 - (void)refresData {
     _currentPage = 1;
-    [self startWaitAnimation];
 
+    [self startAnimation];
     [UserModel FeedBackDetailWithQuestionID:self.questionID Page:[NSString stringWithFormat:@"%ld",(long)_currentPage] Completion:^(NSDictionary *content, BOOL success) {
 
-        [self stopWaitAnimation];
+        [self stopAnimation];
         self.totalPage = SDK_CONTENT_DATA[@"question_list"][@"count"];
         if (self.totalPage.integerValue <= _currentPage) {
             self.isLoadMore = YES;
@@ -233,10 +267,7 @@ static FBDetailViewController *controller = nil;
     }
 
     _currentPage++;
-
     [UserModel FeedBackDetailWithQuestionID:self.questionID Page:[NSString stringWithFormat:@"%ld",(long)_currentPage] Completion:^(NSDictionary *content, BOOL success) {
-        [self stopWaitAnimation];
-
         self.totalPage = SDK_CONTENT_DATA[@"question_list"][@"count"];
         if (success) {
             NSArray *array = SDK_CONTENT_DATA[@"question_list"][@"list"];
@@ -271,15 +302,17 @@ static FBDetailViewController *controller = nil;
     [self setTitleLabelText:dict[@"title"]];
     self.questionID = dict[@"id"];
     self.questionArray = nil;
+    self.isReply = NO;
+    self.canScore = NO;
     [self refresData];
 }
 
 - (void)setTitleLabelText:(NSString *)string {
-    self.titleLabel.text = [NSString stringWithFormat:@"  标题 : %@",string];
+    self.titleLabel.text = [NSString stringWithFormat:@"标题 : %@",string];
 }
 
 - (void)setTypeLabelText:(NSString *)string {
-    self.typeLabel.text = [NSString stringWithFormat:@"  类型 : %@",string];
+    self.typeLabel.text = [NSString stringWithFormat:@"类型 : %@",string];
 }
 
 - (void)setDescriptionText:(NSString *)string {
@@ -291,6 +324,23 @@ static FBDetailViewController *controller = nil;
     [self setTitleLabelText:questionDict[@"title"]];
     [self setTypeLabelText:questionDict[@"type"]];
     [self setDescriptionText:questionDict[@"desc"]];
+    self.canScore = ([NSString stringWithFormat:@"%@",self.questionDict[@"rate"]].integerValue == 0);
+    [self setSources:questionDict[@"rate"]];
+}
+
+- (void)setSources:(id)souce {
+    NSString *so = [NSString stringWithFormat:@"%@",souce];
+    for (int i = 0; i < 5; i++) {
+        if (i < so.integerValue) {
+            [self.stars[i] setImage:SDK_IMAGE(@"star_full") forState:(UIControlStateNormal)];
+        } else {
+            [self.stars[i] setImage:SDK_IMAGE(@"star_empty") forState:(UIControlStateNormal)];
+        }
+    }
+}
+
+- (void)setQuestionArray:(NSMutableArray *)questionArray {
+    _questionArray = questionArray;
 }
 
 - (void)setTableViweContentSet {
@@ -315,6 +365,26 @@ static FBDetailViewController *controller = nil;
     }
 }
 
+- (void)setCanScore:(BOOL)canScore {
+    _canScore = canScore;
+    if (_canScore && _isReply) {
+        self.CustomerServiceEvaluation = [[UIBarButtonItem alloc] initWithTitle:@"客服评价" style:(UIBarButtonItemStyleDone) target:self action:@selector(respondsToEvaluationButton)];
+    } else {
+        self.CustomerServiceEvaluation = nil;
+    }
+    self.navigationItem.rightBarButtonItem = self.CustomerServiceEvaluation;
+}
+
+- (void)setIsReply:(BOOL)isReply {
+    _isReply = isReply;
+    if (_canScore && _isReply) {
+        self.CustomerServiceEvaluation = [[UIBarButtonItem alloc] initWithTitle:@"客服评价" style:(UIBarButtonItemStyleDone) target:self action:@selector(respondsToEvaluationButton)];
+    } else {
+        self.CustomerServiceEvaluation = nil;
+    }
+    self.navigationItem.rightBarButtonItem = self.CustomerServiceEvaluation;
+}
+
 #pragma mark - tableview data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -337,6 +407,7 @@ static FBDetailViewController *controller = nil;
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"FBServerCell"];
         [(FBServerCell *)cell setTextString:dict[@"comment"]];
+        self.isReply = YES;
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
@@ -393,7 +464,7 @@ static FBDetailViewController *controller = nil;
         _descriptionLabel.backgroundColor = [UIColor whiteColor];
         _descriptionLabel.layer.cornerRadius = 8;
         _descriptionLabel.layer.masksToBounds = YES;
-        _descriptionLabel.text = @"  详情 : ";
+        _descriptionLabel.text = @"详情 : ";
     }
     return _descriptionLabel;
 }
@@ -455,13 +526,6 @@ static FBDetailViewController *controller = nil;
     return _tableViewBackGroundLabel;
 }
 
-- (NSMutableArray *)questionArray {
-    if (!_questionArray) {
-        _questionArray = [NSMutableArray array];
-    }
-    return _questionArray;
-}
-
 - (UIView *)inputeTextView {
     if (!_inputeTextView) {
         _inputeTextView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.tableView.frame), WIDTH, 44)];
@@ -493,42 +557,35 @@ static FBDetailViewController *controller = nil;
     return _cancelInpute;
 }
 
-//- (UIBarButtonItem *)rightBUtton {
-//    if (!_rightBUtton) {
-//        _rightBUtton = [[UIBarButtonItem alloc] initWithTitle:@"加载更多" style:(UIBarButtonItemStyleDone) target:self action:@selector(respondsToRightButton)];
-//    }
-//    return _rightBUtton;
-//}
-
-- (void)showAlertMessage:(NSString *)message dismissTime:(float)second dismiss:(void (^)(void))dismiss  {
-
-    FBAlertController *alertController = [FBAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
-
-    [self presentViewController:alertController animated:YES completion:nil];
-
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(second * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [alertController dismissViewControllerAnimated:YES completion:^{
-            if (dismiss) {
-                dismiss();
-            }
-        }];
-    });
+- (UILabel *)sourceTitle {
+    if (!_sourceTitle) {
+        _sourceTitle = [[UILabel alloc] init];
+        _sourceTitle.textAlignment = NSTextAlignmentLeft;
+        _sourceTitle.backgroundColor = [UIColor whiteColor];
+        _sourceTitle.layer.cornerRadius = 8;
+        _sourceTitle.layer.masksToBounds = YES;
+        _sourceTitle.text = @"评分 :";
+    }
+    return _sourceTitle;
 }
 
-
-/** 开始等待动画 */
-- (void)startWaitAnimation {
-    [InfomationTool animationBack].frame = CGRectMake(0, 0, WIDTH, HEIGHT);
-    [InfomationTool animationView].center = CGPointMake(WIDTH / 2, HEIGHT / 2);
-    [self.view addSubview:[InfomationTool animationBack]];
-    [[InfomationTool animationView] startAnimating];
+- (UIView *)souceView {
+    if (!_souceView) {
+        _souceView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, 30)];
+        _souceView.layer.masksToBounds = YES;
+        NSMutableArray *array = [NSMutableArray arrayWithCapacity:5];
+        for (int i = 0; i < 5; i++) {
+            UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+            button.frame = CGRectMake(i * 30, 0, 30, 30);
+            button.userInteractionEnabled = NO;
+            [_souceView addSubview:button];
+            [array addObject:button];
+        }
+        self.stars = array;
+    }
+    return _souceView;
 }
 
-/** 结束等待动画 */
-- (void)stopWaitAnimation {
-    [[InfomationTool animationBack] removeFromSuperview];
-    [[InfomationTool animationView] stopAnimating];
-}
 
 
 

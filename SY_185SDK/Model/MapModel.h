@@ -55,6 +55,11 @@
 
 @property (nonatomic, strong) NSString *REPORT_DATA;
 
+//1.50
+/** 提交客服评价 */
+@property (nonatomic, strong) NSString *QUESTION_RATE;
+
+
 + (MapModel *)sharedModel;
 
 

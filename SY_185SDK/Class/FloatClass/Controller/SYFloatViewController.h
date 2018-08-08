@@ -12,6 +12,7 @@
 #import "FAnnounceViewController.h"
 #import "FSpeedViewController.h"
 #import "FloatSelectView.h"
+#import "FeedbackNavigationController.h"
 
 @protocol SYfloatViewDelegate <NSObject>
 
@@ -52,6 +53,8 @@
 @property (nonatomic, strong) FPacksViewController *packsViewController;
 /** 加速控制器 */
 @property (nonatomic, strong) FSpeedViewController *speedViewController;
+
+@property (nonatomic, strong) FeedbackNavigationController *feedBackNavigationController;
 
 /** 控制器 */ 
 + (SYFloatViewController *)sharedController;

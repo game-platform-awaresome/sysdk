@@ -16,6 +16,8 @@ typedef enum : NSUInteger {
     CodeResetPassword
 } CodeMessage;
 
+typedef void(^UserModelCompletion)(NSDictionary *content, BOOL success);
+
 @interface UserModel : Model
 
 @property (nonatomic, strong) NSString *uid;
@@ -151,6 +153,12 @@ typedef enum : NSUInteger {
 
 /** 添加问题回复 */
 + (void)FeedBackAddCommentWith:(NSString *)comment QuestionID:(NSString *)question_id Completion:(void(^)(NSDictionary *content,BOOL success))completion;
+
+/** 客服评价 */
++ (void)CustomerServiceEvaluationWithQuestionID:(NSString *)questionID
+                                           Rate:(id)rate
+                                         Reason:(NSString *)reason
+                                     Completion:(UserModelCompletion)completion;
 
 #pragma mark - 新手机登录接口
 + (void)newPhoneNumberLoginWith:(NSString *)phoneNumber

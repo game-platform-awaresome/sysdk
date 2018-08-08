@@ -122,7 +122,8 @@ static MapModel *model = nil;
                       @"MOBILE_LOGINV2":@"http://api.185sy.com/index.php?g=api&m=user&a=mobile_login_v2",
                       @"CHECK_SWITCHUSER":@"http://api.185sy.com/index.php?g=api&m=user&a=check_switch_user",
                       @"EDIT_BUNICKNAME":@"http://api.185sy.com/index.php?g=api&m=user&a=edit_binduser_nickname",
-                      @"REPORT_DATA":@"http://api.185sy.com/index.php?g=api&m=user&a=report_data"
+                      @"REPORT_DATA":@"http://api.185sy.com/index.php?g=api&m=user&a=report_data",
+                      @"QUESTION_RATE":@"http://api.185sy.com/index.php?g=api&m=question&a=do_rate_by_player"
                       };
     }
     return _lastDict;

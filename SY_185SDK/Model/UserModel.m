@@ -574,6 +574,37 @@ static NSString *oneUpRegisterPassword = nil;
     }];
 }
 
+/** 客服评价 */
++ (void)CustomerServiceEvaluationWithQuestionID:(NSString *)questionID Rate:(id)rate Reason:(NSString *)reason Completion:(UserModelCompletion)completion {
+    if (![UserModel currentUser].uid) {
+        return;
+    }
+
+    NSArray *pamarasKey = @[@"uid",@"question_id",@"appid",@"channel",@"rate"];
+
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:SDK_GETUID forKey:@"uid"];
+    [dict setObject:questionID forKey:@"question_id"];
+    [dict setObject:SDK_GETAPPID forKey:@"appid"];
+    [dict setObject:SDK_GETCHANNELID forKey:@"channel"];
+    NSString *rateResult;
+    if ([rate isKindOfClass:[NSString class]]) {
+        rateResult = rate;
+    } else {
+        rateResult = [NSString stringWithFormat:@"%@",rate];
+    }
+    [dict setObject:rateResult forKey:@"rate"];
+
+    if (reason && rateResult.integerValue < 3) {
+        [dict setObject:reason forKey:@"reason"];
+    }
+
+    [dict setObject:SDK_GETSIGN(dict, pamarasKey) forKey:@"sign"];
+    [RequestTool postRequestWithURL:MAP_URL.QUESTION_RATE params:dict completion:^(NSDictionary *content, BOOL success) {
+        REQUEST_COMPLETION;
+    }];
+}
+
 
 #pragma mark - new login
 + (void)newPhoneNumberLoginWith:(NSString *)phoneNumber

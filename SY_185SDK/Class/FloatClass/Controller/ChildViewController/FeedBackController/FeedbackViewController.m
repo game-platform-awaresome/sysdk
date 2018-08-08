@@ -14,6 +14,8 @@
 #import "FBDetailViewController.h"
 #import "FFRefreshTableView.h"
 
+#import "SYFeedBackModel.h"
+
 #define RefreshHeaderKeyPathContentOffset @"RefreshHeaderKeyPathContentOffset"
 
 @interface FeedbackViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -29,6 +31,9 @@
 @property (nonatomic, assign) BOOL isLoadMore;
 @property (nonatomic, assign) BOOL isLoading;
 @property (nonatomic, assign) NSInteger currentPage;
+
+
+@property (nonatomic, strong) SYFeedBackModel *model;
 
 @end
 
@@ -159,6 +164,8 @@
     [self.navigationController presentViewController:[FBDetailViewController showDetail] animated:YES completion:^{
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }];
+
+//    [self.navigationController pushViewController:[FBDetailViewController showDetail] animated:YES];
 
 }
 

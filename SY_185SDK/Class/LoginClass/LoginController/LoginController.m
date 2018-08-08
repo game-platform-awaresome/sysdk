@@ -174,9 +174,9 @@ LoginController *controller = nil;
 
     [self showView];
     controller.isShow = YES;
-    [controller startAnimation];
-
-    [controller stopAnimationAfter:10];
+//    [controller startAnimation];
+//
+//    [controller stopAnimationAfter:10];
 
 //    if (useWindow) {
 //        syLog(@"befor key window  === %@", [UIApplication sharedApplication].keyWindow);

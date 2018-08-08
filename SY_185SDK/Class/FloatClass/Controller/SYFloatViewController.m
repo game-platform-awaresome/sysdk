@@ -105,7 +105,7 @@ static UIWindow *appKeyWindow;
 @property (nonatomic, assign) BOOL isResponds;
 
 
-@property (nonatomic, strong) FeedbackNavigationController *feedBackNavigationController;
+//@property (nonatomic, strong) FeedbackNavigationController *feedBackNavigationController;
 
 
 @end

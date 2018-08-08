@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SYBasicViewController.h"
 
-@interface FBDetailViewController : UIViewController
+@interface FBDetailViewController : SYBasicViewController
 
 @property (nonatomic, strong) NSDictionary *dict;
 
