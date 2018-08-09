@@ -211,6 +211,7 @@ static SY185SDK *sdk = nil;
     SDK_Log(@"显示登录页面");
     if ([SDKModel sharedModel].AppID) {
         [LoginController showLoginViewUseTheWindow:[SDKModel sharedModel].useWindow WithDelegate:sdk];
+//        [SYLoginViewController showLoginView];
     } else {
         SDK_MESSAGE(@"正在初始化或未接入网络,请稍后尝试");
     }

@@ -59,7 +59,7 @@ static UIWindow *appWindow = nil;
 /** 背景视图 */
 @property (nonatomic, strong) m185_LoginBackGroundView *backgroundView;
 
-
+@property (nonatomic, assign) BOOL isSetViews;
 
 
 @property (nonatomic, strong) UIViewController *testViewController;
@@ -197,40 +197,40 @@ LoginController *controller = nil;
 
 + (void)showView {
     if ([UIApplication sharedApplication].keyWindow) {
+
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:controller action:@selector(loginViewResignFirstResponds)];
         tap.numberOfTapsRequired = 1;
         tap.numberOfTouchesRequired = 1;
 
+
         if ([UIApplication sharedApplication].keyWindow.windowLevel == UIWindowLevelNormal) {
-            [[UIApplication sharedApplication].keyWindow addSubview:controller.loginControllerBackGroundView];
-            [controller.loginControllerBackGroundView addSubview:controller.backgroundView];
-            [controller.loginControllerBackGroundView addGestureRecognizer:tap];
+            [[UIApplication sharedApplication].keyWindow.rootViewController.view addSubview:[LoginController sharedController].loginControllerBackGroundView];
+            [[LoginController sharedController].loginControllerBackGroundView addSubview:[LoginController sharedController].backgroundView];
+            [[LoginController sharedController].loginControllerBackGroundView addGestureRecognizer:tap];
+
         } else {
             for (UIWindow *window in [UIApplication sharedApplication].windows) {
                 if (window.windowLevel == UIWindowLevelNormal) {
-                    [[UIApplication sharedApplication].keyWindow addSubview:controller.loginControllerBackGroundView];
-                    [controller.loginControllerBackGroundView addSubview:controller.backgroundView];
-                    [controller.loginControllerBackGroundView addGestureRecognizer:tap];
+                    [window.rootViewController.view addSubview:controller.loginControllerBackGroundView];
                     break;
                 }
             }
         }
 
+        if (![LoginController sharedController].isSetViews) {
+            NSLog(@"设置登录页面");
+            [[LoginController sharedController].loginControllerBackGroundView mas_makeConstraints:^(MASConstraintMaker *make) {
+                //                make.edges.mas_equalTo([UIApplication sharedApplication].keyWindow);
+                make.size.mas_equalTo([UIScreen mainScreen].bounds.size);
+                make.center.mas_equalTo(CGPointZero);
+            }];
 
-        [controller.loginControllerBackGroundView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.edges.mas_equalTo([UIApplication sharedApplication].keyWindow);
-        }];
-
-        [controller.backgroundView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(LOGIN_BACK_WIDTH, LOGIN_BACK_HEIGHT));
-            make.center.mas_equalTo(CGPointZero);
-        }];
-
-        if (!controller.testViewController) {
-            controller.testViewController = [UIViewController new];
+            [[LoginController sharedController].backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.size.mas_equalTo(CGSizeMake(LOGIN_BACK_WIDTH, LOGIN_BACK_HEIGHT));
+                make.center.mas_equalTo(CGPointZero);
+            }];
+            [LoginController sharedController].isSetViews = YES;
         }
-        [[UIApplication sharedApplication].keyWindow addSubview:controller.testViewController.view];
-        [[UIApplication sharedApplication].keyWindow sendSubviewToBack:controller.testViewController.view];
 
     } else {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

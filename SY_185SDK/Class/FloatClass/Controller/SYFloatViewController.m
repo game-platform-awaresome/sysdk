@@ -364,27 +364,8 @@ static SYFloatViewController *controller = nil;
     if (_isResponds) {
         return;
     }
-
 #warning fedbck
-
     [self presentViewController:self.feedBackNavigationController animated:YES completion:nil];
-
-//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:self.feedBackNavigationController animated:YES completion:^{
-//
-//    }];
-
-//    _accountPresentView = feedbackView;
-//    NSString *serviceQQ = [SDKModel sharedModel].qq;
-//
-//    if (!serviceQQ || serviceQQ.length < 4) {
-//        serviceQQ = @"客服失联了- -!!!";
-//    }
-//
-//    self.feddbackQQLabel.text = [NSString stringWithFormat:@"客服QQ : %@",serviceQQ];
-//
-//    [self accountViewPresentChildView:self.feedbackView WithButtonFrame:button.frame];
-
-
 }
 
 /** 公告 */
@@ -689,6 +670,9 @@ static SYFloatViewController *controller = nil;
     }
     return _feedBackNavigationController;
 }
+
+
+
 
 
 @end

@@ -8,6 +8,7 @@
 
 #import "FAccountViewController.h"
 #import "UserModel.h"
+#import "SDKModel.h"
 
 
 @interface FAccountViewController ()
@@ -60,6 +61,12 @@
         [self.platformCoin setTitle:[NSString stringWithFormat:@"  %@  ",[UserModel currentUser].platform_money] forState:(UIControlStateNormal)];
     } else {
         [self.platformCoin setTitle:@"  0  " forState:(UIControlStateNormal)];
+    }
+
+    if ([SDKModel sharedModel].box_icon.length > 0) {
+//        [self.avatar setImage:];
+    } else {
+        [self.avatar setImage:SDK_IMAGE(@"SDK_Avator")];
     }
 }
 

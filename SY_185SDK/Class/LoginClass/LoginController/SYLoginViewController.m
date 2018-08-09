@@ -50,6 +50,7 @@ SDKLOG(@"log in failure");\
 
 /** 背景视图 */
 @property (nonatomic, strong) m185_LoginBackGroundView *backgroundView;
+@property (nonatomic, strong) UIWindow *window;
 
 
 @end
@@ -147,7 +148,10 @@ static SYLoginViewController *sy_loginController = nil;
 }
 
 - (void)addViewToWindow:(UIWindow *)window {
-    [[UIApplication sharedApplication].keyWindow addSubview:BackgroundView];
+    if (window) {
+        self.window = window;
+    }
+    [self.window addSubview:BackgroundView];
     [BackgroundView addSubview:LoginViewController.backgroundView];
 }
 
@@ -163,14 +167,16 @@ static SYLoginViewController *sy_loginController = nil;
 
 #pragma mark - layout views
 - (void)layoutViews {
-    [sy_loginController.view mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo([UIApplication sharedApplication].keyWindow);
-    }];
+    if (self.window) {
+        [sy_loginController.view mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.edges.mas_equalTo(self.window);
+        }];
 
-    [sy_loginController.backgroundView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(LOGIN_BACK_WIDTH, LOGIN_BACK_HEIGHT));
-        make.center.mas_equalTo(CGPointZero);
-    }];
+        [sy_loginController.backgroundView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(LOGIN_BACK_WIDTH, LOGIN_BACK_HEIGHT));
+            make.center.mas_equalTo(CGPointZero);
+        }];
+    }
 }
 
 #pragma mark - responds

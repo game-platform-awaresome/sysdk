@@ -76,6 +76,23 @@
 @property (nonatomic, strong) NSArray *static_type;
 
 
+/** 1.50
+ * box_url
+ * 盒子落地页
+ */
+@property (nonatomic, strong) NSString *box_url;
+/**
+ *  box_pic_url
+ *  盒子落地页广告图
+ */
+@property (nonatomic, strong) NSString *box_pic_url;
+/**
+ *  box_icon
+ *  盒子图标地址
+ */
+@property (nonatomic, strong) NSString *box_icon;
+
+
 
 + (SDKModel *)sharedModel;
 
