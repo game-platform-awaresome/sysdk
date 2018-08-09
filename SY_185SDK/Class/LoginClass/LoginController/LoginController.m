@@ -336,7 +336,7 @@ LoginController *controller = nil;
 }
 
 + (void)showBoxADImageView {
-    if ([SDKModel sharedModel].box_url.length > 0 && [SDKModel sharedModel].box_pic_url.length > 0 && ![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"185game://"]]) {
+    if ([SDKModel sharedModel].box_url.length > 0 && [SDKModel sharedModel].box_pic_url.length > 0 && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"185game://"]]) {
         syLog(@"显示盒子广告页面");
         [controller.backgroundView removeFromSuperview];
         [controller.loginControllerBackGroundView addSubview:(UIView *)controller.backgroundView.boxADImageView];

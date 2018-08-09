@@ -8,7 +8,6 @@
 
 #import "SY_BoxADImageView.h"
 #import "SDKModel.h"
-#import "UIImageView+WebCache.h"
 
 @interface SY_BoxADImageView ()
 
@@ -36,7 +35,25 @@
     self.backgroundColor = [UIColor clearColor];
     [self addSubview:self.backView];
     if ([SDKModel sharedModel].box_pic_url.length > 0) {
-        [self.imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[SDKModel sharedModel].box_pic_url]]];
+
+        dispatch_queue_t globalQueue = dispatch_get_global_queue(0, 0);
+        dispatch_async(globalQueue, ^{
+            syLog(@"开始下载图片:%@", [NSThread currentThread]);
+
+            NSString *imageStr = [NSString stringWithFormat:@"%@",[SDKModel sharedModel].box_pic_url];
+            NSURL *imageURL = [NSURL URLWithString:imageStr];
+            NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                syLog(@"图片下载完成");
+                [self.imageView setImage:[UIImage imageWithData:imageData]];
+            });
+        });
+
+//        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[SDKModel sharedModel].box_pic_url]] options:(0) progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self.imageView setImage:image];
+//            });
+//        }];
     } else {
         [self respondsToCloseButton];
     }
