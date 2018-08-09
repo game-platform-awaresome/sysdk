@@ -52,6 +52,7 @@ static SDKModel *model = nil;
     [dict setObject:SDK_GETDEVICEID forKey:@"machine_code"];
     [dict setObject:SDK_GETSIGN(dict, array) forKey:@"sign"];
 
+    syLog(@"init param == %@",dict);
 //    WeakSelf;
     [RequestTool postRequestWithURL:[MapModel sharedModel].USER_INIT params:dict completion:^(NSDictionary *content, BOOL success) {
 
@@ -63,6 +64,7 @@ static SDKModel *model = nil;
             if (status.integerValue == 1) {
 //                [SDKModel sharedModel].AppKey = appkey;
 //                [SDKModel sharedModel].AppID = appID;
+
 //                [weakSelf setAllPropertyWithDict:content[@"data"]];
 
                 id dict = content[@"data"][@"notice_info"];
@@ -294,6 +296,15 @@ static SDKModel *model = nil;
             SDK_Log(@"数据上报失败");
         }
     }];
+}
+
+
+#pragma mark - setter
+- (void)setBox_url:(NSString *)box_url {
+    if (box_url) {
+        syLog(@"\n----------------------\n设置 boxurl \n------------------\n");
+        _box_url = [NSString stringWithFormat:@"%@",box_url];
+    }
 }
 
 

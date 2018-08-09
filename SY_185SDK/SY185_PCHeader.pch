@@ -120,7 +120,7 @@
 
 
 
-#define SDK_VERSION [NSString stringWithFormat:@"版本 : 1.4.3"]
+#define SDK_VERSION [NSString stringWithFormat:@"版本 : 1.5.0"]
 
 #endif /* SY185_PCHeader_pch */
 

@@ -396,6 +396,8 @@
 		B5CCF25F211C123F00FE2B04 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF23C211C123D00FE2B04 /* UIView+WebCache.m */; };
 		B5CCF260211C123F00FE2B04 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF23D211C123D00FE2B04 /* UIView+WebCacheOperation.h */; };
 		B5CCF261211C123F00FE2B04 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF23E211C123D00FE2B04 /* UIView+WebCacheOperation.m */; };
+		B5CCF264211C180200FE2B04 /* SY_BoxADImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF262211C180200FE2B04 /* SY_BoxADImageView.h */; };
+		B5CCF265211C180200FE2B04 /* SY_BoxADImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF263211C180200FE2B04 /* SY_BoxADImageView.m */; };
 		B5D6142A20BF90B20010CA98 /* Tracking.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6142920BF90B20010CA98 /* Tracking.h */; };
 		B5D6143120BF93190010CA98 /* SYStatisticsModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6142F20BF93190010CA98 /* SYStatisticsModel.h */; };
 		B5D6143220BF93190010CA98 /* SYStatisticsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D6143020BF93190010CA98 /* SYStatisticsModel.m */; };
@@ -755,6 +757,8 @@
 		B5CCF23C211C123D00FE2B04 /* UIView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCache.m"; sourceTree = "<group>"; };
 		B5CCF23D211C123D00FE2B04 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		B5CCF23E211C123D00FE2B04 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		B5CCF262211C180200FE2B04 /* SY_BoxADImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SY_BoxADImageView.h; sourceTree = "<group>"; };
+		B5CCF263211C180200FE2B04 /* SY_BoxADImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SY_BoxADImageView.m; sourceTree = "<group>"; };
 		B5D6142920BF90B20010CA98 /* Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracking.h; sourceTree = "<group>"; };
 		B5D6142B20BF90E60010CA98 /* ReYunTracking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = ReYunTracking.a; path = "../SY_185SDK_Demo/trackingIO_ios_sdk_1.0.0 2/ReYunTracking.a"; sourceTree = "<group>"; };
 		B5D6142D20BF91270010CA98 /* SY_185Sta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = SY_185Sta.a; path = "../SY_185SDK_Demo/trackingIO_ios_sdk_1.0.0 2/SY_185Sta.a"; sourceTree = "<group>"; };
@@ -1457,6 +1461,8 @@
 				B5ABC0C51FEA099300B24DE2 /* SY_adPicImageView.m */,
 				B59DE68B20EF19400058163E /* SY_AccountListView.h */,
 				B59DE68C20EF19400058163E /* SY_AccountListView.m */,
+				B5CCF262211C180200FE2B04 /* SY_BoxADImageView.h */,
+				B5CCF263211C180200FE2B04 /* SY_BoxADImageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1590,6 +1596,7 @@
 				B56568AE1FE136F100E3CC44 /* LLRefreshComponent.h in Headers */,
 				B5C40F0221118E47007F74D9 /* SYRequestTool.h in Headers */,
 				B5B28E1B1FDA2F1A008A9BCD /* FeedbackViewController.h in Headers */,
+				B5CCF264211C180200FE2B04 /* SY_BoxADImageView.h in Headers */,
 				B5CCF241211C123F00FE2B04 /* NSImage+WebCache.h in Headers */,
 				B57D4C6B1FA18D8400303A93 /* GM_FloatViewController.h in Headers */,
 				B57D4C6D1FA18D8400303A93 /* InfomationTool.h in Headers */,
@@ -1942,6 +1949,7 @@
 				B5B28E251FDA400C008A9BCD /* FBSubmitViewController.m in Sources */,
 				B57D4C2A1FA18D2000303A93 /* PPhonepayController.m in Sources */,
 				B5C40F0321118E47007F74D9 /* SYRequestTool.m in Sources */,
+				B5CCF265211C180200FE2B04 /* SY_BoxADImageView.m in Sources */,
 				B5E29C952099928E00AFE368 /* FFPayDetailViewController.m in Sources */,
 				B57D4C2B1FA18D2000303A93 /* PPlatformCoinViewController.m in Sources */,
 				B57D4C2C1FA18D2000303A93 /* PTenpayController.m in Sources */,

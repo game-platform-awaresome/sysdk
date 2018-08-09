@@ -9,6 +9,7 @@
 #import "FPacksViewController.h"
 #import "BTWFloatModel.h"
 #import "FPacksCell.h"
+#import "SDKModel.h"
 
 #define CELLIDE @"FPACKSCELL"
 
@@ -86,57 +87,112 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.showArray.count;
+    if ([SDKModel sharedModel].box_url) {
+        return self.showArray.count + 1;
+    } else {
+        return self.showArray.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    FPacksCell *cell = [tableView dequeueReusableCellWithIdentifier:CELLIDE];
-
-    cell.imageView.image = SDK_IMAGE(@"SDK_gift_light");
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",self.showArray[indexPath.row][@"pack_name"]];
-
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    label.font = [UIFont systemFontOfSize:14];
-    NSString *giftcode = [NSString stringWithFormat:@"%@",self.showArray[indexPath.row][@"pack_counts"]];
-
-    if (giftcode.length > 0) {
-        label.text = @"已领取";
-        label.textColor = BUTTON_GREEN_COLOR;
-    } else {
-        label.text = @"为领取";
-        label.textColor = BUTTON_YELLOW_COLOR;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELLIDE];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:CELLIDE];
     }
 
-    [label sizeToFit];
-
+    if ([SDKModel sharedModel].box_url) {
+        if (indexPath.row == 0) {
+            cell.imageView.image = SDK_IMAGE(@"SDK_gift_light");
+            cell.textLabel.text = @"测试礼包";
+            cell.detailTextLabel.text = @"";
+        } else {
+            cell.imageView.image = SDK_IMAGE(@"SDK_gift_light");
+            cell.textLabel.text = [NSString stringWithFormat:@"%@",self.showArray[indexPath.row - 1][@"pack_name"]];
+            NSString *giftcode = [NSString stringWithFormat:@"%@",self.showArray[indexPath.row - 1][@"pack_counts"]];
+            if (giftcode.length > 0) {
+                cell.detailTextLabel.text = @"已领取";
+                cell.detailTextLabel.textColor = BUTTON_GREEN_COLOR;
+            } else {
+                cell.detailTextLabel.text = @"未领取";
+                cell.detailTextLabel.textColor = BUTTON_YELLOW_COLOR;
+            }
+        }
+    } else {
+        cell.imageView.image = SDK_IMAGE(@"SDK_gift_light");
+        cell.textLabel.text = [NSString stringWithFormat:@"%@",self.showArray[indexPath.row][@"pack_name"]];
+        NSString *giftcode = [NSString stringWithFormat:@"%@",self.showArray[indexPath.row][@"pack_counts"]];
+        if (giftcode.length > 0) {
+            cell.detailTextLabel.text = @"已领取";
+            cell.detailTextLabel.textColor = BUTTON_GREEN_COLOR;
+        } else {
+            cell.detailTextLabel.text = @"未领取";
+            cell.detailTextLabel.textColor = BUTTON_YELLOW_COLOR;
+        }
+    }
     cell.backgroundColor = [UIColor whiteColor];
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *giftcode = [NSString stringWithFormat:@"%@",self.showArray[indexPath.row][@"giftcode"]];
-    if (giftcode.length > 0) {
-        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-        [pasteboard setString:giftcode];
-        SDK_MESSAGE(@"已经复制到剪贴板");
-    } else {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-        [BTWFloatModel getGiftWithGiftID:self.showArray[indexPath.row][@"id"] Completion:^(NSDictionary *content, BOOL success) {
+    if ([SDKModel sharedModel].box_url) {
+        if (indexPath.row == 0 ) {
 
-            if (success) {
-                UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-                [pasteboard setString:[NSString stringWithFormat:@"%@",content[@"giftcode"]]];
-                SDK_MESSAGE(@"已经复制到剪贴板");
+            if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"185game://"]]) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"185game://"]];
             } else {
-                NSString *message = [NSString stringWithFormat:@"%@",content[@"msg"]];
-                SDK_MESSAGE(message);
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[SDKModel sharedModel].box_url]];
             }
-            [self getDataSource];
-        }];
+
+            return;
+        }
+        NSString *giftcode = [NSString stringWithFormat:@"%@",self.showArray[indexPath.row - 1][@"giftcode"]];
+        if (giftcode.length > 0) {
+            UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+            [pasteboard setString:giftcode];
+            SDK_MESSAGE(@"已经复制到剪贴板");
+        } else {
+
+            [BTWFloatModel getGiftWithGiftID:self.showArray[indexPath.row - 1][@"id"] Completion:^(NSDictionary *content, BOOL success) {
+
+                if (success) {
+                    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+                    [pasteboard setString:[NSString stringWithFormat:@"%@",content[@"giftcode"]]];
+                    SDK_MESSAGE(@"已经复制到剪贴板");
+                } else {
+                    NSString *message = [NSString stringWithFormat:@"%@",content[@"msg"]];
+                    SDK_MESSAGE(message);
+                }
+                [self getDataSource];
+            }];
+
+        }
+    } else {
+        NSString *giftcode = [NSString stringWithFormat:@"%@",self.showArray[indexPath.row][@"giftcode"]];
+        if (giftcode.length > 0) {
+            UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+            [pasteboard setString:giftcode];
+            SDK_MESSAGE(@"已经复制到剪贴板");
+        } else {
+            [BTWFloatModel getGiftWithGiftID:self.showArray[indexPath.row][@"id"] Completion:^(NSDictionary *content, BOOL success) {
+                if (success) {
+                    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+                    [pasteboard setString:[NSString stringWithFormat:@"%@",content[@"giftcode"]]];
+                    SDK_MESSAGE(@"已经复制到剪贴板");
+                    [self getDataSource];
+                } else {
+                    NSString *message = [NSString stringWithFormat:@"%@",content[@"msg"]];
+                    SDK_MESSAGE(message);
+                }
+                [self getDataSource];
+            }];
+        }
 
     }
+
 
 }
 
@@ -150,7 +206,7 @@
         _tableview.showsHorizontalScrollIndicator = NO;
         _tableview.tableFooterView = [UIView new];
         _tableview.backgroundView = self.tableViewBackground;
-        [_tableview registerClass:[FPacksCell class] forCellReuseIdentifier:CELLIDE];
+//        [_tableview registerClass:[FPacksCell class] forCellReuseIdentifier:CELLIDE];
     }
     return _tableview;
 }

@@ -217,20 +217,20 @@ LoginController *controller = nil;
             }
         }
 
-        if (![LoginController sharedController].isSetViews) {
-            NSLog(@"设置登录页面");
-            [[LoginController sharedController].loginControllerBackGroundView mas_makeConstraints:^(MASConstraintMaker *make) {
-                //                make.edges.mas_equalTo([UIApplication sharedApplication].keyWindow);
-                make.size.mas_equalTo([UIScreen mainScreen].bounds.size);
-                make.center.mas_equalTo(CGPointZero);
-            }];
-
-            [[LoginController sharedController].backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.size.mas_equalTo(CGSizeMake(LOGIN_BACK_WIDTH, LOGIN_BACK_HEIGHT));
-                make.center.mas_equalTo(CGPointZero);
-            }];
-            [LoginController sharedController].isSetViews = YES;
-        }
+//        if (![LoginController sharedController].isSetViews) {
+//            NSLog(@"设置登录页面");
+//            [[LoginController sharedController].loginControllerBackGroundView mas_makeConstraints:^(MASConstraintMaker *make) {
+//                //                make.edges.mas_equalTo([UIApplication sharedApplication].keyWindow);
+//                make.size.mas_equalTo([UIScreen mainScreen].bounds.size);
+//                make.center.mas_equalTo(CGPointZero);
+//            }];
+//
+//            [[LoginController sharedController].backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
+//                make.size.mas_equalTo(CGSizeMake(LOGIN_BACK_WIDTH, LOGIN_BACK_HEIGHT));
+//                make.center.mas_equalTo(CGPointZero);
+//            }];
+//            [LoginController sharedController].isSetViews = YES;
+//        }
 
     } else {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -291,12 +291,9 @@ LoginController *controller = nil;
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //            [[UIApplication sharedApplication].keyWindow addSubview:(UIView *)controller.backgroundView.adPicImageView];
 //        });
+
     } else {
-
-
         [LoginController showBingPhoneView];
-
-
     }
 }
 
@@ -331,7 +328,18 @@ LoginController *controller = nil;
 //        } else {
 //            [[InfomationTool rootViewController].view addSubview:(UIView *)controller.backgroundView.bindingIDCardView];
 //        }
+        
         [controller.loginControllerBackGroundView addSubview:(UIView *)controller.backgroundView.bindingIDCardView];
+    } else {
+        [LoginController showBoxADImageView];
+    }
+}
+
++ (void)showBoxADImageView {
+    if ([SDKModel sharedModel].box_url.length > 0 && [SDKModel sharedModel].box_pic_url.length > 0 && ![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"185game://"]]) {
+        syLog(@"显示盒子广告页面");
+        [controller.backgroundView removeFromSuperview];
+        [controller.loginControllerBackGroundView addSubview:(UIView *)controller.backgroundView.boxADImageView];
     } else {
         [LoginController hideLoginView];
     }
@@ -345,6 +353,11 @@ LoginController *controller = nil;
 #pragma mark - close bind phone view
 - (void)m185_loginBackGroundView:(m185_LoginBackGroundView *)viewController respondsToCloseBindingPhoneView:(id)info {
     [LoginController showBindNameView];
+}
+
+#pragma mark - close box ad view
+- (void)m185_loginBackGroundView:(m185_LoginBackGroundView *)viewController respondsToCloseBoxADView:(id)info {
+    [LoginController hideLoginView];
 }
 
 #pragma mark - show account list view

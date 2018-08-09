@@ -40,6 +40,10 @@
 @property (nonatomic, strong) UIImageView *tableBacgroundImageView;
 
 
+/** 申请返利 */
+@property (nonatomic, strong) UIButton      *rebateButton;
+
+
 @end
 
 @implementation FRechargeRecordView
@@ -63,6 +67,7 @@
     self.layer.borderColor = [UIColor grayColor].CGColor;
     
     [self addSubview:self.title];
+    [self addSubview:self.rebateButton];
     [self addSubview:self.line];
     [self addSubview:self.tableView];
 }
@@ -123,11 +128,18 @@
     }];
 }
 
+#pragma mark - responds
+- (void)respondsTORebateButton {
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"185game://"]]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"185game://"]];
+    } else {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[SDKModel sharedModel].box_url]]];
+    }
+}
+
 #pragma mark - table view delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     return self.showArray.count;
-    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -280,6 +292,22 @@
         _tableBacgroundImageView.center = CGPointMake(FLOAT_MENU_WIDTH / 2, FLOAT_MENU_HEIGHT / 3);
     }
     return _tableBacgroundImageView;
+}
+
+- (UIButton *)rebateButton {
+    if ([SDKModel sharedModel].box_url.length > 0) {
+        if (!_rebateButton) {
+            _rebateButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+            [_rebateButton setTitle:@"申请返利" forState:(UIControlStateNormal)];
+            [_rebateButton setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
+            [_rebateButton sizeToFit];
+            [_rebateButton addTarget:self action:@selector(respondsTORebateButton) forControlEvents:(UIControlEventTouchUpInside)];
+            _rebateButton.center = CGPointMake(_rebateButton.bounds.size.width / 2 + 10, self.title.center.y);
+        }
+        return _rebateButton;
+    } else {
+        return nil;
+    }
 }
 
 

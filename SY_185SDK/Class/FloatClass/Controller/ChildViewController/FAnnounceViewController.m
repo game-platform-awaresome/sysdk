@@ -147,7 +147,7 @@
 
         NSString *state = content[@"state"];
         if (success && state.integerValue == 1) {
-            self.detailLabel.text = content[@"content"];
+            self.detailLabel.text = content[@"data"][@"content"];
         } else {
             self.detailLabel.text = @"暂无详情";
         }
@@ -216,7 +216,7 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
-        _titleLabel.text = @"公告";
+        _titleLabel.text = @"活动";
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.textColor = BLUE_DARK;
         _titleLabel.frame = CGRectMake(0, 0, FLOAT_MENU_WIDTH, FLOAT_MENU_HEIGHT / 7);

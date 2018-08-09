@@ -84,6 +84,8 @@
 - (void)refreshData {
     SDK_START_ANIMATION;
     [BTWFloatModel announcementListWithPage:@"1" Size:nil Completion:^(NSDictionary *content, BOOL success) {
+
+        
         SDK_STOP_ANIMATION;
         if (success) {
             self.showArray = SDK_CONTENT_DATA[@"list"];
@@ -155,9 +157,9 @@
 
     [BTWFloatModel detailAnnouncementWithID:announce Completion:^(NSDictionary *content, BOOL success) {
 
-        NSString *state = content[@"state"];
+        NSString *state = content[@"status"];
         if (success && state.integerValue == 1) {
-            self.detailLabel.text = content[@"content"];
+            self.detailLabel.text = content[@"data"][@"content"];
         } else {
             self.detailLabel.text = @"暂无详情";
         }
@@ -224,7 +226,7 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
-        _titleLabel.text = @"公告";
+        _titleLabel.text = @"活动";
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.textColor = BUTTON_GREEN_COLOR;
         _titleLabel.frame = CGRectMake(0, 0, FLOAT_MENU_WIDTH, FLOAT_MENU_WIDTH / 15 + FLOAT_MENU_WIDTH / 8);
@@ -322,7 +324,7 @@
 - (UILabel *)detailLabel {
     if (!_detailLabel) {
         _detailLabel = [[UILabel alloc] init];
-        _detailLabel.frame = CGRectMake(0, FLOAT_MENU_WIDTH / 15 + FLOAT_MENU_WIDTH / 8, FLOAT_MENU_WIDTH, FLOAT_MENU_HEIGHT - FLOAT_MENU_WIDTH / 15 + FLOAT_MENU_WIDTH / 8);
+        _detailLabel.frame = CGRectMake(0, FLOAT_MENU_WIDTH / 15 + FLOAT_MENU_WIDTH / 8, FLOAT_MENU_WIDTH, FLOAT_MENU_HEIGHT - FLOAT_MENU_WIDTH / 15 - FLOAT_MENU_WIDTH / 8);
         _detailLabel.backgroundColor = [UIColor whiteColor];
         _detailLabel.numberOfLines = 0;
         _detailLabel.textColor = TEXTCOLOR;

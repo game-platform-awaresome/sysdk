@@ -12,6 +12,7 @@
 @class SY_BindingIDCardView;
 @class SY_adPicImageView;
 @class SY_AccountListView;
+@class SY_BoxADImageView;
 
 @protocol m185_LoginBackGroundViewDeleagte <NSObject>
 
@@ -43,6 +44,10 @@
 /** 关闭广告页面 */
 - (void)m185_loginBackGroundView:(m185_LoginBackGroundView *)viewController
          respondsToCloseADPicView:(id)info;
+
+/** 关闭盒子广告页 */
+- (void)m185_loginBackGroundView:(m185_LoginBackGroundView *)viewController
+        respondsToCloseBoxADView:(id)info;
 
 /** 关闭账号列表 */
 - (void)m185_loginBackGroundView:(m185_LoginBackGroundView *)viewController closeAccountListView:(id)info;
@@ -84,14 +89,14 @@
 /** 释放第一响应 */
 - (void)inputResignFirstResponds;
 
-/** 登陆后的绑定手机页面 */
-@property (nonatomic, strong) SY_BindingPhoneView *bingdingPhoneView;
-
-/** 绑定身份证页面 */
-@property (nonatomic, strong) SY_BindingIDCardView *bindingIDCardView;
-
 /** 广告页 */
-@property (nonatomic, strong) SY_adPicImageView *adPicImageView;
+@property (nonatomic, strong) SY_adPicImageView     *adPicImageView;
+/** 登陆后的绑定手机页面 */
+@property (nonatomic, strong) SY_BindingPhoneView   *bingdingPhoneView;
+/** 绑定身份证页面 */
+@property (nonatomic, strong) SY_BindingIDCardView  *bindingIDCardView;
+/** 盒子广告页面 */
+@property (nonatomic, strong) SY_BoxADImageView     *boxADImageView;
 
 /** 账号列表页 */
 @property (nonatomic, strong) SY_AccountListView *accountListView;

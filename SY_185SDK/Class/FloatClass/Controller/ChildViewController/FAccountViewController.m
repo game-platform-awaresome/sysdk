@@ -9,6 +9,7 @@
 #import "FAccountViewController.h"
 #import "UserModel.h"
 #import "SDKModel.h"
+#import "UIImageView+WebCache.h"
 
 
 @interface FAccountViewController ()
@@ -64,7 +65,7 @@
     }
 
     if ([SDKModel sharedModel].box_icon.length > 0) {
-//        [self.avatar setImage:];
+        [self.avatar sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[SDKModel sharedModel].box_icon]] placeholderImage:SDK_IMAGE(@"SDK_Avator")];
     } else {
         [self.avatar setImage:SDK_IMAGE(@"SDK_Avator")];
     }
@@ -238,7 +239,7 @@
         _announceLabel = [[UILabel alloc] init];
         _announceLabel.bounds = CGRectMake(0, 0, view_width / 5, 30);
         _announceLabel.center = CGPointMake(self.announceButton.center.x, self.announceButton.center.y + view_width / 12);
-        _announceLabel.text = @"公告";
+        _announceLabel.text = @"活动";
         _announceLabel.font = [UIFont systemFontOfSize:14];
         _announceLabel.textAlignment = NSTextAlignmentCenter;
     }

@@ -244,14 +244,25 @@ static SY185SDK *sdk = nil;
     [UserModel currentUser].switchAccount = NO;
 
     if (success) {
-//        syLog(@"======== %@",[SDKModel sharedModel].isdisplay_buoy);
+
         syLog(@"channel = %@",[SDKModel sharedModel].channel);
 #warning show float view
+
+#ifdef DEBUG
+//        if ([SDKModel sharedModel].isdisplay_buoy.boolValue) {
+//            SDK_Log(@"显示悬浮标");
+            [SY185SDK showFloatView];
+//        }
+#else
         if ([SDKModel sharedModel].isdisplay_buoy.boolValue) {
             SDK_Log(@"显示悬浮标");
             [SY185SDK showFloatView];
         }
+
+
+#endif
     }
+
 
     SDK_Log(@"结束登录回调");
     SDKLOG(@"login call back end");

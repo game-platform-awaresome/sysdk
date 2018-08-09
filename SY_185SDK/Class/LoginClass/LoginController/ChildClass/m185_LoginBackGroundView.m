@@ -19,13 +19,25 @@
 #import "SY_BindingIDCardView.h"
 #import "SY_adPicImageView.h"
 #import "SY_AccountListView.h"
+#import "SY_BoxADImageView.h"
+
+
 
 #import "SDKModel.h"
 
 #define LOGIN_BACK_WIDTH FLOAT_MENU_WIDTH
 #define LOGIN_BACK_HEIGHT LOGIN_BACK_WIDTH * 0.8
 
-@interface m185_LoginBackGroundView ()<SYLoginViewDelegate,SYRegistViewDelegate,SYOneUpRegistDelegate,SYForgetPaswordDelegate,SYAutoLoginDelegate,BindingPhoneViewDelegate,AdPicImageViewDelegate,SY_AccountListViewDelegate>
+@interface m185_LoginBackGroundView ()
+<SYLoginViewDelegate,
+SYRegistViewDelegate,
+SYOneUpRegistDelegate,
+SYForgetPaswordDelegate,
+SYAutoLoginDelegate,
+BindingPhoneViewDelegate,
+AdPicImageViewDelegate,
+SY_AccountListViewDelegate,
+SY_BoxADImageViewDelegate>
 
 /** 登录页面 */
 @property (nonatomic, strong) SY_LoginView *loginView;
@@ -241,6 +253,13 @@
     }
 }
 
+#pragma mark - box ad view delegate
+- (void)SY_BoxADImageView:(SY_BoxADImageView *)view CloseBoxADImage:(id)info {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(m185_loginBackGroundView:respondsToCloseBoxADView:)]) {
+        [self.delegate m185_loginBackGroundView:self respondsToCloseBoxADView:nil];
+    }
+}
+
 #pragma mark - account list delegate
 - (void)SY_AccountListView:(SY_AccountListView *)view clickCloseButton:(id)obj {
     syLog(@"关闭账号列表");
@@ -438,6 +457,14 @@
         _accountListView.delegate = self;
     }
     return _accountListView;
+}
+
+- (SY_BoxADImageView *)boxADImageView {
+    if (!_boxADImageView) {
+        _boxADImageView = [[SY_BoxADImageView alloc] init];
+        _boxADImageView.delegate = self;
+    }
+    return _boxADImageView;
 }
 
 /** 立即注册 */
