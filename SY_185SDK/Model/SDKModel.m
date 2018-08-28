@@ -8,16 +8,16 @@
 
 #import "SDKModel.h"
 #import "MapModel.h"
-#import <UserNotifications/UserNotifications.h>
 #import "SYStatisticsModel.h"
 #import "UserModel.h"
 #import "RequestTool.h"
+
 
 #define SDKINITURL  MAINURL_ADDLASTURL(@"index.php?g=api&m=user&a=do_init")
 
 #define SystemVersion (([UIDevice currentDevice].systemVersion).doubleValue)
 
-@interface SDKModel ()<UNUserNotificationCenterDelegate>
+@interface SDKModel ()
 
 
 @end
@@ -95,79 +95,82 @@ static SDKModel *model = nil;
 + (void)pushNotificationWith:(NSDictionary *)dict {
     syLog(@"添加");
     syLog(@"dict === %@",dict);
-
-    if (SystemVersion > 10.0) {
-        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-
-        center.delegate = [SDKModel sharedModel];
-
-        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound)completionHandler:^(BOOL granted, NSError * _Nullable error) {
-            if (granted == YES) {
-
-                if (SystemVersion > 10.0) {
-
-                    UNTimeIntervalNotificationTrigger *timeTrigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:6 repeats:NO];
-
-                    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
-                    content.title = [NSString stringWithFormat:@"%@",dict[@"title"]];
-                    content.body = [NSString stringWithFormat:@"%@",dict[@"content"]];
-                    content.badge = @666;
-                    content.sound = [UNNotificationSound defaultSound];
-                    content.userInfo = dict;
-
-                    NSString *requestIdentifier = [SDKModel notificationIdentifierWithUserInfo:dict];
-
-                    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:requestIdentifier content:content trigger:timeTrigger];
-                    UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
-                    [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
-                        if (!error) {
-                            syLog(@"notification === 添加成功");
-                        }
-                    }];
-                } else {
-
-                }
-            } else {
-
-            }
-        }];
-
-        [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-
-        }];
-    } else {
+    if (NSClassFromString(@"UIPopoverController")) {
 
     }
+
+//    if (SystemVersion > 10.0) {
+//        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+//
+//        center.delegate = [SDKModel sharedModel];
+//
+//        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound)completionHandler:^(BOOL granted, NSError * _Nullable error) {
+//            if (granted == YES) {
+//
+//                if (SystemVersion > 10.0) {
+//
+//                    UNTimeIntervalNotificationTrigger *timeTrigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:6 repeats:NO];
+//
+//                    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+//                    content.title = [NSString stringWithFormat:@"%@",dict[@"title"]];
+//                    content.body = [NSString stringWithFormat:@"%@",dict[@"content"]];
+//                    content.badge = @666;
+//                    content.sound = [UNNotificationSound defaultSound];
+//                    content.userInfo = dict;
+//
+//                    NSString *requestIdentifier = [SDKModel notificationIdentifierWithUserInfo:dict];
+//
+//                    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:requestIdentifier content:content trigger:timeTrigger];
+//                    UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
+//                    [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+//                        if (!error) {
+//                            syLog(@"notification === 添加成功");
+//                        }
+//                    }];
+//                } else {
+//
+//                }
+//            } else {
+//
+//            }
+//        }];
+//
+//        [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+//
+//        }];
+//    } else {
+//
+//    }
 }
 
 
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
-
-    if (SystemVersion > 10.0) {
-        completionHandler(UNNotificationPresentationOptionAlert);
-    } else {
-
-    }
-}
-
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
-
-
-}
-
-+ (NSString *)notificationIdentifierWithUserInfo:(NSDictionary *)dict {
-    return [NSString stringWithFormat:@"%@-%@",dict[@"add_time"],dict[@"title"]];
-}
-
-+ (void)deletAllNotification {
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-
-    if (SystemVersion > 10.0) {
-        [[UNUserNotificationCenter currentNotificationCenter] removeDeliveredNotificationsWithIdentifiers:@[]];
-    } else {
-
-    }
-}
+//- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+//
+//    if (SystemVersion > 10.0) {
+//        completionHandler(UNNotificationPresentationOptionAlert);
+//    } else {
+//
+//    }
+//}
+//
+//- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+//
+//
+//}
+//
+//+ (NSString *)notificationIdentifierWithUserInfo:(NSDictionary *)dict {
+//    return [NSString stringWithFormat:@"%@-%@",dict[@"add_time"],dict[@"title"]];
+//}
+//
+//+ (void)deletAllNotification {
+//    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+//
+//    if (SystemVersion > 10.0) {
+//        [[UNUserNotificationCenter currentNotificationCenter] removeDeliveredNotificationsWithIdentifiers:@[]];
+//    } else {
+//
+//    }
+//}
 
 + (NSInteger)year:(NSDate *)date {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

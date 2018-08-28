@@ -218,17 +218,18 @@ LoginController *controller = nil;
         }
 
 //        if (![LoginController sharedController].isSetViews) {
-//            NSLog(@"设置登录页面");
-//            [[LoginController sharedController].loginControllerBackGroundView mas_makeConstraints:^(MASConstraintMaker *make) {
-//                //                make.edges.mas_equalTo([UIApplication sharedApplication].keyWindow);
-//                make.size.mas_equalTo([UIScreen mainScreen].bounds.size);
-//                make.center.mas_equalTo(CGPointZero);
+//            [[LoginController sharedController].loginControllerBackGroundView mas_updateConstraints:^(MASConstraintMaker *make) {
+//                make.edges.mas_equalTo([UIApplication sharedApplication].keyWindow);
+////                make.size.mas_equalTo([UIScreen mainScreen].bounds.size);
+////                make.center.mas_equalTo(CGPointZero);
 //            }];
 //
-//            [[LoginController sharedController].backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
+//
+//            [[LoginController sharedController].backgroundView mas_updateConstraints:^(MASConstraintMaker *make) {
 //                make.size.mas_equalTo(CGSizeMake(LOGIN_BACK_WIDTH, LOGIN_BACK_HEIGHT));
 //                make.center.mas_equalTo(CGPointZero);
 //            }];
+
 //            [LoginController sharedController].isSetViews = YES;
 //        }
 
@@ -336,7 +337,7 @@ LoginController *controller = nil;
 }
 
 + (void)showBoxADImageView {
-    if ([SDKModel sharedModel].box_url.length > 0 && [SDKModel sharedModel].box_pic_url.length > 0 && [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"185game://"]]) {
+    if ([SDKModel sharedModel].box_url.length > 0 && [SDKModel sharedModel].box_pic_url.length > 0 && ![[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"185game://"]]) {
         syLog(@"显示盒子广告页面");
         [controller.backgroundView removeFromSuperview];
         [controller.loginControllerBackGroundView addSubview:(UIView *)controller.backgroundView.boxADImageView];

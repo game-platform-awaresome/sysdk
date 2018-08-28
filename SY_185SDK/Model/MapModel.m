@@ -42,7 +42,7 @@ static MapModel *model = nil;
 - (void)getMapUrl:(void(^)(void))completion {
 
     WeakSelf;
-    [RequestTool postRequestWithURL:@"http://api.185sy.com/index.php?g=api&m=index&a=map" params:nil completion:^(NSDictionary *content, BOOL success) {
+    [RequestTool postRequestWithURL:@"http://testsdk.btwan.com/api/index/map" params:nil completion:^(NSDictionary *content, BOOL success) {
 
         syLog(@"%@",content);
         REQUEST_STATUS;

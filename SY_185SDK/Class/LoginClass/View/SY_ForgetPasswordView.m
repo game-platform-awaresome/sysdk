@@ -127,9 +127,7 @@ typedef enum : NSUInteger {
             }
 
             SDK_START_ANIMATION;
-
             [UserModel isRegisterWithphoneNumber:self.restFirstTextField.text Completion:^(NSDictionary *content, BOOL success) {
-
                 SDK_STOP_ANIMATION;
                 if (success) {
                     NSString *state = SDK_CONTENT_DATA[@"is_exsists"];
@@ -184,6 +182,8 @@ typedef enum : NSUInteger {
 
             SDK_START_ANIMATION;
             [UserModel ResetPasswordWithToken:_resetToken PhoneNumber:_resetPhoneNumber Password:self.restFirstTextField.text completion:^(NSDictionary *content, BOOL success) {
+
+
 
                 SDK_STOP_ANIMATION;
                 if (success) {

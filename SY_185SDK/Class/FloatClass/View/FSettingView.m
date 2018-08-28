@@ -446,7 +446,7 @@ typedef enum : NSUInteger {
                 NSString *status = content[@"status"];
                 if (success && status.integerValue == 1) {
 
-                    [UserModel currentUser].mobile = [NSString stringWithFormat:@"%@",SDK_CONTENT_DATA[@"mobile"]];
+                    [UserModel currentUser].mobile = _BPCurrentPhoneNumber;
                     [self.BPtimer invalidate];
                     self.BPtimer = nil;
                     
@@ -461,7 +461,7 @@ typedef enum : NSUInteger {
                     _bpNextType = BPimportComplete;
                 } else {
                     if (content) {
-                        [InfomationTool showAlertMessage:[RequestTool statuMessage:content[@"state"]] dismissTime:0.7 dismiss:nil];
+                        [InfomationTool showAlertMessage:content[@"msg"] dismissTime:0.7 dismiss:nil];
                     } else {
                         SDK_MESSAGE(@"网络不不见了!");
                     }
@@ -506,7 +506,6 @@ typedef enum : NSUInteger {
                             SDK_MESSAGE(@"解绑失败,请稍后重试");
                         }
                     }
-                    
                 }];
                 
             }

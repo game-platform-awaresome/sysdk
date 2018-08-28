@@ -217,8 +217,8 @@ static SYPayController *controller = nil;
     } else {
         //如果还没支付 就关闭了页面,回调失败
         SDK_Log(@"关闭了支付页面 : 回调支付失败");
-        if (self.SYPayDelegate && [self.SYPayDelegate respondsToSelector:@selector(m185_PayDelegateWithPaySuccess:WithInformation:)]) {
-            [self.SYPayDelegate m185_PayDelegateWithPaySuccess:NO WithInformation:@{@"orderID":@"",@"msg":@"user close the payment page"}];
+        if (self.SYPayDelegate && [self.SYPayDelegate respondsToSelector:@selector(m185_PayDelegateWithPaySuccess:WithInformation:)]){
+            [self.SYPayDelegate m185_PayDelegateWithPaySuccess:NO WithInformation:@{@"msg":@"user pay close"}];
         }
     }
     [self hidePayView];

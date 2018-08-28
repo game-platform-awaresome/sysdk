@@ -80,7 +80,12 @@
     NSURL * url = [request URL];
     WKNavigationActionPolicy  actionPolicy = WKNavigationActionPolicyAllow;
 
-    !([[url scheme] isEqualToString:@"http"] || [[url scheme] isEqualToString:@"https"]) ? [[UIApplication sharedApplication] openURL:url] : 0;
+    if ([[url scheme] isEqualToString:@"http"] || [[url scheme] isEqualToString:@"https"]) {
+
+    } else {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+
 
     decisionHandler(actionPolicy);
 }
