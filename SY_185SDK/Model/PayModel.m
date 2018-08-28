@@ -144,7 +144,9 @@ static PayModel *model = nil;
     SDK_Log(([NSString stringWithFormat:@"pay info after -> \n server_id : %@\n server_name : %@\n role_id : %@\n role_name : %@\n product_id : %@\n product_name : %@\n amount : %@\n extend : %@\n",serverID,serverName,roleID,roleName,productID,productName,amount,extension]));
 
     [RequestTool postRequestWithURL:MAP_URL.PAY_START params:dict completion:^(NSDictionary *content, BOOL success) {
+
         REQUEST_COMPLETION;
+
     }];
 }
 

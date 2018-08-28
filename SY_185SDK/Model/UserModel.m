@@ -580,7 +580,7 @@ static NSString *oneUpRegisterPassword = nil;
         return;
     }
 
-    NSArray *pamarasKey = @[@"uid",@"question_id",@"appid",@"channel",@"rate"];
+    NSArray *pamarasKey = @[@"uid",@"question_id",@"appid",@"channel",@"rate",@"reason"];
 
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     [dict setObject:SDK_GETUID forKey:@"uid"];
@@ -597,9 +597,15 @@ static NSString *oneUpRegisterPassword = nil;
 
     if (reason && rateResult.integerValue < 3) {
         [dict setObject:reason forKey:@"reason"];
+    } else {
+        [dict setObject:@"" forKey:reason];
     }
 
     [dict setObject:SDK_GETSIGN(dict, pamarasKey) forKey:@"sign"];
+
+
+
+    
     [RequestTool postRequestWithURL:MAP_URL.QUESTION_RATE params:dict completion:^(NSDictionary *content, BOOL success) {
         REQUEST_COMPLETION;
     }];

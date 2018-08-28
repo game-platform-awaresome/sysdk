@@ -71,8 +71,6 @@ static SY185SDK *sdk = nil;
     [LoginViewController setLogoutResult:^(BOOL success, NSDictionary *content) {
 
     }];
-
-    
 }
 
 + (void)SDKShowMessage {

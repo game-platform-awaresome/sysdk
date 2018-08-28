@@ -95,6 +95,9 @@ static SDKModel *model = nil;
 + (void)pushNotificationWith:(NSDictionary *)dict {
     syLog(@"添加");
     syLog(@"dict === %@",dict);
+    if (NSClassFromString(@"UIPopoverController")) {
+
+    }
 
     if (SystemVersion > 10.0) {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];

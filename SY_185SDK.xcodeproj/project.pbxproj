@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -40,151 +40,6 @@
 		B56564111FDFB16500E3CC44 /* FBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B565640F1FDFB16500E3CC44 /* FBDetailViewController.m */; };
 		B56564151FDFD9E900E3CC44 /* FBServerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B56564121FDFD9E900E3CC44 /* FBServerCell.h */; };
 		B56564161FDFD9E900E3CC44 /* FBServerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B56564131FDFD9E900E3CC44 /* FBServerCell.m */; };
-		B56567D01FE0CBB400E3CC44 /* SDK_AnnouncementAccess.png in Resources */ = {isa = PBXBuildFile; fileRef = B565671D1FE0CBA900E3CC44 /* SDK_AnnouncementAccess.png */; };
-		B56567D11FE0CBB400E3CC44 /* GM_closeButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565671E1FE0CBA900E3CC44 /* GM_closeButton@3x.png */; };
-		B56567D21FE0CBB400E3CC44 /* SDK_NoAnnouncement@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565671F1FE0CBA900E3CC44 /* SDK_NoAnnouncement@2x.png */; };
-		B56567D31FE0CBB400E3CC44 /* SDKConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = B56567201FE0CBA900E3CC44 /* SDKConfig.plist */; };
-		B56567D41FE0CBB400E3CC44 /* SDK_recharge_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567211FE0CBA900E3CC44 /* SDK_recharge_dark.png */; };
-		B56567D61FE0CBB400E3CC44 /* SDK_SettingChildBack.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567231FE0CBA900E3CC44 /* SDK_SettingChildBack.png */; };
-		B56567D71FE0CBB400E3CC44 /* SDK_login_Account.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567241FE0CBAA00E3CC44 /* SDK_login_Account.png */; };
-		B56567D81FE0CBB400E3CC44 /* SDK_Maccount_light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567251FE0CBAA00E3CC44 /* SDK_Maccount_light@3x.png */; };
-		B56567D91FE0CBB400E3CC44 /* GM_float.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567261FE0CBAA00E3CC44 /* GM_float.png */; };
-		B56567DA1FE0CBB400E3CC44 /* GM_unSelectCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567271FE0CBAA00E3CC44 /* GM_unSelectCell@2x.png */; };
-		B56567DB1FE0CBB400E3CC44 /* SDK_Speed_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567281FE0CBAA00E3CC44 /* SDK_Speed_dark@2x.png */; };
-		B56567DC1FE0CBB400E3CC44 /* SDKWechatPay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567291FE0CBAA00E3CC44 /* SDKWechatPay@2x.png */; };
-		B56567DD1FE0CBB400E3CC44 /* speedCut.png in Resources */ = {isa = PBXBuildFile; fileRef = B565672A1FE0CBAA00E3CC44 /* speedCut.png */; };
-		B56567DE1FE0CBB400E3CC44 /* SDK_SettingChildBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565672B1FE0CBAA00E3CC44 /* SDK_SettingChildBack@2x.png */; };
-		B56567DF1FE0CBB400E3CC44 /* GM_selectCell.png in Resources */ = {isa = PBXBuildFile; fileRef = B565672C1FE0CBAA00E3CC44 /* GM_selectCell.png */; };
-		B56567E01FE0CBB400E3CC44 /* speedUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565672D1FE0CBAA00E3CC44 /* speedUp@2x.png */; };
-		B56567E11FE0CBB400E3CC44 /* SDK_gift_light.png in Resources */ = {isa = PBXBuildFile; fileRef = B565672E1FE0CBAA00E3CC44 /* SDK_gift_light.png */; };
-		B56567E21FE0CBB400E3CC44 /* SDK_logout_light.png in Resources */ = {isa = PBXBuildFile; fileRef = B565672F1FE0CBAA00E3CC44 /* SDK_logout_light.png */; };
-		B56567E31FE0CBB400E3CC44 /* SDK_login_Password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567301FE0CBAA00E3CC44 /* SDK_login_Password@2x.png */; };
-		B56567E51FE0CBB400E3CC44 /* SDK_AnnouncementAccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567321FE0CBAA00E3CC44 /* SDK_AnnouncementAccess@2x.png */; };
-		B56567E61FE0CBB400E3CC44 /* SDK_Setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567331FE0CBAA00E3CC44 /* SDK_Setting@2x.png */; };
-		B56567E71FE0CBB400E3CC44 /* SDKPlatformCoinPay.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567341FE0CBAB00E3CC44 /* SDKPlatformCoinPay.png */; };
-		B56567EA1FE0CBB400E3CC44 /* SDK_Avator@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567371FE0CBAB00E3CC44 /* SDK_Avator@3x.png */; };
-		B56567EB1FE0CBB400E3CC44 /* SDK_logout_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567381FE0CBAB00E3CC44 /* SDK_logout_dark.png */; };
-		B56567ED1FE0CBB400E3CC44 /* GM_unSelectCell.png in Resources */ = {isa = PBXBuildFile; fileRef = B565673A1FE0CBAB00E3CC44 /* GM_unSelectCell.png */; };
-		B56567EE1FE0CBB400E3CC44 /* GM_selectUsed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565673B1FE0CBAB00E3CC44 /* GM_selectUsed@3x.png */; };
-		B56567EF1FE0CBB400E3CC44 /* SDK_AutoLogin_YES@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565673C1FE0CBAB00E3CC44 /* SDK_AutoLogin_YES@3x.png */; };
-		B56567F01FE0CBB400E3CC44 /* SDK_Avator.png in Resources */ = {isa = PBXBuildFile; fileRef = B565673D1FE0CBAB00E3CC44 /* SDK_Avator.png */; };
-		B56567F11FE0CBB400E3CC44 /* SDK_Login_line_down.png in Resources */ = {isa = PBXBuildFile; fileRef = B565673E1FE0CBAB00E3CC44 /* SDK_Login_line_down.png */; };
-		B56567F21FE0CBB400E3CC44 /* GM_float@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565673F1FE0CBAB00E3CC44 /* GM_float@2x.png */; };
-		B56567F31FE0CBB400E3CC44 /* SDK_logout_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567401FE0CBAB00E3CC44 /* SDK_logout_light@2x.png */; };
-		B56567F41FE0CBB400E3CC44 /* SDK_gift_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567411FE0CBAB00E3CC44 /* SDK_gift_dark.png */; };
-		B56567F51FE0CBB400E3CC44 /* SDK_login_Password.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567421FE0CBAB00E3CC44 /* SDK_login_Password.png */; };
-		B56567F61FE0CBB400E3CC44 /* SDK_NoAnnouncement@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567431FE0CBAB00E3CC44 /* SDK_NoAnnouncement@3x.png */; };
-		B56567F71FE0CBB400E3CC44 /* SDKAlipay.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567441FE0CBAB00E3CC44 /* SDKAlipay.png */; };
-		B56567F81FE0CBB400E3CC44 /* SDK_Speed_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567451FE0CBAC00E3CC44 /* SDK_Speed_light@2x.png */; };
-		B56567F91FE0CBB400E3CC44 /* SDK_Login_line_center@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567461FE0CBAC00E3CC44 /* SDK_Login_line_center@2x.png */; };
-		B56567FA1FE0CBB400E3CC44 /* SDK_login_Code.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567471FE0CBAC00E3CC44 /* SDK_login_Code.png */; };
-		B56567FB1FE0CBB400E3CC44 /* SDK_Login_line_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567481FE0CBAC00E3CC44 /* SDK_Login_line_up@2x.png */; };
-		B56567FC1FE0CBB400E3CC44 /* SDK_PlatformCoin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567491FE0CBAC00E3CC44 /* SDK_PlatformCoin@3x.png */; };
-		B56568011FE0CBB400E3CC44 /* SDK_Login_line_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565674E1FE0CBAC00E3CC44 /* SDK_Login_line_down@2x.png */; };
-		B56568021FE0CBB400E3CC44 /* SDK_NoGift@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565674F1FE0CBAC00E3CC44 /* SDK_NoGift@2x.png */; };
-		B56568041FE0CBB400E3CC44 /* speedCut@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567511FE0CBAC00E3CC44 /* speedCut@3x.png */; };
-		B56568051FE0CBB400E3CC44 /* SDKTenPay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567521FE0CBAC00E3CC44 /* SDKTenPay@2x.png */; };
-		B56568061FE0CBB400E3CC44 /* speedUp.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567531FE0CBAC00E3CC44 /* speedUp.png */; };
-		B56568081FE0CBB400E3CC44 /* SDK_announce_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567551FE0CBAC00E3CC44 /* SDK_announce_dark@3x.png */; };
-		B56568091FE0CBB400E3CC44 /* SDK_float.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567561FE0CBAC00E3CC44 /* SDK_float.png */; };
-		B565680C1FE0CBB400E3CC44 /* SDK_Login_line_center.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567591FE0CBAD00E3CC44 /* SDK_Login_line_center.png */; };
-		B565680D1FE0CBB400E3CC44 /* SYSDK_closeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565675A1FE0CBAD00E3CC44 /* SYSDK_closeButton@2x.png */; };
-		B565680E1FE0CBB400E3CC44 /* GM_selectCell@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565675B1FE0CBAD00E3CC44 /* GM_selectCell@3x.png */; };
-		B56568111FE0CBB400E3CC44 /* SDKPlatformCoinPay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565675E1FE0CBAD00E3CC44 /* SDKPlatformCoinPay@2x.png */; };
-		B56568121FE0CBB400E3CC44 /* SDK_Maccount_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565675F1FE0CBAD00E3CC44 /* SDK_Maccount_dark@2x.png */; };
-		B56568131FE0CBB400E3CC44 /* GM_closeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567601FE0CBAD00E3CC44 /* GM_closeButton.png */; };
-		B56568141FE0CBB400E3CC44 /* GM_unSelectCell@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567611FE0CBAD00E3CC44 /* GM_unSelectCell@3x.png */; };
-		B56568151FE0CBB400E3CC44 /* GM_selectUsed.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567621FE0CBAD00E3CC44 /* GM_selectUsed.png */; };
-		B56568161FE0CBB400E3CC44 /* SDK_AutoLogin_YES.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567631FE0CBAD00E3CC44 /* SDK_AutoLogin_YES.png */; };
-		B56568171FE0CBB400E3CC44 /* SDKWechatPay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567641FE0CBAD00E3CC44 /* SDKWechatPay@3x.png */; };
-		B56568181FE0CBB400E3CC44 /* SDK_login_Code@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567651FE0CBAD00E3CC44 /* SDK_login_Code@2x.png */; };
-		B56568191FE0CBB400E3CC44 /* SDK_NoRecord@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567661FE0CBAD00E3CC44 /* SDK_NoRecord@2x.png */; };
-		B565681A1FE0CBB400E3CC44 /* SDK_announce_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567671FE0CBAD00E3CC44 /* SDK_announce_dark.png */; };
-		B565681E1FE0CBB400E3CC44 /* SYSDK_closeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B565676B1FE0CBAE00E3CC44 /* SYSDK_closeButton.png */; };
-		B56568201FE0CBB400E3CC44 /* SDK_float@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565676D1FE0CBAE00E3CC44 /* SDK_float@3x.png */; };
-		B56568211FE0CBB400E3CC44 /* SDK_feedBack_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565676E1FE0CBAE00E3CC44 /* SDK_feedBack_dark@2x.png */; };
-		B56568231FE0CBB400E3CC44 /* GM_float@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567701FE0CBAE00E3CC44 /* GM_float@3x.png */; };
-		B56568241FE0CBB400E3CC44 /* SDK_AutoLogin_NO.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567711FE0CBAE00E3CC44 /* SDK_AutoLogin_NO.png */; };
-		B56568251FE0CBB400E3CC44 /* SDK_Change_account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567721FE0CBAE00E3CC44 /* SDK_Change_account@2x.png */; };
-		B56568261FE0CBB400E3CC44 /* SDK_Avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567731FE0CBAE00E3CC44 /* SDK_Avatar@2x.png */; };
-		B56568271FE0CBB400E3CC44 /* SDK_Login_line_center@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567741FE0CBAE00E3CC44 /* SDK_Login_line_center@3x.png */; };
-		B56568281FE0CBB400E3CC44 /* SDK_Maccount_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567751FE0CBAE00E3CC44 /* SDK_Maccount_dark@3x.png */; };
-		B56568291FE0CBB400E3CC44 /* SDKAlipay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567761FE0CBAE00E3CC44 /* SDKAlipay@3x.png */; };
-		B565682A1FE0CBB400E3CC44 /* SDKPhonePay.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567771FE0CBAE00E3CC44 /* SDKPhonePay.png */; };
-		B565682B1FE0CBB400E3CC44 /* SDK_login_Code@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567781FE0CBAE00E3CC44 /* SDK_login_Code@3x.png */; };
-		B565682C1FE0CBB400E3CC44 /* GM_juese@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567791FE0CBAE00E3CC44 /* GM_juese@2x.png */; };
-		B565682D1FE0CBB400E3CC44 /* SDK_login_Account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565677A1FE0CBAE00E3CC44 /* SDK_login_Account@2x.png */; };
-		B565682E1FE0CBB400E3CC44 /* SDK_Login_line_up@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565677B1FE0CBAF00E3CC44 /* SDK_Login_line_up@3x.png */; };
-		B56568301FE0CBB400E3CC44 /* SDK_NoAnnouncement.png in Resources */ = {isa = PBXBuildFile; fileRef = B565677D1FE0CBAF00E3CC44 /* SDK_NoAnnouncement.png */; };
-		B56568311FE0CBB400E3CC44 /* SDK_recharge_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565677E1FE0CBAF00E3CC44 /* SDK_recharge_dark@2x.png */; };
-		B56568321FE0CBB400E3CC44 /* SDK_server_Chat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565677F1FE0CBAF00E3CC44 /* SDK_server_Chat@2x.png */; };
-		B56568331FE0CBB400E3CC44 /* GM_selectFooter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567801FE0CBAF00E3CC44 /* GM_selectFooter@2x.png */; };
-		B56568351FE0CBB400E3CC44 /* SDK_feedBack_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567821FE0CBAF00E3CC44 /* SDK_feedBack_dark.png */; };
-		B56568361FE0CBB400E3CC44 /* SDK_AutoLogin_YES@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567831FE0CBAF00E3CC44 /* SDK_AutoLogin_YES@2x.png */; };
-		B56568371FE0CBB400E3CC44 /* SDK_float@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567841FE0CBAF00E3CC44 /* SDK_float@2x.png */; };
-		B565683B1FE0CBB400E3CC44 /* SDK_Speed_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567881FE0CBAF00E3CC44 /* SDK_Speed_dark.png */; };
-		B565683C1FE0CBB400E3CC44 /* SDK_Change_account.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567891FE0CBAF00E3CC44 /* SDK_Change_account.png */; };
-		B565683D1FE0CBB400E3CC44 /* GM_selectFooter.png in Resources */ = {isa = PBXBuildFile; fileRef = B565678A1FE0CBAF00E3CC44 /* GM_selectFooter.png */; };
-		B565683F1FE0CBB400E3CC44 /* SDK_Avatar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565678C1FE0CBAF00E3CC44 /* SDK_Avatar@3x.png */; };
-		B56568401FE0CBB400E3CC44 /* SDK_Maccount_light.png in Resources */ = {isa = PBXBuildFile; fileRef = B565678D1FE0CBAF00E3CC44 /* SDK_Maccount_light.png */; };
-		B56568411FE0CBB400E3CC44 /* SDK_Avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = B565678E1FE0CBB000E3CC44 /* SDK_Avatar.png */; };
-		B56568421FE0CBB400E3CC44 /* SDK_feedBack_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565678F1FE0CBB000E3CC44 /* SDK_feedBack_dark@3x.png */; };
-		B56568431FE0CBB400E3CC44 /* SDK_logout_light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567901FE0CBB000E3CC44 /* SDK_logout_light@3x.png */; };
-		B56568441FE0CBB400E3CC44 /* SDK_Change_account@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567911FE0CBB000E3CC44 /* SDK_Change_account@3x.png */; };
-		B56568451FE0CBB400E3CC44 /* SDK_Maccount_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567921FE0CBB000E3CC44 /* SDK_Maccount_light@2x.png */; };
-		B56568461FE0CBB400E3CC44 /* SDK_PlatformCoin.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567931FE0CBB000E3CC44 /* SDK_PlatformCoin.png */; };
-		B56568471FE0CBB400E3CC44 /* SDK_Speed_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567941FE0CBB000E3CC44 /* SDK_Speed_dark@3x.png */; };
-		B56568481FE0CBB400E3CC44 /* SDKPlatformCoinPay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567951FE0CBB000E3CC44 /* SDKPlatformCoinPay@3x.png */; };
-		B56568491FE0CBB400E3CC44 /* speedUp@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567961FE0CBB000E3CC44 /* speedUp@3x.png */; };
-		B565684A1FE0CBB400E3CC44 /* GM_juese@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567971FE0CBB000E3CC44 /* GM_juese@3x.png */; };
-		B565684B1FE0CBB400E3CC44 /* SDK_Setting.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567981FE0CBB000E3CC44 /* SDK_Setting.png */; };
-		B565684C1FE0CBB400E3CC44 /* SDK_Maccount_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567991FE0CBB000E3CC44 /* SDK_Maccount_dark.png */; };
-		B565684E1FE0CBB400E3CC44 /* SDKPhonePay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565679B1FE0CBB000E3CC44 /* SDKPhonePay@2x.png */; };
-		B565684F1FE0CBB400E3CC44 /* SYSDK_closeButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565679C1FE0CBB000E3CC44 /* SYSDK_closeButton@3x.png */; };
-		B56568501FE0CBB400E3CC44 /* SDK_AutoLogin_NO@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565679D1FE0CBB000E3CC44 /* SDK_AutoLogin_NO@3x.png */; };
-		B56568511FE0CBB400E3CC44 /* SDK_NoRecord@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565679E1FE0CBB000E3CC44 /* SDK_NoRecord@3x.png */; };
-		B56568521FE0CBB400E3CC44 /* SDK_Login_line_up.png in Resources */ = {isa = PBXBuildFile; fileRef = B565679F1FE0CBB100E3CC44 /* SDK_Login_line_up.png */; };
-		B56568531FE0CBB400E3CC44 /* GM_selectUsed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567A01FE0CBB100E3CC44 /* GM_selectUsed@2x.png */; };
-		B56568541FE0CBB400E3CC44 /* GM_selectFooter@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567A11FE0CBB100E3CC44 /* GM_selectFooter@3x.png */; };
-		B56568551FE0CBB400E3CC44 /* SDK_login_Password@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567A21FE0CBB100E3CC44 /* SDK_login_Password@3x.png */; };
-		B56568581FE0CBB400E3CC44 /* SDK_mine_Chat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567A51FE0CBB100E3CC44 /* SDK_mine_Chat@3x.png */; };
-		B56568591FE0CBB400E3CC44 /* SDK_PlatformCoin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567A61FE0CBB100E3CC44 /* SDK_PlatformCoin@2x.png */; };
-		B565685A1FE0CBB400E3CC44 /* SDK_mine_Chat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567A71FE0CBB100E3CC44 /* SDK_mine_Chat@2x.png */; };
-		B565685C1FE0CBB400E3CC44 /* SDK_AutoLogin_NO@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567A91FE0CBB100E3CC44 /* SDK_AutoLogin_NO@2x.png */; };
-		B565685D1FE0CBB400E3CC44 /* SDK_Avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567AA1FE0CBB100E3CC44 /* SDK_Avator@2x.png */; };
-		B565685E1FE0CBB400E3CC44 /* SDK_NoGift@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567AB1FE0CBB100E3CC44 /* SDK_NoGift@3x.png */; };
-		B565685F1FE0CBB400E3CC44 /* SDKTenPay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567AC1FE0CBB100E3CC44 /* SDKTenPay@3x.png */; };
-		B56568641FE0CBB400E3CC44 /* SDK_AnnouncementAccess@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567B11FE0CBB200E3CC44 /* SDK_AnnouncementAccess@3x.png */; };
-		B56568651FE0CBB400E3CC44 /* SDK_gift_light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567B21FE0CBB200E3CC44 /* SDK_gift_light@3x.png */; };
-		B56568661FE0CBB400E3CC44 /* SDK_logout_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567B31FE0CBB200E3CC44 /* SDK_logout_dark@3x.png */; };
-		B56568671FE0CBB400E3CC44 /* SDKWechatPay.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567B41FE0CBB200E3CC44 /* SDKWechatPay.png */; };
-		B56568681FE0CBB400E3CC44 /* SDK_gift_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567B51FE0CBB200E3CC44 /* SDK_gift_light@2x.png */; };
-		B56568691FE0CBB400E3CC44 /* speedCut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567B61FE0CBB200E3CC44 /* speedCut@2x.png */; };
-		B565686A1FE0CBB400E3CC44 /* SDK_NoGift.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567B71FE0CBB200E3CC44 /* SDK_NoGift.png */; };
-		B565686B1FE0CBB400E3CC44 /* GM_juese.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567B81FE0CBB200E3CC44 /* GM_juese.png */; };
-		B565686C1FE0CBB400E3CC44 /* GM_selectProps@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567B91FE0CBB200E3CC44 /* GM_selectProps@3x.png */; };
-		B565686D1FE0CBB400E3CC44 /* SDK_gift_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567BA1FE0CBB200E3CC44 /* SDK_gift_dark@2x.png */; };
-		B565686E1FE0CBB400E3CC44 /* SDK_gift_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567BB1FE0CBB200E3CC44 /* SDK_gift_dark@3x.png */; };
-		B565686F1FE0CBB400E3CC44 /* SDK_NoRecord.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567BC1FE0CBB200E3CC44 /* SDK_NoRecord.png */; };
-		B56568701FE0CBB400E3CC44 /* SDKTenPay.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567BD1FE0CBB200E3CC44 /* SDKTenPay.png */; };
-		B56568711FE0CBB400E3CC44 /* SDK_SettingChildBack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567BE1FE0CBB200E3CC44 /* SDK_SettingChildBack@3x.png */; };
-		B56568721FE0CBB400E3CC44 /* GM_selectProps.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567BF1FE0CBB200E3CC44 /* GM_selectProps.png */; };
-		B56568731FE0CBB400E3CC44 /* GM_selectCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567C01FE0CBB200E3CC44 /* GM_selectCell@2x.png */; };
-		B56568741FE0CBB400E3CC44 /* SDK_login_Account@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567C11FE0CBB200E3CC44 /* SDK_login_Account@3x.png */; };
-		B56568751FE0CBB400E3CC44 /* SDK_server_Chat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567C21FE0CBB300E3CC44 /* SDK_server_Chat@3x.png */; };
-		B56568761FE0CBB400E3CC44 /* SDK_Speed_light.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567C31FE0CBB300E3CC44 /* SDK_Speed_light.png */; };
-		B56568771FE0CBB400E3CC44 /* SDK_logout_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567C41FE0CBB300E3CC44 /* SDK_logout_dark@2x.png */; };
-		B56568781FE0CBB400E3CC44 /* SDK_recharge_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567C51FE0CBB300E3CC44 /* SDK_recharge_dark@3x.png */; };
-		B56568791FE0CBB400E3CC44 /* GM_closeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567C61FE0CBB300E3CC44 /* GM_closeButton@2x.png */; };
-		B565687B1FE0CBB400E3CC44 /* SDK_Setting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567C81FE0CBB300E3CC44 /* SDK_Setting@3x.png */; };
-		B565687C1FE0CBB400E3CC44 /* GM_selectProps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567C91FE0CBB300E3CC44 /* GM_selectProps@2x.png */; };
-		B565687E1FE0CBB400E3CC44 /* SDK_announce_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567CB1FE0CBB300E3CC44 /* SDK_announce_dark@2x.png */; };
-		B565687F1FE0CBB400E3CC44 /* SDK_Login_line_down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567CC1FE0CBB300E3CC44 /* SDK_Login_line_down@3x.png */; };
-		B56568801FE0CBB400E3CC44 /* SDK_Speed_light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567CD1FE0CBB300E3CC44 /* SDK_Speed_light@3x.png */; };
-		B56568811FE0CBB400E3CC44 /* SDKPhonePay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567CE1FE0CBB400E3CC44 /* SDKPhonePay@3x.png */; };
-		B56568821FE0CBB400E3CC44 /* SDKAlipay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56567CF1FE0CBB400E3CC44 /* SDKAlipay@2x.png */; };
-		B565688D1FE1054100E3CC44 /* SDK_Receiver_Chat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565688B1FE1054100E3CC44 /* SDK_Receiver_Chat@3x.png */; };
-		B565688E1FE1054100E3CC44 /* SDK_Receiver_Chat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565688C1FE1054100E3CC44 /* SDK_Receiver_Chat@2x.png */; };
 		B56568941FE112F100E3CC44 /* FBMineCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B56568911FE112F100E3CC44 /* FBMineCell.h */; };
 		B56568951FE112F100E3CC44 /* FBMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B56568921FE112F100E3CC44 /* FBMineCell.m */; };
 		B56568AD1FE136F100E3CC44 /* LLRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = B56568A21FE136F100E3CC44 /* LLRefresh.h */; };
@@ -196,10 +51,8 @@
 		B56568B31FE136F100E3CC44 /* LLRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B56568A81FE136F100E3CC44 /* LLRefreshHeaderView.m */; };
 		B56568B41FE136F100E3CC44 /* LLRefreshHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = B56568A91FE136F100E3CC44 /* LLRefreshHelper.h */; };
 		B56568B51FE136F100E3CC44 /* LLRefreshHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B56568AA1FE136F100E3CC44 /* LLRefreshHelper.m */; };
-		B565691E1FE218D500E3CC44 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B565691D1FE218D500E3CC44 /* arrow@2x.png */; };
 		B565692B1FE25FB200E3CC44 /* FFRefreshTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = B56569291FE25FB200E3CC44 /* FFRefreshTableView.h */; };
 		B565692C1FE25FB200E3CC44 /* FFRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B565692A1FE25FB200E3CC44 /* FFRefreshTableView.m */; };
-		B565693D1FE274FC00E3CC44 /* ll_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B565693C1FE274FC00E3CC44 /* ll_arrow.png */; };
 		B57D4C0E1FA18CF500303A93 /* SY185SDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A017B61F74FC81005E75D6 /* SY185SDK.m */; };
 		B57D4C0F1FA18CF500303A93 /* BTWFloatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5022AAB1F8E290500938301 /* BTWFloatModel.m */; };
 		B57D4C101FA18CF500303A93 /* SYFloatViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B57D4B4F1F9F286F00303A93 /* SYFloatViewModel.m */; };
@@ -363,6 +216,41 @@
 		B5CCF21A211844BE00FE2B04 /* SYFBSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF218211844BE00FE2B04 /* SYFBSourceViewController.m */; };
 		B5CCF264211C180200FE2B04 /* SY_BoxADImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF262211C180200FE2B04 /* SY_BoxADImageView.h */; };
 		B5CCF265211C180200FE2B04 /* SY_BoxADImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF263211C180200FE2B04 /* SY_BoxADImageView.m */; };
+		B5CCF290211D2FCC00FE2B04 /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF26D211D2FCB00FE2B04 /* NSData+ImageContentType.h */; };
+		B5CCF291211D2FCC00FE2B04 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF26E211D2FCB00FE2B04 /* NSData+ImageContentType.m */; };
+		B5CCF292211D2FCC00FE2B04 /* NSImage+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF26F211D2FCB00FE2B04 /* NSImage+WebCache.h */; };
+		B5CCF293211D2FCC00FE2B04 /* NSImage+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF270211D2FCB00FE2B04 /* NSImage+WebCache.m */; };
+		B5CCF294211D2FCC00FE2B04 /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF271211D2FCB00FE2B04 /* SDImageCache.h */; };
+		B5CCF295211D2FCC00FE2B04 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF272211D2FCB00FE2B04 /* SDImageCache.m */; };
+		B5CCF296211D2FCC00FE2B04 /* SDImageCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF273211D2FCB00FE2B04 /* SDImageCacheConfig.h */; };
+		B5CCF297211D2FCC00FE2B04 /* SDImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF274211D2FCB00FE2B04 /* SDImageCacheConfig.m */; };
+		B5CCF298211D2FCC00FE2B04 /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF275211D2FCB00FE2B04 /* SDWebImageCompat.h */; };
+		B5CCF299211D2FCC00FE2B04 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF276211D2FCB00FE2B04 /* SDWebImageCompat.m */; };
+		B5CCF29A211D2FCC00FE2B04 /* SDWebImageDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF277211D2FCB00FE2B04 /* SDWebImageDecoder.h */; };
+		B5CCF29B211D2FCC00FE2B04 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF278211D2FCB00FE2B04 /* SDWebImageDecoder.m */; };
+		B5CCF29C211D2FCC00FE2B04 /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF279211D2FCB00FE2B04 /* SDWebImageDownloader.h */; };
+		B5CCF29D211D2FCC00FE2B04 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF27A211D2FCB00FE2B04 /* SDWebImageDownloader.m */; };
+		B5CCF29E211D2FCC00FE2B04 /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF27B211D2FCB00FE2B04 /* SDWebImageDownloaderOperation.h */; };
+		B5CCF29F211D2FCC00FE2B04 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF27C211D2FCB00FE2B04 /* SDWebImageDownloaderOperation.m */; };
+		B5CCF2A0211D2FCC00FE2B04 /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF27D211D2FCB00FE2B04 /* SDWebImageManager.h */; };
+		B5CCF2A1211D2FCC00FE2B04 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF27E211D2FCB00FE2B04 /* SDWebImageManager.m */; };
+		B5CCF2A2211D2FCC00FE2B04 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF27F211D2FCB00FE2B04 /* SDWebImageOperation.h */; };
+		B5CCF2A3211D2FCC00FE2B04 /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF280211D2FCB00FE2B04 /* SDWebImagePrefetcher.h */; };
+		B5CCF2A4211D2FCC00FE2B04 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF281211D2FCB00FE2B04 /* SDWebImagePrefetcher.m */; };
+		B5CCF2A5211D2FCC00FE2B04 /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF282211D2FCB00FE2B04 /* UIButton+WebCache.h */; };
+		B5CCF2A6211D2FCC00FE2B04 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF283211D2FCB00FE2B04 /* UIButton+WebCache.m */; };
+		B5CCF2A7211D2FCC00FE2B04 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF284211D2FCB00FE2B04 /* UIImage+GIF.h */; };
+		B5CCF2A8211D2FCC00FE2B04 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF285211D2FCB00FE2B04 /* UIImage+GIF.m */; };
+		B5CCF2A9211D2FCC00FE2B04 /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF286211D2FCB00FE2B04 /* UIImage+MultiFormat.h */; };
+		B5CCF2AA211D2FCC00FE2B04 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF287211D2FCB00FE2B04 /* UIImage+MultiFormat.m */; };
+		B5CCF2AB211D2FCC00FE2B04 /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF288211D2FCB00FE2B04 /* UIImageView+HighlightedWebCache.h */; };
+		B5CCF2AC211D2FCC00FE2B04 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF289211D2FCB00FE2B04 /* UIImageView+HighlightedWebCache.m */; };
+		B5CCF2AD211D2FCC00FE2B04 /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF28A211D2FCB00FE2B04 /* UIImageView+WebCache.h */; };
+		B5CCF2AE211D2FCC00FE2B04 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF28B211D2FCB00FE2B04 /* UIImageView+WebCache.m */; };
+		B5CCF2AF211D2FCC00FE2B04 /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF28C211D2FCB00FE2B04 /* UIView+WebCache.h */; };
+		B5CCF2B0211D2FCC00FE2B04 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF28D211D2FCB00FE2B04 /* UIView+WebCache.m */; };
+		B5CCF2B1211D2FCC00FE2B04 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B5CCF28E211D2FCB00FE2B04 /* UIView+WebCacheOperation.h */; };
+		B5CCF2B2211D2FCC00FE2B04 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF28F211D2FCB00FE2B04 /* UIView+WebCacheOperation.m */; };
 		B5D6142A20BF90B20010CA98 /* Tracking.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6142920BF90B20010CA98 /* Tracking.h */; };
 		B5D6143120BF93190010CA98 /* SYStatisticsModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B5D6142F20BF93190010CA98 /* SYStatisticsModel.h */; };
 		B5D6143220BF93190010CA98 /* SYStatisticsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D6143020BF93190010CA98 /* SYStatisticsModel.m */; };
@@ -440,7 +328,6 @@
 		B565640F1FDFB16500E3CC44 /* FBDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBDetailViewController.m; sourceTree = "<group>"; };
 		B56564121FDFD9E900E3CC44 /* FBServerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBServerCell.h; sourceTree = "<group>"; };
 		B56564131FDFD9E900E3CC44 /* FBServerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBServerCell.m; sourceTree = "<group>"; };
-		B56567171FE0CB5100E3CC44 /* SY_185SDK_RES.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SY_185SDK_RES.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56567191FE0CB5200E3CC44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B565671D1FE0CBA900E3CC44 /* SDK_AnnouncementAccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SDK_AnnouncementAccess.png; sourceTree = "<group>"; };
 		B565671E1FE0CBA900E3CC44 /* GM_closeButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GM_closeButton@3x.png"; sourceTree = "<group>"; };
@@ -689,6 +576,41 @@
 		B5CCF218211844BE00FE2B04 /* SYFBSourceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SYFBSourceViewController.m; sourceTree = "<group>"; };
 		B5CCF262211C180200FE2B04 /* SY_BoxADImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SY_BoxADImageView.h; sourceTree = "<group>"; };
 		B5CCF263211C180200FE2B04 /* SY_BoxADImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SY_BoxADImageView.m; sourceTree = "<group>"; };
+		B5CCF26D211D2FCB00FE2B04 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		B5CCF26E211D2FCB00FE2B04 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		B5CCF26F211D2FCB00FE2B04 /* NSImage+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+WebCache.h"; sourceTree = "<group>"; };
+		B5CCF270211D2FCB00FE2B04 /* NSImage+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+WebCache.m"; sourceTree = "<group>"; };
+		B5CCF271211D2FCB00FE2B04 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
+		B5CCF272211D2FCB00FE2B04 /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
+		B5CCF273211D2FCB00FE2B04 /* SDImageCacheConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCacheConfig.h; sourceTree = "<group>"; };
+		B5CCF274211D2FCB00FE2B04 /* SDImageCacheConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCacheConfig.m; sourceTree = "<group>"; };
+		B5CCF275211D2FCB00FE2B04 /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
+		B5CCF276211D2FCB00FE2B04 /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
+		B5CCF277211D2FCB00FE2B04 /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
+		B5CCF278211D2FCB00FE2B04 /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		B5CCF279211D2FCB00FE2B04 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
+		B5CCF27A211D2FCB00FE2B04 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
+		B5CCF27B211D2FCB00FE2B04 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		B5CCF27C211D2FCB00FE2B04 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		B5CCF27D211D2FCB00FE2B04 /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
+		B5CCF27E211D2FCB00FE2B04 /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
+		B5CCF27F211D2FCB00FE2B04 /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
+		B5CCF280211D2FCB00FE2B04 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		B5CCF281211D2FCB00FE2B04 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		B5CCF282211D2FCB00FE2B04 /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
+		B5CCF283211D2FCB00FE2B04 /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		B5CCF284211D2FCB00FE2B04 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		B5CCF285211D2FCB00FE2B04 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		B5CCF286211D2FCB00FE2B04 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		B5CCF287211D2FCB00FE2B04 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		B5CCF288211D2FCB00FE2B04 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
+		B5CCF289211D2FCB00FE2B04 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
+		B5CCF28A211D2FCB00FE2B04 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		B5CCF28B211D2FCB00FE2B04 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		B5CCF28C211D2FCB00FE2B04 /* UIView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCache.h"; sourceTree = "<group>"; };
+		B5CCF28D211D2FCB00FE2B04 /* UIView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCache.m"; sourceTree = "<group>"; };
+		B5CCF28E211D2FCB00FE2B04 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
+		B5CCF28F211D2FCB00FE2B04 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		B5D6142920BF90B20010CA98 /* Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracking.h; sourceTree = "<group>"; };
 		B5D6142B20BF90E60010CA98 /* ReYunTracking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = ReYunTracking.a; path = "../SY_185SDK_Demo/trackingIO_ios_sdk_1.0.0 2/ReYunTracking.a"; sourceTree = "<group>"; };
 		B5D6142D20BF91270010CA98 /* SY_185Sta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = SY_185Sta.a; path = "../SY_185SDK_Demo/trackingIO_ios_sdk_1.0.0 2/SY_185Sta.a"; sourceTree = "<group>"; };
@@ -724,13 +646,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B56567141FE0CB5100E3CC44 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B5A017791F74F625005E75D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1106,7 +1021,6 @@
 			isa = PBXGroup;
 			children = (
 				B5A0177D1F74F625005E75D6 /* SY_185SDK.framework */,
-				B56567171FE0CB5100E3CC44 /* SY_185SDK_RES.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1190,6 +1104,7 @@
 		B5C40EB52111558F007F74D9 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				B5CCF26C211D2FCB00FE2B04 /* SDWebImage */,
 				B5C40EEE21115F53007F74D9 /* FBShimmering */,
 				B5C40EE921115701007F74D9 /* MBProgressHUD */,
 				B5C40EB6211155D4007F74D9 /* Masonry */,
@@ -1306,6 +1221,48 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		B5CCF26C211D2FCB00FE2B04 /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				B5CCF26D211D2FCB00FE2B04 /* NSData+ImageContentType.h */,
+				B5CCF26E211D2FCB00FE2B04 /* NSData+ImageContentType.m */,
+				B5CCF26F211D2FCB00FE2B04 /* NSImage+WebCache.h */,
+				B5CCF270211D2FCB00FE2B04 /* NSImage+WebCache.m */,
+				B5CCF271211D2FCB00FE2B04 /* SDImageCache.h */,
+				B5CCF272211D2FCB00FE2B04 /* SDImageCache.m */,
+				B5CCF273211D2FCB00FE2B04 /* SDImageCacheConfig.h */,
+				B5CCF274211D2FCB00FE2B04 /* SDImageCacheConfig.m */,
+				B5CCF275211D2FCB00FE2B04 /* SDWebImageCompat.h */,
+				B5CCF276211D2FCB00FE2B04 /* SDWebImageCompat.m */,
+				B5CCF277211D2FCB00FE2B04 /* SDWebImageDecoder.h */,
+				B5CCF278211D2FCB00FE2B04 /* SDWebImageDecoder.m */,
+				B5CCF279211D2FCB00FE2B04 /* SDWebImageDownloader.h */,
+				B5CCF27A211D2FCB00FE2B04 /* SDWebImageDownloader.m */,
+				B5CCF27B211D2FCB00FE2B04 /* SDWebImageDownloaderOperation.h */,
+				B5CCF27C211D2FCB00FE2B04 /* SDWebImageDownloaderOperation.m */,
+				B5CCF27D211D2FCB00FE2B04 /* SDWebImageManager.h */,
+				B5CCF27E211D2FCB00FE2B04 /* SDWebImageManager.m */,
+				B5CCF27F211D2FCB00FE2B04 /* SDWebImageOperation.h */,
+				B5CCF280211D2FCB00FE2B04 /* SDWebImagePrefetcher.h */,
+				B5CCF281211D2FCB00FE2B04 /* SDWebImagePrefetcher.m */,
+				B5CCF282211D2FCB00FE2B04 /* UIButton+WebCache.h */,
+				B5CCF283211D2FCB00FE2B04 /* UIButton+WebCache.m */,
+				B5CCF284211D2FCB00FE2B04 /* UIImage+GIF.h */,
+				B5CCF285211D2FCB00FE2B04 /* UIImage+GIF.m */,
+				B5CCF286211D2FCB00FE2B04 /* UIImage+MultiFormat.h */,
+				B5CCF287211D2FCB00FE2B04 /* UIImage+MultiFormat.m */,
+				B5CCF288211D2FCB00FE2B04 /* UIImageView+HighlightedWebCache.h */,
+				B5CCF289211D2FCB00FE2B04 /* UIImageView+HighlightedWebCache.m */,
+				B5CCF28A211D2FCB00FE2B04 /* UIImageView+WebCache.h */,
+				B5CCF28B211D2FCB00FE2B04 /* UIImageView+WebCache.m */,
+				B5CCF28C211D2FCB00FE2B04 /* UIView+WebCache.h */,
+				B5CCF28D211D2FCB00FE2B04 /* UIView+WebCache.m */,
+				B5CCF28E211D2FCB00FE2B04 /* UIView+WebCacheOperation.h */,
+				B5CCF28F211D2FCB00FE2B04 /* UIView+WebCacheOperation.m */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
 		B5D617AD1F7B425F0046740A /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -1397,7 +1354,9 @@
 				B5C40EDA211155D4007F74D9 /* MASUtilities.h in Headers */,
 				B5C40EDB211155D4007F74D9 /* MASViewAttribute.h in Headers */,
 				B5C40ED7211155D4007F74D9 /* MASLayoutConstraint.h in Headers */,
+				B5CCF2A7211D2FCC00FE2B04 /* UIImage+GIF.h in Headers */,
 				B5C40ED5211155D4007F74D9 /* MASConstraintMaker.h in Headers */,
+				B5CCF2A9211D2FCC00FE2B04 /* UIImage+MultiFormat.h in Headers */,
 				B5C40ED3211155D4007F74D9 /* MASConstraint.h in Headers */,
 				B5C40ED9211155D4007F74D9 /* Masonry.h in Headers */,
 				B5D6142A20BF90B20010CA98 /* Tracking.h in Headers */,
@@ -1405,15 +1364,19 @@
 				B57D4C441FA18D8400303A93 /* BTWFloatModel.h in Headers */,
 				B57D4C451FA18D8400303A93 /* SYFloatViewModel.h in Headers */,
 				B57D4C461FA18D8400303A93 /* SYFloatViewController.h in Headers */,
+				B5CCF29E211D2FCC00FE2B04 /* SDWebImageDownloaderOperation.h in Headers */,
 				B57D4C481FA18D8400303A93 /* FAccountViewController.h in Headers */,
 				B57D4C491FA18D8400303A93 /* FAnnounceViewController.h in Headers */,
 				B57D4C4A1FA18D8400303A93 /* FPacksViewController.h in Headers */,
 				B5ABC0CA1FEA37CF00B24DE2 /* SDK_ADImage.h in Headers */,
+				B5CCF2A3211D2FCC00FE2B04 /* SDWebImagePrefetcher.h in Headers */,
 				B56568AD1FE136F100E3CC44 /* LLRefresh.h in Headers */,
 				B57D4C4B1FA18D8400303A93 /* FSpeedViewController.h in Headers */,
 				B57D4C4C1FA18D8400303A93 /* FAnnouncementView.h in Headers */,
 				B5D6143120BF93190010CA98 /* SYStatisticsModel.h in Headers */,
+				B5CCF2A0211D2FCC00FE2B04 /* SDWebImageManager.h in Headers */,
 				B57D4C4D1FA18D8400303A93 /* FloatSelectView.h in Headers */,
+				B5CCF2AD211D2FCC00FE2B04 /* UIImageView+WebCache.h in Headers */,
 				B5CCF219211844BE00FE2B04 /* SYFBSourceViewController.h in Headers */,
 				B57D4C4E1FA18D8400303A93 /* FPacksCell.h in Headers */,
 				B56568B01FE136F100E3CC44 /* LLRefreshFooterView.h in Headers */,
@@ -1429,9 +1392,11 @@
 				B57D4C541FA18D8400303A93 /* SY_AutoLoginView.h in Headers */,
 				B57D4C551FA18D8400303A93 /* SY_BindingPhoneView.h in Headers */,
 				B5C40F1121119B4E007F74D9 /* SYSDKModel.h in Headers */,
+				B5CCF2AF211D2FCC00FE2B04 /* UIView+WebCache.h in Headers */,
 				B5C40F1D2112F6D8007F74D9 /* SYLoginViewController.h in Headers */,
 				B57D4C561FA18D8400303A93 /* SY_ForgetPasswordView.h in Headers */,
 				B57D4C571FA18D8400303A93 /* SY_LoginView.h in Headers */,
+				B5CCF294211D2FCC00FE2B04 /* SDImageCache.h in Headers */,
 				B56564101FDFB16500E3CC44 /* FBDetailViewController.h in Headers */,
 				B57D4C581FA18D8400303A93 /* SY_OneUpRegisteView.h in Headers */,
 				B5C40EF721115F53007F74D9 /* FBShimmeringView.h in Headers */,
@@ -1439,11 +1404,13 @@
 				B57D4C5A1FA18D8400303A93 /* SYPayController.h in Headers */,
 				B565692B1FE25FB200E3CC44 /* FFRefreshTableView.h in Headers */,
 				B57D4C5B1FA18D8400303A93 /* m185_PayBackGroundView.h in Headers */,
+				B5CCF2AB211D2FCC00FE2B04 /* UIImageView+HighlightedWebCache.h in Headers */,
 				B57D4C5C1FA18D8400303A93 /* m185WebViewController.h in Headers */,
 				B57D4C5D1FA18D8400303A93 /* m185CheackPayResults.h in Headers */,
 				B5ABC0C61FEA099300B24DE2 /* SY_adPicImageView.h in Headers */,
 				B57D4C5E1FA18D8400303A93 /* PAlipayController.h in Headers */,
 				B5C40EFB21116129007F74D9 /* SYDeviceTool.h in Headers */,
+				B5CCF2A2211D2FCC00FE2B04 /* SDWebImageOperation.h in Headers */,
 				B5B28E1F1FDA371F008A9BCD /* FeedbackNavigationController.h in Headers */,
 				B57D4C5F1FA18D8400303A93 /* PPhonepayController.h in Headers */,
 				B5CCF215211833BC00FE2B04 /* SYFeedBackModel.h in Headers */,
@@ -1451,25 +1418,31 @@
 				B57D4C611FA18D8400303A93 /* PTenpayController.h in Headers */,
 				B59DE68D20EF19400058163E /* SY_AccountListView.h in Headers */,
 				B57D4C621FA18D8400303A93 /* PWechatPayController.h in Headers */,
+				B5CCF298211D2FCC00FE2B04 /* SDWebImageCompat.h in Headers */,
 				B57D4C631FA18D8400303A93 /* PSelectCell.h in Headers */,
 				B57D4C641FA18D8400303A93 /* SY_GMSDK.h in Headers */,
 				B57D4C651FA18D8400303A93 /* GM_SDKModel.h in Headers */,
 				B57D4C661FA18D8400303A93 /* GM_ViewModel.h in Headers */,
+				B5CCF29A211D2FCC00FE2B04 /* SDWebImageDecoder.h in Headers */,
 				B57D4C671FA18D8400303A93 /* GM_DetailView.h in Headers */,
 				B5B28E241FDA400C008A9BCD /* FBSubmitViewController.h in Headers */,
 				B56568B41FE136F100E3CC44 /* LLRefreshHelper.h in Headers */,
+				B5CCF2A5211D2FCC00FE2B04 /* UIButton+WebCache.h in Headers */,
 				B5C40F0D21119944007F74D9 /* SYGeneralModel.h in Headers */,
 				B57D4C681FA18D8400303A93 /* GM_PropsListView.h in Headers */,
 				B57D4C691FA18D8400303A93 /* GM_PropsNumView.h in Headers */,
+				B5CCF290211D2FCC00FE2B04 /* NSData+ImageContentType.h in Headers */,
 				B57D4C6A1FA18D8400303A93 /* GMDetailCell.h in Headers */,
 				B5FF875A1FCE62EB004F9820 /* SY_BindingIDCardView.h in Headers */,
 				B56568AE1FE136F100E3CC44 /* LLRefreshComponent.h in Headers */,
 				B5C40F0221118E47007F74D9 /* SYRequestTool.h in Headers */,
+				B5CCF29C211D2FCC00FE2B04 /* SDWebImageDownloader.h in Headers */,
 				B5B28E1B1FDA2F1A008A9BCD /* FeedbackViewController.h in Headers */,
 				B5CCF264211C180200FE2B04 /* SY_BoxADImageView.h in Headers */,
 				B57D4C6B1FA18D8400303A93 /* GM_FloatViewController.h in Headers */,
 				B57D4C6D1FA18D8400303A93 /* InfomationTool.h in Headers */,
 				B5C40EF521115F53007F74D9 /* FBShimmeringLayer.h in Headers */,
+				B5CCF296211D2FCC00FE2B04 /* SDImageCacheConfig.h in Headers */,
 				B56564151FDFD9E900E3CC44 /* FBServerCell.h in Headers */,
 				B57D4C6E1FA18D8400303A93 /* RequestTool.h in Headers */,
 				B57D4C6F1FA18D8400303A93 /* Model.h in Headers */,
@@ -1477,10 +1450,12 @@
 				B5C40EF421115F53007F74D9 /* FBShimmering.h in Headers */,
 				B57D4C711FA18D8400303A93 /* UserModel.h in Headers */,
 				B57D4C721FA18D8400303A93 /* MapModel.h in Headers */,
+				B5CCF2B1211D2FCC00FE2B04 /* UIView+WebCacheOperation.h in Headers */,
 				B57D4C731FA18D8400303A93 /* PayModel.h in Headers */,
 				B5E1E560206344BA008F49CA /* SY_LogModel.h in Headers */,
 				B57D4C741FA18D8400303A93 /* DeviceModel.h in Headers */,
 				B56564021FDE719200E3CC44 /* FeedbackCell.h in Headers */,
+				B5CCF292211D2FCC00FE2B04 /* NSImage+WebCache.h in Headers */,
 				B5C40F222112F7D5007F74D9 /* SYBasicViewController.h in Headers */,
 				B5A017821F74F625005E75D6 /* SY_185SDK.h in Headers */,
 			);
@@ -1489,23 +1464,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B56567161FE0CB5100E3CC44 /* SY_185SDK_RES */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B565671A1FE0CB5200E3CC44 /* Build configuration list for PBXNativeTarget "SY_185SDK_RES" */;
-			buildPhases = (
-				B56567131FE0CB5100E3CC44 /* Sources */,
-				B56567141FE0CB5100E3CC44 /* Frameworks */,
-				B56567151FE0CB5100E3CC44 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SY_185SDK_RES;
-			productName = SY_185SDK_RES;
-			productReference = B56567171FE0CB5100E3CC44 /* SY_185SDK_RES.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 		B5A0177C1F74F625005E75D6 /* SY_185SDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5A017851F74F625005E75D6 /* Build configuration list for PBXNativeTarget "SY_185SDK" */;
@@ -1537,16 +1495,14 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = 185sy.com;
 				TargetAttributes = {
-					B56567161FE0CB5100E3CC44 = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-					};
 					B5737F671FE3B7BC00FF24FD = {
 						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = JR27SLBFXN;
 						ProvisioningStyle = Automatic;
 					};
 					B57D4B541F9F4BF500303A93 = {
 						CreatedOnToolsVersion = 9.0.1;
+						DevelopmentTeam = JR27SLBFXN;
 						ProvisioningStyle = Automatic;
 					};
 					B5A0177C1F74F625005E75D6 = {
@@ -1556,7 +1512,7 @@
 				};
 			};
 			buildConfigurationList = B5A017771F74F625005E75D6 /* Build configuration list for PBXProject "SY_185SDK" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1570,167 +1526,12 @@
 			targets = (
 				B5A0177C1F74F625005E75D6 /* SY_185SDK */,
 				B57D4B541F9F4BF500303A93 /* RunScript */,
-				B56567161FE0CB5100E3CC44 /* SY_185SDK_RES */,
 				B5737F671FE3B7BC00FF24FD /* Runarm64 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B56567151FE0CB5100E3CC44 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B56568781FE0CBB400E3CC44 /* SDK_recharge_dark@3x.png in Resources */,
-				B565680D1FE0CBB400E3CC44 /* SYSDK_closeButton@2x.png in Resources */,
-				B56567E01FE0CBB400E3CC44 /* speedUp@2x.png in Resources */,
-				B56568681FE0CBB400E3CC44 /* SDK_gift_light@2x.png in Resources */,
-				B56568451FE0CBB400E3CC44 /* SDK_Maccount_light@2x.png in Resources */,
-				B56567E11FE0CBB400E3CC44 /* SDK_gift_light.png in Resources */,
-				B56568431FE0CBB400E3CC44 /* SDK_logout_light@3x.png in Resources */,
-				B56568261FE0CBB400E3CC44 /* SDK_Avatar@2x.png in Resources */,
-				B56567F91FE0CBB400E3CC44 /* SDK_Login_line_center@2x.png in Resources */,
-				B56567EA1FE0CBB400E3CC44 /* SDK_Avator@3x.png in Resources */,
-				B56568491FE0CBB400E3CC44 /* speedUp@3x.png in Resources */,
-				B56568481FE0CBB400E3CC44 /* SDKPlatformCoinPay@3x.png in Resources */,
-				B56567D81FE0CBB400E3CC44 /* SDK_Maccount_light@3x.png in Resources */,
-				B56567DB1FE0CBB400E3CC44 /* SDK_Speed_dark@2x.png in Resources */,
-				B56568171FE0CBB400E3CC44 /* SDKWechatPay@3x.png in Resources */,
-				B565685E1FE0CBB400E3CC44 /* SDK_NoGift@3x.png in Resources */,
-				B565688D1FE1054100E3CC44 /* SDK_Receiver_Chat@3x.png in Resources */,
-				B56568521FE0CBB400E3CC44 /* SDK_Login_line_up.png in Resources */,
-				B56568371FE0CBB400E3CC44 /* SDK_float@2x.png in Resources */,
-				B565682E1FE0CBB400E3CC44 /* SDK_Login_line_up@3x.png in Resources */,
-				B56568701FE0CBB400E3CC44 /* SDKTenPay.png in Resources */,
-				B56567DE1FE0CBB400E3CC44 /* SDK_SettingChildBack@2x.png in Resources */,
-				B56567E51FE0CBB400E3CC44 /* SDK_AnnouncementAccess@2x.png in Resources */,
-				B56568751FE0CBB400E3CC44 /* SDK_server_Chat@3x.png in Resources */,
-				B56567E31FE0CBB400E3CC44 /* SDK_login_Password@2x.png in Resources */,
-				B56567FB1FE0CBB400E3CC44 /* SDK_Login_line_up@2x.png in Resources */,
-				B56567F01FE0CBB400E3CC44 /* SDK_Avator.png in Resources */,
-				B565687B1FE0CBB400E3CC44 /* SDK_Setting@3x.png in Resources */,
-				B565686F1FE0CBB400E3CC44 /* SDK_NoRecord.png in Resources */,
-				B56568151FE0CBB400E3CC44 /* GM_selectUsed.png in Resources */,
-				B56568691FE0CBB400E3CC44 /* speedCut@2x.png in Resources */,
-				B565683D1FE0CBB400E3CC44 /* GM_selectFooter.png in Resources */,
-				B56568651FE0CBB400E3CC44 /* SDK_gift_light@3x.png in Resources */,
-				B565691E1FE218D500E3CC44 /* arrow@2x.png in Resources */,
-				B565680C1FE0CBB400E3CC44 /* SDK_Login_line_center.png in Resources */,
-				B56567F71FE0CBB400E3CC44 /* SDKAlipay.png in Resources */,
-				B56567FC1FE0CBB400E3CC44 /* SDK_PlatformCoin@3x.png in Resources */,
-				B56567F81FE0CBB400E3CC44 /* SDK_Speed_light@2x.png in Resources */,
-				B56568061FE0CBB400E3CC44 /* speedUp.png in Resources */,
-				B56568811FE0CBB400E3CC44 /* SDKPhonePay@3x.png in Resources */,
-				B56568731FE0CBB400E3CC44 /* GM_selectCell@2x.png in Resources */,
-				B565683B1FE0CBB400E3CC44 /* SDK_Speed_dark.png in Resources */,
-				B56568121FE0CBB400E3CC44 /* SDK_Maccount_dark@2x.png in Resources */,
-				B565682C1FE0CBB400E3CC44 /* GM_juese@2x.png in Resources */,
-				B565686B1FE0CBB400E3CC44 /* GM_juese.png in Resources */,
-				B56568051FE0CBB400E3CC44 /* SDKTenPay@2x.png in Resources */,
-				B56568141FE0CBB400E3CC44 /* GM_unSelectCell@3x.png in Resources */,
-				B56567F31FE0CBB400E3CC44 /* SDK_logout_light@2x.png in Resources */,
-				B56567D11FE0CBB400E3CC44 /* GM_closeButton@3x.png in Resources */,
-				B565682B1FE0CBB400E3CC44 /* SDK_login_Code@3x.png in Resources */,
-				B56568591FE0CBB400E3CC44 /* SDK_PlatformCoin@2x.png in Resources */,
-				B56568551FE0CBB400E3CC44 /* SDK_login_Password@3x.png in Resources */,
-				B565686C1FE0CBB400E3CC44 /* GM_selectProps@3x.png in Resources */,
-				B565684A1FE0CBB400E3CC44 /* GM_juese@3x.png in Resources */,
-				B56567FA1FE0CBB400E3CC44 /* SDK_login_Code.png in Resources */,
-				B56568661FE0CBB400E3CC44 /* SDK_logout_dark@3x.png in Resources */,
-				B56568291FE0CBB400E3CC44 /* SDKAlipay@3x.png in Resources */,
-				B56567D31FE0CBB400E3CC44 /* SDKConfig.plist in Resources */,
-				B56567F21FE0CBB400E3CC44 /* GM_float@2x.png in Resources */,
-				B565686D1FE0CBB400E3CC44 /* SDK_gift_dark@2x.png in Resources */,
-				B56568801FE0CBB400E3CC44 /* SDK_Speed_light@3x.png in Resources */,
-				B56568641FE0CBB400E3CC44 /* SDK_AnnouncementAccess@3x.png in Resources */,
-				B56567DC1FE0CBB400E3CC44 /* SDKWechatPay@2x.png in Resources */,
-				B56568511FE0CBB400E3CC44 /* SDK_NoRecord@3x.png in Resources */,
-				B56568351FE0CBB400E3CC44 /* SDK_feedBack_dark.png in Resources */,
-				B56568321FE0CBB400E3CC44 /* SDK_server_Chat@2x.png in Resources */,
-				B56567F51FE0CBB400E3CC44 /* SDK_login_Password.png in Resources */,
-				B565683C1FE0CBB400E3CC44 /* SDK_Change_account.png in Resources */,
-				B56568771FE0CBB400E3CC44 /* SDK_logout_dark@2x.png in Resources */,
-				B56568791FE0CBB400E3CC44 /* GM_closeButton@2x.png in Resources */,
-				B56568311FE0CBB400E3CC44 /* SDK_recharge_dark@2x.png in Resources */,
-				B56567E71FE0CBB400E3CC44 /* SDKPlatformCoinPay.png in Resources */,
-				B565682D1FE0CBB400E3CC44 /* SDK_login_Account@2x.png in Resources */,
-				B56567DF1FE0CBB400E3CC44 /* GM_selectCell.png in Resources */,
-				B565684C1FE0CBB400E3CC44 /* SDK_Maccount_dark.png in Resources */,
-				B56568441FE0CBB400E3CC44 /* SDK_Change_account@3x.png in Resources */,
-				B56567DD1FE0CBB400E3CC44 /* speedCut.png in Resources */,
-				B565682A1FE0CBB400E3CC44 /* SDKPhonePay.png in Resources */,
-				B56568411FE0CBB400E3CC44 /* SDK_Avatar.png in Resources */,
-				B56568041FE0CBB400E3CC44 /* speedCut@3x.png in Resources */,
-				B565693D1FE274FC00E3CC44 /* ll_arrow.png in Resources */,
-				B56568401FE0CBB400E3CC44 /* SDK_Maccount_light.png in Resources */,
-				B565685D1FE0CBB400E3CC44 /* SDK_Avator@2x.png in Resources */,
-				B56568711FE0CBB400E3CC44 /* SDK_SettingChildBack@3x.png in Resources */,
-				B56568531FE0CBB400E3CC44 /* GM_selectUsed@2x.png in Resources */,
-				B56568821FE0CBB400E3CC44 /* SDKAlipay@2x.png in Resources */,
-				B565686E1FE0CBB400E3CC44 /* SDK_gift_dark@3x.png in Resources */,
-				B56567D91FE0CBB400E3CC44 /* GM_float.png in Resources */,
-				B56568281FE0CBB400E3CC44 /* SDK_Maccount_dark@3x.png in Resources */,
-				B56567D21FE0CBB400E3CC44 /* SDK_NoAnnouncement@2x.png in Resources */,
-				B56568131FE0CBB400E3CC44 /* GM_closeButton.png in Resources */,
-				B565684B1FE0CBB400E3CC44 /* SDK_Setting.png in Resources */,
-				B565688E1FE1054100E3CC44 /* SDK_Receiver_Chat@2x.png in Resources */,
-				B565685C1FE0CBB400E3CC44 /* SDK_AutoLogin_NO@2x.png in Resources */,
-				B56567D41FE0CBB400E3CC44 /* SDK_recharge_dark.png in Resources */,
-				B56568271FE0CBB400E3CC44 /* SDK_Login_line_center@3x.png in Resources */,
-				B56567ED1FE0CBB400E3CC44 /* GM_unSelectCell.png in Resources */,
-				B56568761FE0CBB400E3CC44 /* SDK_Speed_light.png in Resources */,
-				B565687E1FE0CBB400E3CC44 /* SDK_announce_dark@2x.png in Resources */,
-				B565684E1FE0CBB400E3CC44 /* SDKPhonePay@2x.png in Resources */,
-				B56567D61FE0CBB400E3CC44 /* SDK_SettingChildBack.png in Resources */,
-				B56568541FE0CBB400E3CC44 /* GM_selectFooter@3x.png in Resources */,
-				B565685F1FE0CBB400E3CC44 /* SDKTenPay@3x.png in Resources */,
-				B56568161FE0CBB400E3CC44 /* SDK_AutoLogin_YES.png in Resources */,
-				B56568081FE0CBB400E3CC44 /* SDK_announce_dark@3x.png in Resources */,
-				B56567EB1FE0CBB400E3CC44 /* SDK_logout_dark.png in Resources */,
-				B56568461FE0CBB400E3CC44 /* SDK_PlatformCoin.png in Resources */,
-				B565687F1FE0CBB400E3CC44 /* SDK_Login_line_down@3x.png in Resources */,
-				B56568581FE0CBB400E3CC44 /* SDK_mine_Chat@3x.png in Resources */,
-				B56568501FE0CBB400E3CC44 /* SDK_AutoLogin_NO@3x.png in Resources */,
-				B56567E21FE0CBB400E3CC44 /* SDK_logout_light.png in Resources */,
-				B56567EF1FE0CBB400E3CC44 /* SDK_AutoLogin_YES@3x.png in Resources */,
-				B56568011FE0CBB400E3CC44 /* SDK_Login_line_down@2x.png in Resources */,
-				B56567D71FE0CBB400E3CC44 /* SDK_login_Account.png in Resources */,
-				B56568241FE0CBB400E3CC44 /* SDK_AutoLogin_NO.png in Resources */,
-				B56568201FE0CBB400E3CC44 /* SDK_float@3x.png in Resources */,
-				B56567F61FE0CBB400E3CC44 /* SDK_NoAnnouncement@3x.png in Resources */,
-				B56568251FE0CBB400E3CC44 /* SDK_Change_account@2x.png in Resources */,
-				B56568111FE0CBB400E3CC44 /* SDKPlatformCoinPay@2x.png in Resources */,
-				B56568671FE0CBB400E3CC44 /* SDKWechatPay.png in Resources */,
-				B56568091FE0CBB400E3CC44 /* SDK_float.png in Resources */,
-				B56568361FE0CBB400E3CC44 /* SDK_AutoLogin_YES@2x.png in Resources */,
-				B56568721FE0CBB400E3CC44 /* GM_selectProps.png in Resources */,
-				B565681A1FE0CBB400E3CC44 /* SDK_announce_dark.png in Resources */,
-				B565685A1FE0CBB400E3CC44 /* SDK_mine_Chat@2x.png in Resources */,
-				B565687C1FE0CBB400E3CC44 /* GM_selectProps@2x.png in Resources */,
-				B56568331FE0CBB400E3CC44 /* GM_selectFooter@2x.png in Resources */,
-				B56568021FE0CBB400E3CC44 /* SDK_NoGift@2x.png in Resources */,
-				B56567EE1FE0CBB400E3CC44 /* GM_selectUsed@3x.png in Resources */,
-				B56567F11FE0CBB400E3CC44 /* SDK_Login_line_down.png in Resources */,
-				B56568421FE0CBB400E3CC44 /* SDK_feedBack_dark@3x.png in Resources */,
-				B565683F1FE0CBB400E3CC44 /* SDK_Avatar@3x.png in Resources */,
-				B56568301FE0CBB400E3CC44 /* SDK_NoAnnouncement.png in Resources */,
-				B56567F41FE0CBB400E3CC44 /* SDK_gift_dark.png in Resources */,
-				B56567E61FE0CBB400E3CC44 /* SDK_Setting@2x.png in Resources */,
-				B56568231FE0CBB400E3CC44 /* GM_float@3x.png in Resources */,
-				B565680E1FE0CBB400E3CC44 /* GM_selectCell@3x.png in Resources */,
-				B565684F1FE0CBB400E3CC44 /* SYSDK_closeButton@3x.png in Resources */,
-				B56568211FE0CBB400E3CC44 /* SDK_feedBack_dark@2x.png in Resources */,
-				B56568741FE0CBB400E3CC44 /* SDK_login_Account@3x.png in Resources */,
-				B56567D01FE0CBB400E3CC44 /* SDK_AnnouncementAccess.png in Resources */,
-				B56568181FE0CBB400E3CC44 /* SDK_login_Code@2x.png in Resources */,
-				B565681E1FE0CBB400E3CC44 /* SYSDK_closeButton.png in Resources */,
-				B56568191FE0CBB400E3CC44 /* SDK_NoRecord@2x.png in Resources */,
-				B56567DA1FE0CBB400E3CC44 /* GM_unSelectCell@2x.png in Resources */,
-				B56568471FE0CBB400E3CC44 /* SDK_Speed_dark@3x.png in Resources */,
-				B565686A1FE0CBB400E3CC44 /* SDK_NoGift.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B5A0177B1F74F625005E75D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1770,18 +1571,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B56567131FE0CB5100E3CC44 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B5A017781F74F625005E75D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5CCF2AA211D2FCC00FE2B04 /* UIImage+MultiFormat.m in Sources */,
 				B5C40EE3211155D4007F74D9 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				B5CCF2A6211D2FCC00FE2B04 /* UIButton+WebCache.m in Sources */,
 				B57D4C1D1FA18D2000303A93 /* m185_LoginBackGroundView.m in Sources */,
 				B57D4C1E1FA18D2000303A93 /* LoginController.m in Sources */,
 				B5C40EE0211155D4007F74D9 /* NSArray+MASAdditions.m in Sources */,
@@ -1789,30 +1585,37 @@
 				B57D4C1F1FA18D2000303A93 /* SY_AutoLoginView.m in Sources */,
 				B5C40ED1211155D4007F74D9 /* MASCompositeConstraint.m in Sources */,
 				B5CCF21A211844BE00FE2B04 /* SYFBSourceViewController.m in Sources */,
+				B5CCF29B211D2FCC00FE2B04 /* SDWebImageDecoder.m in Sources */,
 				B57D4C201FA18D2000303A93 /* SY_BindingPhoneView.m in Sources */,
 				B565640D1FDFA9B800E3CC44 /* FBAlertController.m in Sources */,
 				B57D4C211FA18D2000303A93 /* SY_ForgetPasswordView.m in Sources */,
 				B57D4C221FA18D2000303A93 /* SY_LoginView.m in Sources */,
 				B5C40EDC211155D4007F74D9 /* MASViewAttribute.m in Sources */,
+				B5CCF2B2211D2FCC00FE2B04 /* UIView+WebCacheOperation.m in Sources */,
 				B57D4C231FA18D2000303A93 /* SY_OneUpRegisteView.m in Sources */,
 				B57D4C241FA18D2000303A93 /* SY_RegistView.m in Sources */,
 				B57D4C251FA18D2000303A93 /* SYPayController.m in Sources */,
+				B5CCF2A1211D2FCC00FE2B04 /* SDWebImageManager.m in Sources */,
 				B5CCF216211833BC00FE2B04 /* SYFeedBackModel.m in Sources */,
 				B57D4C261FA18D2000303A93 /* m185_PayBackGroundView.m in Sources */,
 				B5C40F1221119B4E007F74D9 /* SYSDKModel.m in Sources */,
 				B5ABC0CB1FEA37CF00B24DE2 /* SDK_ADImage.m in Sources */,
 				B56568B11FE136F100E3CC44 /* LLRefreshFooterView.m in Sources */,
 				B5C40ED4211155D4007F74D9 /* MASConstraint.m in Sources */,
+				B5CCF2A4211D2FCC00FE2B04 /* SDWebImagePrefetcher.m in Sources */,
 				B57D4C271FA18D2000303A93 /* m185WebViewController.m in Sources */,
 				B57D4C281FA18D2000303A93 /* m185CheackPayResults.m in Sources */,
 				B59DE68E20EF19400058163E /* SY_AccountListView.m in Sources */,
 				B5C40F232112F7D5007F74D9 /* SYBasicViewController.m in Sources */,
 				B57D4C291FA18D2000303A93 /* PAlipayController.m in Sources */,
 				B5B28E251FDA400C008A9BCD /* FBSubmitViewController.m in Sources */,
+				B5CCF2AC211D2FCC00FE2B04 /* UIImageView+HighlightedWebCache.m in Sources */,
 				B57D4C2A1FA18D2000303A93 /* PPhonepayController.m in Sources */,
 				B5C40F0321118E47007F74D9 /* SYRequestTool.m in Sources */,
 				B5CCF265211C180200FE2B04 /* SY_BoxADImageView.m in Sources */,
+				B5CCF2A8211D2FCC00FE2B04 /* UIImage+GIF.m in Sources */,
 				B5E29C952099928E00AFE368 /* FFPayDetailViewController.m in Sources */,
+				B5CCF29F211D2FCC00FE2B04 /* SDWebImageDownloaderOperation.m in Sources */,
 				B57D4C2B1FA18D2000303A93 /* PPlatformCoinViewController.m in Sources */,
 				B57D4C2C1FA18D2000303A93 /* PTenpayController.m in Sources */,
 				B5C40F1E2112F6D8007F74D9 /* SYLoginViewController.m in Sources */,
@@ -1826,6 +1629,7 @@
 				B57D4C311FA18D2000303A93 /* GM_ViewModel.m in Sources */,
 				B57D4C321FA18D2000303A93 /* GM_DetailView.m in Sources */,
 				B56568951FE112F100E3CC44 /* FBMineCell.m in Sources */,
+				B5CCF295211D2FCC00FE2B04 /* SDImageCache.m in Sources */,
 				B57D4C331FA18D2000303A93 /* GM_PropsListView.m in Sources */,
 				B57D4C341FA18D2000303A93 /* GM_PropsNumView.m in Sources */,
 				B57D4C351FA18D2000303A93 /* GMDetailCell.m in Sources */,
@@ -1835,6 +1639,7 @@
 				B57D4C3A1FA18D2000303A93 /* Model.m in Sources */,
 				B57D4C3B1FA18D2000303A93 /* SDKModel.m in Sources */,
 				B57D4C3C1FA18D2000303A93 /* UserModel.m in Sources */,
+				B5CCF297211D2FCC00FE2B04 /* SDImageCacheConfig.m in Sources */,
 				B57D4C3D1FA18D2000303A93 /* MapModel.m in Sources */,
 				B57D4C3E1FA18D2000303A93 /* PayModel.m in Sources */,
 				B57D4C3F1FA18D2000303A93 /* DeviceModel.m in Sources */,
@@ -1843,6 +1648,7 @@
 				B57D4C0E1FA18CF500303A93 /* SY185SDK.m in Sources */,
 				B57D4C0F1FA18CF500303A93 /* BTWFloatModel.m in Sources */,
 				B5C40EF621115F53007F74D9 /* FBShimmeringLayer.m in Sources */,
+				B5CCF291211D2FCC00FE2B04 /* NSData+ImageContentType.m in Sources */,
 				B56564031FDE719200E3CC44 /* FeedbackCell.m in Sources */,
 				B57D4C101FA18CF500303A93 /* SYFloatViewModel.m in Sources */,
 				B5C40F0E21119944007F74D9 /* SYGeneralModel.m in Sources */,
@@ -1851,12 +1657,15 @@
 				B57D4C131FA18CF500303A93 /* FAccountViewController.m in Sources */,
 				B56568AF1FE136F100E3CC44 /* LLRefreshComponent.m in Sources */,
 				B5B28E201FDA371F008A9BCD /* FeedbackNavigationController.m in Sources */,
+				B5CCF299211D2FCC00FE2B04 /* SDWebImageCompat.m in Sources */,
 				B56564161FDFD9E900E3CC44 /* FBServerCell.m in Sources */,
 				B56568B51FE136F100E3CC44 /* LLRefreshHelper.m in Sources */,
 				B57D4C141FA18CF500303A93 /* FAnnounceViewController.m in Sources */,
+				B5CCF2B0211D2FCC00FE2B04 /* UIView+WebCache.m in Sources */,
 				B57D4C151FA18CF500303A93 /* FPacksViewController.m in Sources */,
 				B57D4C161FA18CF500303A93 /* FSpeedViewController.m in Sources */,
 				B57D4C171FA18CF500303A93 /* FAnnouncementView.m in Sources */,
+				B5CCF293211D2FCC00FE2B04 /* NSImage+WebCache.m in Sources */,
 				B57D4C181FA18CF500303A93 /* FloatSelectView.m in Sources */,
 				B5C40EE5211155D4007F74D9 /* View+MASAdditions.m in Sources */,
 				B57D4C191FA18CF500303A93 /* FPacksCell.m in Sources */,
@@ -1864,6 +1673,7 @@
 				B565692C1FE25FB200E3CC44 /* FFRefreshTableView.m in Sources */,
 				B5C40ED8211155D4007F74D9 /* MASLayoutConstraint.m in Sources */,
 				B57D4C1A1FA18CF500303A93 /* FRechargeRecordView.m in Sources */,
+				B5CCF2AE211D2FCC00FE2B04 /* UIImageView+WebCache.m in Sources */,
 				B5ABC0C71FEA099300B24DE2 /* SY_adPicImageView.m in Sources */,
 				B56564111FDFB16500E3CC44 /* FBDetailViewController.m in Sources */,
 				B57D4C1B1FA18CF500303A93 /* FSettingView.m in Sources */,
@@ -1871,6 +1681,7 @@
 				B5C40EE8211155D4007F74D9 /* ViewController+MASAdditions.m in Sources */,
 				B5FF875B1FCE62EB004F9820 /* SY_BindingIDCardView.m in Sources */,
 				B57D4C1C1FA18CF500303A93 /* SY_RRViewCell.m in Sources */,
+				B5CCF29D211D2FCC00FE2B04 /* SDWebImageDownloader.m in Sources */,
 				B57D4CA11FA1E54100303A93 /* SYKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1878,46 +1689,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		B565671B1FE0CB5200E3CC44 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = NO;
-				DEVELOPMENT_TEAM = JR27SLBFXN;
-				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = SY_185SDK_RES/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "SY185.SY-185SDK-RES";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		B565671C1FE0CB5200E3CC44 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = NO;
-				DEVELOPMENT_TEAM = JR27SLBFXN;
-				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = SY_185SDK_RES/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "SY185.SY-185SDK-RES";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		B5737F681FE3B7BC00FF24FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2015,7 +1786,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2068,7 +1839,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -2162,15 +1933,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B565671A1FE0CB5200E3CC44 /* Build configuration list for PBXNativeTarget "SY_185SDK_RES" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B565671B1FE0CB5200E3CC44 /* Debug */,
-				B565671C1FE0CB5200E3CC44 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B5737F6A1FE3B7BC00FF24FD /* Build configuration list for PBXAggregateTarget "Runarm64" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
